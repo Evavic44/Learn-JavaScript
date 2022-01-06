@@ -22,3 +22,7 @@ js = "boring";
 if (js === "amazing") alert("JavaScript is Fun!");
 
 // This script is false because JS is no longer amazing but has been changed to boring.
+
+// You can also do mathematical calculations in the console
+
+20 + 30 + 20;
