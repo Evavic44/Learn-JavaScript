@@ -89,7 +89,7 @@ A value is a piece of data which is the most fundamental unit of information in 
 **E.g:**
 
 `'Jonas', 'Eke'` are example of values.
-If we wrap it in a `console.log()` we should see in in the console.
+If we wrap it in a `console.log()` we should see it in the console.
 
 ```js
 console.log("Eke");
@@ -102,12 +102,6 @@ An extremely useful thing is to store data in variables so it can be reusable.
 ### What is a variable?
 
 Variables are containers for storing values.
-
-When to Use JavaScript var?
-Always declare JavaScript variables with var,let, orconst.
-The var keyword is used in all JavaScript code from 1995 to 2015.
-The let and const keywords were added to JavaScript in 2015.
-If you want your code to run in older browser, you must use var.
 
 **For example:**
 
@@ -134,7 +128,7 @@ You can use this variable multiple times in your code, and anytime JavaScript se
 This is extremely useful because if you want to change the value of the variable, you only have to do it in one place.
 
 **For Example:**
-If we change the variable value from **Eke** to **John**, everywhere we referenced the variable will automatically get changed to the new **John**.
+If we change the variable value from **Eke** to **John**, everywhere we referenced the variable will automatically get changed as well.
 
 ```js
 let firstName = "John";
@@ -150,3 +144,89 @@ console.log(firstName);
 Now we have know what a variable is, we need to uderstand the rules and conventions for naming variables because we shouldn't use random names for variables.
 
 Variable names are called **identifiers** and can be short names (like x and y) or more descriptive (age, sum, firstName)
+
+#### Camel case
+
+This is a very popular naming convention in JavaScript, which involves writing the first word in lower case and all the next words in uppercase:
+
+**Like so:** `first`, `firstPerson`, `countNumber`. `selectMainUser`. Another popular one is using underscores: `first_name` count_number, ETC.
+
+### Rules in naming variables
+
+There are also some strict rules in JavaScript on how you can name variables.
+
+- You can't start a variable name with a number.
+
+**Example:**
+
+```js
+let 2boys = '3';
+```
+
+Infact variables names can only contain numbers, letters, underscores and dollar sign.
+
+**Example**
+
+```js
+let jonas&Matilda = 'name';
+```
+
+This will prompt an error because **&** is not allowed to be used in variable names.
+
+- Another rule is to not start a variable name with an uppercase letter.
+
+**Example**
+
+```js
+let Person = "Eke";
+```
+
+Though this is not illegal to do, it is just that upper case letters are reserved for a specific use case in JavaScrit Object Oriented Programming.
+
+Starting a variable with uppercase are also reserved for constants that we know will never change.
+
+**Example:**
+
+```js
+let PI = 3.14;
+```
+
+We know the value of PI will never change, which makes it a constant and the convention for writing contants is using uppercase.
+
+- Writing descriptive variable names
+  When writing JavaScript, it is good practice to write our variable names are descriptive. This helps the code to be more readable and will be easy to understand what the variable does just by reading the name.
+
+**For Example:**
+This variable name is more descriptive than
+
+```js
+let myFirstJob = "Programmer";
+let myCurrentJob = "Teacher";
+```
+
+Than writing this.
+
+```js
+let job1 = "Programmer";
+let job2 = "Teacher";
+```
+
+```js
+console.log(myFirstJob);
+```
+
+### Reserved keywords
+
+You will also encounter errors in your javascript naming if you use reserved keywords like:
+
+- new
+- function
+- name, ETC.
+
+### When to Use JavaScript var?
+
+Always declare JavaScript variables with var, let, or const.
+
+- The var keyword is used in all JavaScript code from 1995 to 2015.
+- The let and const keywords were added to JavaScript in 2015.
+- Var supports older browsers.
