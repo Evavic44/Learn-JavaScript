@@ -1,0 +1,17 @@
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(to top left, #28b487, #7dd56f);
+  overflow-y: hidden;
+}
+
+h1 {
+  font-family: sans-serif;
+  font-size: 50px;
+  width: 100%;
+  text-align: center;
+  color: white;
+}
+
+/*# sourceMappingURL=main.css.map */
