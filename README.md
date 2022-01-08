@@ -95,6 +95,58 @@ If we wrap it in a `console.log()` we should see in in the console.
 console.log("Eke");
 ```
 
-You can have multiple values as well. For example the calculation we did earlier; `console.log()`had multiple numbers(values) which was combined with the math operators to give us one single value.
+You can have multiple values as well. For example the calculation we did earlier; `console.log(40 + 8 + 23 - 10)` had multiple numbers(values) which was combined with the math operators to give us one single value: `61`
 
-An extremely useful thing is to store data in variables so it can be re-usable.
+An extremely useful thing is to store data in variables so it can be reusable.
+
+### What is a variable?
+
+Variables are containers for storing values.
+
+When to Use JavaScript var?
+Always declare JavaScript variables with var,let, orconst.
+The var keyword is used in all JavaScript code from 1995 to 2015.
+The let and const keywords were added to JavaScript in 2015.
+If you want your code to run in older browser, you must use var.
+
+**For example:**
+
+```js
+let firstName = "Eke";
+```
+
+In the code above, we have a container of `firstName` and this container holds or stores a value of `Eke` and now if we want to use this value, all we have to do is to use the variable name; `firstName` in this case.
+
+```js
+let firstName = "Eke";
+
+console.log(firstName);
+```
+
+Now in other to use the variable, we can do a `console.log()` and the variable name.
+
+```js
+console.log(firstName);
+```
+
+You can use this variable multiple times in your code, and anytime JavaScript sees the variable `firstName`, it'll replace it with the value we assigned to it.
+
+This is extremely useful because if you want to change the value of the variable, you only have to do it in one place.
+
+**For Example:**
+If we change the variable value from **Eke** to **John**, everywhere we referenced the variable will automatically get changed to the new **John**.
+
+```js
+let firstName = "John";
+
+console.log(firstName);
+console.log(firstName);
+console.log(firstName);
+console.log(firstName);
+```
+
+### Variable Naming Conventions
+
+Now we have know what a variable is, we need to uderstand the rules and conventions for naming variables because we shouldn't use random names for variables.
+
+Variable names are called **identifiers** and can be short names (like x and y) or more descriptive (age, sum, firstName)
