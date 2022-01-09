@@ -230,3 +230,50 @@ Always declare JavaScript variables with var, let, or const.
 - The var keyword is used in all JavaScript code from 1995 to 2015.
 - The let and const keywords were added to JavaScript in 2015.
 - Var supports older browsers.
+
+## Data Types
+
+In every programming language, values can have different types depending on the type of data we want them to hold. Earlier we looked at string and numbers but there are other data types.
+
+In JavaScript, every value is either an **object** or **primitive** data type.
+
+<!--Screenshot of values types-->
+
+### The 7 Primitive Data Types
+
+1. Number:
+   Floating point numbers are used for decimals and integer.
+
+```js
+let js = 23;
+```
+
+The value 23 is actually the same as saying 23.0 even though we didn't specify it.
+
+2. String:
+   Strings are sequence of characters used for texts. When using strings, always put them in quotes, wether single or double quotes. If you don't, JavaScript will confuse it for variable names.
+
+```js
+let firstName = "Eke";
+```
+
+3. Boolean
+   Boolean are logical types that can only be **true** or **false** So they are mostly used in making decisions.
+
+```js
+let fullAge = "true";
+```
+
+These values types mentioned above are the 3 main value types you'll use the most, but there are still 4 more value types which might be a bit convincing.
+
+4. Undefined:
+   These are values taken by a variable name but is not yet defined('empty value')
+
+```js
+let children;
+```
+
+5. Null:
+   This also means 'Empty value', but is used in different circumstances, which we'll look at sometime later.
+
+6.
