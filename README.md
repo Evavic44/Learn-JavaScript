@@ -241,8 +241,9 @@ In JavaScript, every value is either an **object** or **primitive** data type.
 
 ### The 7 Primitive Data Types
 
-1. Number:
-   Floating point numbers are used for decimals and integer.
+### 1. Number:
+
+Floating point numbers are used for decimals and integer.
 
 ```js
 let js = 23;
@@ -250,15 +251,17 @@ let js = 23;
 
 The value 23 is actually the same as saying 23.0 even though we didn't specify it.
 
-2. String:
-   Strings are sequence of characters used for texts. When using strings, always put them in quotes, wether single or double quotes. If you don't, JavaScript will confuse it for variable names.
+### 2. String:
+
+Strings are sequence of characters used for texts. When using strings, always put them in quotes, wether single or double quotes. If you don't, JavaScript will confuse it for variable names.
 
 ```js
 let firstName = "Eke";
 ```
 
-3. Boolean
-   Boolean are logical types that can only be **true** or **false** So they are mostly used in making decisions.
+### 3. Boolean
+
+Boolean are logical types that can only be **true** or **false** So they are mostly used in making decisions.
 
 ```js
 let fullAge = "true";
@@ -266,14 +269,16 @@ let fullAge = "true";
 
 These values types mentioned above are the 3 main value types you'll use the most, but there are still 4 more value types which might be a bit convincing.
 
-4. Undefined:
-   These are values taken by a variable name but is not yet defined('empty value')
+### 4. Undefined:
+
+These are values taken by a variable name but is not yet defined('empty value')
 
 ```js
 let children;
 ```
 
-5. Null:
-   This also means 'Empty value', but is used in different circumstances, which we'll look at sometime later.
+### 5. Null:
 
-6.
+This also means 'Empty value', but is used in different circumstances, which we'll look at sometime later.
+
+### 6.
