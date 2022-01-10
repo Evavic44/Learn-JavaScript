@@ -271,14 +271,22 @@ These values types mentioned above are the 3 main value types you'll use the mos
 
 ### 4. Undefined:
 
-These are values taken by a variable name but is not yet defined('empty value')
+These are values taken by a variable name but is not yet defined('empty value'). In other words, these are variables that have been declared but haven't being assigned a value. For Example:
 
 ```js
 let children;
 ```
 
+As you can see the variable **children** has been declared but has not being assigned a value, in other words, undefined.
+
 ### 5. Null:
 
 This also means 'Empty value', but is used in different circumstances, which we'll look at sometime later.
 
-### 6.
+### 6. Symbol(ES2015)
+
+This data type simply means, value that is unique and cannot be changed. _(Not useful for now)_
+
+### 7. BigInt (ES2020)
+
+These data types is used for large integers that the `number` data type can't hold. So it's basically another type for numbers.
