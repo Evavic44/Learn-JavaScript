@@ -258,10 +258,12 @@ The value 23 is actually the same as saying 23.0 even though we didn't specify i
 
 ### 2. String:
 
-Strings are sequence of characters used for texts. When using strings, always put them in quotes, wether single or double quotes. If you don't, JavaScript will confuse it for variable names.
+Strings are sequence of characters used for texts. When using strings, always put them in quotes, wether single or double quotes and backtics **``**. If you don't, JavaScript will confuse it for variable names.
 
 ```js
 let firstName = "Eke";
+let lastName = `Tom Cruise!`;
+let hobby = "Programming and coding!";
 ```
 
 ### 3. Boolean
