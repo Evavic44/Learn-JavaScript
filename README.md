@@ -102,6 +102,7 @@ An extremely useful thing is to store data in variables so it can be reusable.
 ### What is a variable?
 
 Variables are containers for storing values.
+In JavaScript, you can store a value in a variable with the assignment operator `(=)`.
 
 **For example:**
 
