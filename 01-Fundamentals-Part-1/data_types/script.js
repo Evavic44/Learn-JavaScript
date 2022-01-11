@@ -30,6 +30,7 @@ let job2 = "teacher";
 console.log(myFirstJob);
 */
 
+// Declared a varible (Boolean)
 let javascriptIsFun = true;
 console.log(javascriptIsFun);
 
@@ -38,6 +39,7 @@ console.log(typeof javascriptIsFun);
 console.log(typeof 23);
 console.log(typeof "Eke");
 
+// Redefine the variable with a new value (string)
 javascriptIsFun = "YES!";
 console.log(typeof javascriptIsFun);
 
