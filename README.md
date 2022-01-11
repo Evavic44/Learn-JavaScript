@@ -9,6 +9,10 @@
 - <a href="https://www.udemy.com/course/the-complete-javascript-course/">The Complete JavaScript Course 2022: From Zero to Expert!</a>
 - <a href="https://github.com/jonasschmedtmann/complete-javascript-course">GitHub Repository</a>
 
+## Books and Articles.
+
+- <a href="https://eloquentjavascript.net/">Eloquent JavaScript</a> by <a href="https://twitter.com/MarijnJH?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor">Martin Haverbeke</a>
+
 ## What is JavaScript?
 
 JavaScript is a High level, object oriented, multi-paradigm programming language.
