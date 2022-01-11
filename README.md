@@ -295,9 +295,18 @@ These are values taken by a variable name but is not yet defined('empty value').
 
 ```js
 let children;
+console.log(children);
 ```
 
 As you can see the variable **children** has been declared but has not being assigned a value, in other words, undefined.
+
+If we use the `typeof` operator, we will get an undefined type in our console and an undefined `typeof`.
+
+```js
+let children;
+console.log(children);
+console.log(typeof children);
+```
 
 ### 5. Null:
 
@@ -321,3 +330,21 @@ Another important thing to note about dynamic types is that variables can be ass
 **For Example**
 
 Variable `X` can intially be a number and then later, a string.
+
+Just like we did before, we can re-assign a new value to a variable we created.
+
+```js
+children = 20;
+console.log(typeof children);
+```
+
+Now when we check our console, we can see the type of `null` we had earlier has been changed to `number` This is the power of dynamic typing in JavaScript.
+
+**Error/bug in typeof**
+When we use the `typeof` function to check the data type of an empty variable, the result in the console was **Undefined**, because we did not define the variable, now when we try to check the `typeof` of `null`, we get an error like so.
+
+```js
+console.log(typeof null);
+```
+
+The console sees the typeof as an **object** This is an error/bug that has not being fixed in JavaScript for legacy reasons. This is an error because `null` is not an object and should return `null` as `null` just like we had `undefined` return as `undefined`.

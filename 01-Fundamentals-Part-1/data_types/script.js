@@ -43,12 +43,15 @@ console.log(typeof "Eke");
 javascriptIsFun = "YES!";
 console.log(typeof javascriptIsFun);
 
+// Undefined variable
 let year;
 console.log(year);
 console.log(typeof year);
 
+// Assign a value to (year)
 year = 1991;
 console.log(year);
 console.log(typeof year);
 
+// JavaScript typeof error
 console.log(typeof null);
