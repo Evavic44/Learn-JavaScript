@@ -290,3 +290,14 @@ This data type simply means, value that is unique and cannot be changed. _(Not u
 ### 7. BigInt (ES2020)
 
 These data types is used for large integers that the `number` data type can't hold. So it's basically another type for numbers.
+
+## Dynamic Typing
+
+It's also good to know that JavaScript has a feature called dynamic typing which means when you create a new variable, you don't need to define the data type of the value of that variable. This is a feature unique to JavaScript as other languages will require you to determine the data type.
+
+This distinction between data and the variable is pretty important because in JavaScript, it's the value that has the type, not the variable.
+
+Another important thing to note about dynamic types is that variables can be assigned a new value with a different data type without any problems.  
+**For Example**
+
+Variable `X` can intially be a number and then later, a string.
