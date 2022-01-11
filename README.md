@@ -266,11 +266,24 @@ let firstName = "Eke";
 
 ### 3. Boolean
 
-Boolean are logical types that can only be **true** or **false** So they are mostly used in making decisions.
+Boolean are logical types that are used for providing two possibilities like: **true** or **false**, **yes** or **no**. So Booleans are mostly used in making decisions.
 
 ```js
-let fullAge = "true";
+let fullAge = true;
+console.log(fullAge);
 ```
+
+Now on the console we would see fullAge value is set to true.
+In JavaScript, there is a logic you can use to show the type of value of a particular variable. This logic is called `typeof`
+
+```js
+let fullAge = true;
+console.log(fullAge);
+
+console.log(typeof fullAge);
+```
+
+Now when we check the console, we will see the data type of **fullAge**, which is a Boolean.
 
 These values types mentioned above are the 3 main value types you'll use the most, but there are still 4 more value types which might be a bit convincing.
 
