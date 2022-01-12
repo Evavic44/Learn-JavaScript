@@ -348,3 +348,7 @@ console.log(typeof null);
 ```
 
 The console sees the typeof as an **object** This is an error/bug that has not being fixed in JavaScript for legacy reasons. This is an error because `null` is not an object and should return `null` as `null` just like we had `undefined` return as `undefined`.
+
+## 9. Basic Operators
+
+An operator allows you
