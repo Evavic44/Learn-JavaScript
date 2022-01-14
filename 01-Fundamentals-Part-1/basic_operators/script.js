@@ -59,6 +59,7 @@ console.log(myFirstJob);
 // BASIC OPERATORS
 
 // Math Operations
+/*
 const dob = 2021;
 
 const ageEke = dob - 1997;
@@ -90,3 +91,32 @@ console.log(ageSarah >= 10);
 
 const isFullAge = ageSarah >= 10;
 console.log(dob - 1991 > dob - 2010);
+
+*/
+
+// Maths Operators
+const now = 2037;
+const ageEke = now - 1997;
+const ageSarah = now - 2018;
+// log multiple items together.
+console.log(ageEke, ageSarah);
+
+console.log(ageEke * 2, ageEke / 10, 2 ** 3);
+// 2 ** 3 means 2 to the power of 3 = 2 * 2 *2
+
+// + arithimetic operator
+
+const firstName = "Victor";
+const lastName = "Eke";
+console.log(firstName + lastName);
+
+// Add space between strings
+console.log(firstName + " " + lastName);
+
+// Typeof Operator
+// let ageEke = 32;
+// console.log(typeof ageEke);
+
+// Equal operator: the equals symbol is an operator on it's own.
+let x = 10 + 5;
+console.log(x);

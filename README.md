@@ -454,4 +454,76 @@ If we run this code, it will give us the age value of 30. In as much as this wor
 
 ## 10. Basic Operators
 
-An operator allows you
+An operator allows you to transfer or combine multiple values, and do many more work with values. There are many categories of operators, we have **Mathematical operators**, **comparison operators**, **logic operators**, **assignment operators** and many more.
+
+### Arithimetic Operators
+
+We have already used the minus(-) and plus(+) operators, but we can do all mathematial operators like multilplication, division and so on.
+
+**For example**
+
+```js
+const ageEke = 2037 - 1997;
+const ageSarah = 2037 - 2018;
+console.log(ageEke, ageSarah);
+```
+
+The result will be the calculated sum of 2037 - 1997 and 2037 - 2018.
+Since we specified 2037 in two different places, it will be good to add it to a variable so we don't have to repeat ourselves.
+
+```js
+const now = 2037;
+```
+
+Now we can use it in our code like this;
+
+```js
+const ageEke = now - 1997;
+const ageSarah = now - 2018;
+console.log(ageEke, ageSarah);
+```
+
+We also have other arithimetic operators:
+
+```js
+console.log(ageEke - 2, ageEke / 10, 2 ** 3);
+```
+
+**2 ** 3\*_ here means 2 raised to power 3 which is `2 _ 2 \* 2 = 8`
+
+We can also use arthimetic operators to join strings or in other words concatenate strings.
+
+```js
+const firstName = "Victor";
+const lastName = "Eke";
+console.log(firstName + lastName);
+```
+
+This will combine both values and give use a full string `VictorEke`
+You can add space between these values by using an empty string.
+
+```js
+console.log(firstName + " " + lastName);
+```
+
+### Typeof Operator
+
+// We already looked at the typeof operator and how we can use it to know the data type of a variable.
+
+```js
+let ageEke = 32;
+console.log(typeof ageEke);
+```
+
+This will give us the data type of ageEke value which is a `number`
+
+### Assignment Operator
+
+It is also good to note that the equals`(=)` symbol is an operator on it's own.
+
+```js
+let x = 10 + 5;
+console.log(x);
+```
+
+If we run this code in the console, the plus `(+)` operator will be executed before the equal to`(=)` which is based on a couple of rules about operator precedence that we'll be looking at later.
