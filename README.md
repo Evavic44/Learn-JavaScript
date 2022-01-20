@@ -489,7 +489,7 @@ We also have other arithimetic operators:
 console.log(ageEke - 2, ageEke / 10, 2 ** 3);
 ```
 
-**2 ** 3\*_ here means 2 raised to power 3 which is `2 _ 2 \* 2 = 8`
+`2 ** 3` here means 2 raised to power 3 which is `2x2x2 = 8`
 
 We can also use arthimetic operators to join strings or in other words concatenate strings.
 
@@ -508,7 +508,7 @@ console.log(firstName + " " + lastName);
 
 ### Typeof Operator
 
-// We already looked at the typeof operator and how we can use it to know the data type of a variable.
+We already looked at the typeof operator and how we can use it to know the data type of a variable.
 
 ```js
 let ageEke = 32;
@@ -519,7 +519,7 @@ This will give us the data type of ageEke value which is a `number`
 
 ### Assignment Operator
 
-It is also good to note that the equals`(=)` symbol is an operator on it's own.
+It is also good to note that the equals `(=)` symbol is an operator on it's own.
 
 ```js
 let x = 10 + 5;
