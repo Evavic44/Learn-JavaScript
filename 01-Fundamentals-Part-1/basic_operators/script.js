@@ -104,7 +104,7 @@ console.log(ageEke, ageSarah);
 console.log(ageEke * 2, ageEke / 10, 2 ** 3);
 // 2 ** 3 means 2 to the power of 3 = 2 * 2 *2
 
-// + arithimetic operator
+// Arithimetic operator
 
 const firstName = "Victor";
 const lastName = "Eke";
@@ -118,5 +118,21 @@ console.log(firstName + " " + lastName);
 // console.log(typeof ageEke);
 
 // Equal operator: the equals symbol is an operator on it's own.
-let x = 10 + 5;
+
+// Assignment operators
+let x = 10 + 5; // x = 15
+x += 10; // x = x + 10 = 25
+x *= 4; // x = x * 4 = 100
+x++; // x = x + 1;
 console.log(x);
+
+// Comparison operators
+console.log(ageEke > ageSarah);
+console.log(ageSarah >= 18);
+console.log(ageSarah <= 18);
+
+// Add the previous calculation to a variable.
+const fullAge = ageSarah >= 18;
+
+// We can do all the previous calculation in one line
+console.log(now - 1997 > now - 2018);
