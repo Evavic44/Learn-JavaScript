@@ -599,7 +599,9 @@ Operators with higher precedence will be executed before the lower ones.
 
 Let's take a look at the precedence of different operators from **MDN**.
 
-<!-- Screenshot of precedence operator -->
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence"><img src="https://user-images.githubusercontent.com/62628408/150381705-b96dd202-5a28-4b01-8318-25d104909175.png"></a>
+
+**Image Credit:** <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence">MDN DOCS</a>
 
 Now we can use this table to understand the precedence of the operators in the code above and how it was executed.
 
