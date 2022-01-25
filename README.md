@@ -656,7 +656,6 @@ GOOD LUCK 😀
 
 ```js
 // --------- TEST DATA 1 ------------
-// TEST 1
 const massMark = 78;
 const heightMark = 1.69;
 
@@ -669,7 +668,7 @@ const BMIjohn = massJohn / (heightJohn * heightJohn);
 const markHigherBMIs = BMImark > BMIjohn;
 console.log(BMImark, BMIjohn, markHigherBMIs);
 
-// TEST 2
+// --------- TEST DATA 2 ------------
 const massMark = 95;
 const heightMark = 1.88;
 const massJohn = 85;
