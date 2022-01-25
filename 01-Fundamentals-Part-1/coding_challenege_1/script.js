@@ -22,47 +22,47 @@ GOOD LUCK 😀
 // ------------------- TEST DATA 1 ----------------------
 
 // Mark's Data
-// const markMass = 78;
-// const markHeight = 1.69;
-
-// // John's Data
-// const johnMass = 92;
-// const johnHeight = 1.95;
-
-// // Mark's BMI
-// console.log(markMass / markHeight ** 2); // Mark BMI = 27.309968138370508
-
-// // John's BMI
-// console.log(johnMass / (johnHeight * johnHeight)); // John BMI = 24.194608809993426
-
-// // markHigherBMI
-// const johnBMI = 24.194608809993426;
-// const markBMI = 27.309968138370508;
-
-// const markHigherBMI = markBMI > johnBMI;
-// console.log(markHigherBMI);
-
-// ------------------- TEST DATA 2 ----------------------
-// Mark's Data
-const markMass = 95;
-const markHeight = 1.88;
+const markMass = 78;
+const markHeight = 1.69;
 
 // John's Data
-const johnMass = 85;
-const johnHeight = 1.76;
+const johnMass = 92;
+const johnHeight = 1.95;
 
 // Mark's BMI
-console.log(markMass / markHeight ** 2); // Mark BMI = 26.87867813490267
+console.log(markMass / markHeight ** 2); // Mark BMI = 27.309968138370508
 
 // John's BMI
-console.log(johnMass / johnHeight ** 2); // John BMI = 27.44059917355372
+console.log(johnMass / (johnHeight * johnHeight)); // John BMI = 24.194608809993426
 
 // markHigherBMI
-const markBMI = 26.87867813490267;
-const johnBMI = 27.44059917355372;
+const johnBMI = 24.194608809993426;
+const markBMI = 27.309968138370508;
 
 const markHigherBMI = markBMI > johnBMI;
 console.log(markHigherBMI);
+
+// ------------------- TEST DATA 2 ----------------------
+// Mark's Data
+// const markMass = 95;
+// const markHeight = 1.88;
+
+// // John's Data
+// const johnMass = 85;
+// const johnHeight = 1.76;
+
+// // Mark's BMI
+// console.log(markMass / markHeight ** 2); // Mark BMI = 26.87867813490267
+
+// // John's BMI
+// console.log(johnMass / johnHeight ** 2); // John BMI = 27.44059917355372
+
+// // markHigherBMI
+// const markBMI = 26.87867813490267;
+// const johnBMI = 27.44059917355372;
+
+// const markHigherBMI = markBMI > johnBMI;
+// console.log(markHigherBMI);
 
 /*
 ======================================================
@@ -76,20 +76,14 @@ console.log(markHigherBMI);
 // const massJohn = 92;
 // const heightJohn = 1.95;
 
-// const BMImark = massMark / heightMark ** 2;
-// const BMIjohn = massJohn / (heightJohn * heightJohn);
-
-// const markHigherBMIs = BMImark > BMIjohn;
-// console.log(BMImark, BMIjohn, markHigherBMIs);
-
 // // TEST 2
-// const massMark = 95;
-// const heightMark = 1.88;
-// const massJohn = 85;
-// const heightJohn = 1.76;
+const massMark = 95;
+const heightMark = 1.88;
+const massJohn = 85;
+const heightJohn = 1.76;
 
-// const BMImark = massMark / heightMark ** 2;
-// const BMIjohn = massJohn / (heightJohn * heightJohn);
+const BMImark = massMark / heightMark ** 2;
+const BMIjohn = massJohn / (heightJohn * heightJohn);
 
-// const markHigherBMI = BMImark > BMIjohn;
-// console.log(BMImark, BMIjohn, markHigherBMI);
+const markHigherBMIs = BMImark > BMIjohn;
+console.log(BMImark, BMIjohn, markHigherBMIs);
