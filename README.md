@@ -711,6 +711,6 @@ const eke =
 console.log(eke);
 ```
 
-We can see this is a pain to write and we have to manage the spacing between each string and text. This brings us to our topic **"Template Literals:"** which is a a way of writing strings in a normal way and then insert variables directly into the string.
+We can see this is a pain to write and we have to manage the spacing between each string and text. This brings us to our topic **"Template Literals:"** which is an easy way of writing strings in a normal way and then insert variables directly into the string.
 
-So basically a template literals can assemble multiple pieces in one final string.
+So basically a template literal can assemble multiple pieces in one final string.
