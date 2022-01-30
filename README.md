@@ -753,3 +753,76 @@ console.log(`String with
 multiple
 lines`);
 ```
+
+## Conditional Staements - if else
+
+Conditional statements are used to perform different actions based on different conditions.
+
+Very often when you write code, you want to perform different actions for different decisions.
+
+### if statement
+
+The `if` statement is used to specify a block of JavaScript code to be executed when a condition is true.
+
+**For Example**
+
+```js
+if (condition) {
+  // condition is a boolean
+  // Execute this code if condition is true.
+}
+```
+
+Now let's write a program that checks if a person is allowed to start taking a drivers license or not. And if not, it will print how many years are left until the person can start taking their drivers license.
+
+```js
+const age = 19;
+const requirement = age >= 18;
+if (requirement) {
+  console.log("Sarah can have her driving license 🚗");
+}
+```
+
+This will execute the command because the result is `true` because Sarah is 19 years old. But if we make Sarah 15 years the result will be false because the required age is 18.
+
+Now let's write an `else statement that will print when the result is false.
+
+### else statement
+
+The else statement is basically a block of code to be executed if the condition is false.
+
+```js
+if () {
+
+}  else (condition) {
+   // Execute this code if the condition is false.
+}
+```
+
+```js
+const age = 16;
+
+if (age >= 18) {
+  console.log(`Sarah can start her driving license! 🚗`);
+} else {
+  const requirement = 18 - age;
+  console.log(
+    `Sarah is too young. Wait another ${requirement} more year(s) 👶🏾`
+  );
+}
+```
+
+The Else block is not compulsory, if the condition of a code block is `false`, it will not output any code.
+
+Let's see another example. In this example, we'll write a code that detects what century a person falls into by calculating their birthday.
+
+```js
+const birthYear = 1997;
+let century;
+
+if (birthYear <= 2000) {
+  century = 20;
+} else {
+  century = 21;
+}
+```
