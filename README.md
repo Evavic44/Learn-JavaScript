@@ -636,7 +636,7 @@ Here we are calculating the average value of `ageEke` & `ageSarah` and dividing 
 Result would be:
 **40 19 49.5**
 
-## Coding Challenge 1
+## 🎉Coding Challenge 1
 
 ```
 Mark and John are trying to compare their BMI (Body Mass Index),
