@@ -814,15 +814,24 @@ if (age >= 18) {
 
 The Else block is not compulsory, if the condition of a code block is `false`, it will not output any code.
 
-Let's see another example. In this example, we'll write a code that detects what century a person falls into by calculating their birthday.
+Now the combination of the `if` and `else` statement is called a control structure. And this is reffered to as a structure because it allows us to have more control of the way the code is executed. For example, with the `if, else` statement, we specified the code blocks that should execute and the one that shouldn't, this gives us more control over how the code works.
+
+There are more control structures, but we'll be discussing more about that in the future.
+
+Let's see another example. In this example, we'll write a code that detects what century a person falls into using their year of birth.
 
 ```js
 const birthYear = 1997;
 let century;
 
+// Person was born below or at year 2000.
 if (birthYear <= 2000) {
-  century = 20;
+  century = 20; // if true, execute 20th century
 } else {
-  century = 21;
+  century = 21; // if false, execute 21st century
 }
+
+console.log(century);
 ```
+
+It is good to note that, any variable defined inside a code block will not be accessible outside of the code block.
