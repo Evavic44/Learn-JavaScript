@@ -874,3 +874,131 @@ if (markBMI > johnBMI) {
   console.log(`John's BMI (${johnBMI}) is higher than Mark's! (${markBMI})`);
 }
 ```
+
+## Type Conversion and Coercion
+
+Types are one of the fundamentals aspect of programming and converting between them is something we do in every programming language.
+
+For example: converting a `"string"` to a `number`, a `number` to a `Boolean`, etc.
+
+### Definition
+
+Type conversion happens when we manually convert from one data type to another, while type coercion happens when JavaScript automatically converts the data types for us, implicitly.
+
+### Type Conversion
+
+```js
+const inputYear = "1991";
+console.log(InputYear + 18);
+```
+
+The expression above will concatenate the string `inputYear` with `18` and the result will be `199118`
+This is because the plus `+` operator cannot convert a string to a number, in other to convert the string, we will need to use the `Number` function together with a bracket and the data type inside.
+
+**For Example**
+
+```js
+Number(inputYear);
+```
+
+```js
+const inputYear = "1991";
+console.log(Number(inputYear));
+console.log(Number(inputYear) + 18);
+```
+
+This function will convert the string to a number and now when the command is executed, the `+` operator can now add the `1991` to `18` and give us `2009`.
+
+There are certain types that are impossible to convert. For example: a string that doesn't contain a number.
+
+```js
+console.log(Number("Eke"));
+```
+
+JavaScript will try to convert this string to a number but will be prompted by an error:
+
+```js
+NaN; // Which stands for: Not a number
+```
+
+It is good to note that `NaN` actually means an invalid number because if you use the `typeof` operator to check the data type, the result is a `number`.
+
+```js
+console.log(typeof NaN);
+```
+
+Not just numbers but we can also convert a number to a string using the same format we used earlier. Ensure you start the type with a capital letter followed by the parenthesis.
+
+```js
+console.log(String(23));
+```
+
+The last type we can convert is the `Boolean` but this behaves in a seperate way by using somethin we call `truthy` & `falsy` values. We'll be looking at them a lot later.
+
+That is all about type conversion. We rarely use this in JavaScript as it automatically converts data types for us.
+
+### Type coercion
+
+This happens when an operator is dealing with values that have different data types. In that case, JavScript will convert one of the values to match the other value so the calculation can be made.
+
+```js
+console.log("I am " + 23 + " years old"); // JavaScript will convert the number to a string that says: I am 23 years old.
+```
+
+Naturally, we would need to specify the data type for the number, but in JavaScript this is done automatically.
+
+```js
+console.log("I am " Number(23) "years old");
+```
+
+Type coercion also works on other operators, like: minus `-`, multiplication `*`, division `/`, boolean `true/false` operator
+
+#### Minus/Subtraction `-` operator
+
+This will convert the strings to a number and will execute the calculation.
+
+```js
+console.log("23" - "10" - 3); // Result will be 10
+```
+
+In the example above, `23` & `10` is a string but adding the minus operator converted it to numbers, therefore `23 - 10 - 3 = 10`
+
+#### Plus/Addition operator `+`
+
+This will convert the numbers to string and concatenate the numbers.
+
+```js
+console.log("23" + "10" + 3); // Result will be 23103
+```
+
+#### Division operator `/`
+
+This has the same effect as the multiplication and subtraction operator.
+
+```js
+console.log("23" / 18);
+```
+
+The string will be converted to numbers and the result will be `23 / 18 = 11.5`
+
+#### Logical operator `True/False`
+
+```js
+console.log("23" > "18"); // Result will be true
+```
+
+### Guess the output
+
+```js
+let n = "1" + 1; // n = "11"
+n = n - 1;
+console.log(n); // n = 10
+```
+
+```js
+console.log(2 + 3 + 4 + "5"); // result will be "95"
+```
+
+```js
+console.log("10" - "4" - "3" - 2 + "5"); // Result will be "15";
+```
