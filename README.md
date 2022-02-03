@@ -1002,3 +1002,69 @@ console.log(2 + 3 + 4 + "5"); // result will be "95"
 ```js
 console.log("10" - "4" - "3" - 2 + "5"); // Result will be "15";
 ```
+
+## Truthy & Falsy Values
+
+Falsy values are values that are not exactly false but will become false when they are converted to a **Boolean**. In JavaScript there are over 5 falsy values:
+
+```
+- 0
+- ''
+- undefined
+- null
+- NaN
+```
+
+These 5 values are not exactly false initially but will become false when we try to convert them to a **Boolean**
+
+Everything else are called: Truthy values. Basically any number that is not `0`, or any string that is not empty will be true when we try to convert them to a Boolean.
+
+```js
+console.log(Boolean(0)); // With a number = false
+console.log(Boolean(undefined)); // With undefined  = false
+console.log(Boolean("Eke")); // With a string = true
+console.log(Boolean({})); // With an empty object = true
+console.log(Boolean("")); // With an empty string = false
+```
+
+In practice, we rarely use the above concept. Conversion to Boolean values is usually done implicitly in other words, it is by type coercion and not conversion.
+
+Now let's look at how type coercion works in an if/else condition.
+
+```js
+const money = 0;
+if (money) {
+  console.log("Don't spend it all. 💵");
+} else {
+  console.log("You should get a job. 👷🏾‍♀️");
+}
+```
+
+The result is false: Which will be **You should get a job. 👷🏾‍♀️** and this is because in a logical context of an if/else statement condition, JavaScript will try to coerce any value (in this case: 0) into a Boolean, and this happens using the falsy & truthy value rules.
+
+Since `money = 0`, we know that it is a falsy value therefore the result will be false and as a result, the `else` block will be executed.
+
+Now, if we change the number to something like 100, it will be a truthy value and result will execte the `if` block.
+
+Another use case example is to check if a value is defined or not.
+
+```js
+let height;
+if (height) {
+  console.log("Height is defined!");
+} else {
+  console.log("Height is UNDEFINED!");
+}
+```
+
+In the example above code, height is undefined, because we didn't assign it any value yet and we know from the list we shared earlier, undefined is a falsy value, the height will be converted to a Boolean and the else block will be executed.
+
+If we assign a value to the height, this will execute the if `statement`
+
+```js
+let height = 100;
+```
+
+But we may run into problems with this. For example, if the `height: 0`, (which is a falsy value) the output will be the `else` block. And this is a bug in our code because we didn't account for the height to be 0 and the result is undefined even though that is not true.
+
+However we can fix this using something called `logical operators` which we'll check later.
