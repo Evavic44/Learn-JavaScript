@@ -18,15 +18,15 @@
 JavaScript is a High level, object oriented, multi-paradigm programming language.
 
 - A programming language is a tool that allows one to write code that will instruct a computer to do something.
-- JavaScript is a high level language, which means that we don't have to worry about a lot of stuffs like managing a computer's memory wile it runs. Which makes JavaScript easier to write and learn.
+- JavaScript is a high level language, which means that we don't have to worry about a lot of stuff like managing a computer's memory while it runs. Which makes JavaScript easier to write and learn.
 - JavaScript is object oriented which means the language is mostly based on objects for storing data.
-- JavaScript is also a multi paradigm language meaning that it is os flexible and versartile that we can use all kinds of different programming styles. And this styles are just ways of structuring our code.
+- JavaScript is also a multi paradigm language meaning that it is so flexible and versartile that we can use all kinds of different programming styles. And this styles are just ways of structuring our code.
 
 ## What do we use JavaScript for?
 
 Javascript is used to add dynamics and effects to a webpage. Manipulate content (HTML & CSS), load data from remote servers and to build entire applications in the browser, which we call web apps.
 
-Also, JavaScript can also run outside of web browsers. For e.g It is possible to use JavaScript on the web server using a very popular technology called NodeJS which doesn't need any browser at all and this allows us to create backend applications which are simply applications that run on a web server and to interact with databases, ETC.
+JavaScript can also run outside of web browsers. For e.g It is possible to use JavaScript on the web server using a very popular technology called NodeJS which doesn't need any browser at all and this allows us to create backend applications which are simply applications that run on a web server and to interact with databases, ETC.
 
 ## JavaScript Releases
 
@@ -40,13 +40,13 @@ Now you understand how powerful JavaScript is and what it is used for, let's mov
 
 ## How to link a JavaScript File
 
-Usually when building frontend applications, JavaScript is attached to web pages. So our JavaScript needs to be attached to a HTML documnet.
+Usually when building frontend applications, JavaScript is attached to web pages in the HTML document.
 
 ### Inline Linking
 
-This involves writing JavaScript code inside the head of the HTML document. To do that, we can use the dedicated html tag which is the <script></script> element.
+This involves writing JavaScript code inside the head of the HTML document. To do that, we can use the dedicated html tag which is the `<script></script>` element.
 
-Now run the previous code we saw in Hello_Js.
+Now run the code in <a href="github.com/evavic44/javascript-course/1_Hello_world.js">Hello_Js.</a>
 
 ```js
 <script>
