@@ -26,7 +26,19 @@ JavaScript is a High level, object oriented, multi-paradigm programming language
 
 Javascript is used to add dynamics and effects to a webpage. Manipulate content (HTML & CSS), load data from remote servers and to build entire applications in the browser, which we call web apps.
 
+## There is nothing you can't do with JavaScript (Well, Almost)
+
+### Frontend Applications
+
+Javascript is completely dynamic and is the language that the popular frameworks and libraries like React, Angular and Vue are built in. These libraries might go away but JavaScript won't so it's a good idea to have a good foundation of JavaScript itself.
+
+### Backend Applications
+
 JavaScript can also run outside of web browsers. For e.g It is possible to use JavaScript on the web server using a very popular technology called NodeJS which doesn't need any browser at all and this allows us to create backend applications which are simply applications that run on a web server and to interact with databases, ETC.
+
+### Native Mobile and Desktop Applications
+
+JavaScript has really changed the whole developement industry over the last couple of years, making things possible that has been really difficult. With the help of frameworks and libraries like Ionic, React Native, Electron, JavaScript can be used to build native mobile and desktop applications.
 
 ## JavaScript Releases
 
@@ -228,14 +240,6 @@ You will also encounter errors in your javascript naming if you use reserved key
 - function
 - name, ETC.
 
-### When to Use JavaScript var?
-
-Always declare JavaScript variables with var, let, or const.
-
-- The var keyword is used in all JavaScript code from 1995 to 2015.
-- The let and const keywords were added to JavaScript in 2015.
-- Var supports older browsers.
-
 ## Data Types
 
 In every programming language, values can have different types depending on the type of data we want them to hold. Earlier we looked at string and numbers but there are other data types.
@@ -248,7 +252,7 @@ In JavaScript, every value is either an **object** or **primitive** data type.
 
 ### 1. Number:
 
-Floating point numbers are used for decimals and integer.
+These are called floating point numbers, which means every number has a decimal point. For example the number **23** is actually seen as **23.0** Numbers are decimals and integer.
 
 ```js
 let js = 23;
@@ -324,7 +328,7 @@ These data types is used for large integers that the `number` data type can't ho
 
 It's also good to know that JavaScript has a feature called dynamic typing which means when you create a new variable, you don't need to define the data type of the value of that variable. This is a feature unique to JavaScript as other languages will require you to determine the data type.
 
-This distinction between data and the variable is pretty important because in JavaScript, it's the value that has the type, not the variable.
+This distinction between data type and the variable is pretty important because in JavaScript, it's the value that has the type, not the variable.
 
 Another important thing to note about dynamic types is that variables can be assigned a new value with a different data type without any problems.  
 **For Example**
@@ -358,6 +362,14 @@ There are basically 3 main ways of declaring a variable, which includes:
 - var
 
 `let` and `const` were both introduced in ES6 so they are modern JavaScript while the `var` keyword is the old way of declaring variables. Let's learn the differences and which one to use in which situation.
+
+### When to Use JavaScript var?
+
+Always declare JavaScript variables with var, let, or const.
+
+- The var keyword is used in all JavaScript code from 1995 to 2015.
+- The let and const keywords were added to JavaScript in 2015.
+- Var supports older browsers.
 
 #### let
 
@@ -427,7 +439,7 @@ So by default, always use `const` and if you think the variable will have to cha
 
 ### var
 
-This was the old way of declaring variables before (ES6) was introduced in 2015. Even though it is not recommended to use the `var` keyword in this time, it is still good to understand how it works for legacy reasons because you may see this in older codebases or tutorial online.
+This was the old way of declaring variables before (ES6) was introduced in 2015. Even though it is not recommended to use the `var` keyword in this time, it is still good to understand how it works for legacy reasons because you may see this in older codebases or tutorials online.
 
 **For Example:**
 
@@ -547,7 +559,7 @@ console.log(x);
 
 ### Comparison Operators
 
-We use these operators to produce `BOOLEAN` values.
+We use this operator to produce `BOOLEAN` values.
 
 ```js
 console.log(ageEke > ageSarah);
