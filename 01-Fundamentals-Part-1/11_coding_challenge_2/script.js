@@ -1,4 +1,4 @@
-// Coding challenege #2
+// ! Coding challenege #2
 
 /*
 Use the BMI example from Challenege #1, and the code you already wrote, and improve it:
@@ -24,11 +24,15 @@ const heightJohn = 1.95;
 // const massJohn = 85;
 // const heightJohn = 1.76;
 
-const markBMI = massMark / heightMark ** 2;
-const johnBMI = massJohn / heightJohn ** 2;
+const johnBMI = massJohn / (heightJohn * heightJohn);
+const markBMI = massMark / (heightMark * heightMark);
 
 if (markBMI > johnBMI) {
-  console.log(`Mark's BMI (${markBMI}) is higher than John's! (${johnBMI}) 💚`);
+  console.log(
+    `Mark's BMI (${markBMI}) is higher than John's BMI (${johnBMI}) 💙`
+  );
 } else {
-  console.log(`John's BMI (${johnBMI}) is higher than Mark's! (${markBMI}) ❤️`);
+  console.log(
+    `John's BMI (${johnBMI}) is higher than Mark's BMI (${markBMI}) 💜`
+  );
 }
