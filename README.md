@@ -324,7 +324,7 @@ This data type simply means, value that is unique and cannot be changed. _(Not u
 
 These data types is used for large integers that the `number` data type can't hold. So it's basically another type for numbers.
 
-## Dynamic Typing
+### Dynamic Typing
 
 It's also good to know that JavaScript has a feature called dynamic typing which means when you create a new variable, you don't need to define the data type of the value of that variable. This is a feature unique to JavaScript as other languages will require you to determine the data type.
 
@@ -648,7 +648,7 @@ Here we are calculating the average value of `ageEke` & `ageSarah` and dividing 
 Result would be:
 **40 19 49.5**
 
-## 🎉Coding Challenge 1
+## 🎉 Coding Challenge 1
 
 ```js
 Mark and John are trying to compare their BMI (Body Mass Index),
@@ -664,7 +664,7 @@ TEST DATA 2: Marks weights 95 kg and is 1.88 m tall. John weights 85 kg and is 1
 GOOD LUCK 😀
 ```
 
-## Solution
+## 🎉 Solution
 
 ```js
 // --------- TEST DATA 1 ------------
@@ -693,7 +693,7 @@ const markHigherBMI = BMImark > BMIjohn;
 console.log(BMImark, BMIjohn, markHigherBMI);
 ```
 
-## Strings & Template Literals
+## 12. Strings & Template Literals
 
 Strings are a very important part of programming and this section will understand what template literals is and how to build strings better and faster.
 
@@ -766,7 +766,7 @@ multiple
 lines`);
 ```
 
-## Conditional Staements - if else
+## 13. Conditional Staements - if else
 
 Conditional statements are used to perform different actions based on different conditions.
 
@@ -848,7 +848,7 @@ console.log(century);
 
 It is good to note that, any variable defined inside a code block will not be accessible outside of the code block.
 
-## 🎉Coding Challenge 2
+## 🎉 Coding Challenge 2
 
 ```
 Use the BMI example from Challenege #1, and the code you already wrote, and improve it:
@@ -891,7 +891,7 @@ if (markBMI > johnBMI) {
 }
 ```
 
-## Type Conversion and Coercion
+## 14. Type Conversion and Coercion
 
 Types are one of the fundamentals aspect of programming and converting between them is something we do in every programming language.
 
@@ -1007,7 +1007,7 @@ console.log("23" > "18"); // Result will be true
 
 ```js
 let n = "1" + 1; // n = "11"
-n = n - 1;
+n = n - 1; // 11 - 1 Minus operator converts string to number
 console.log(n); // n = 10
 ```
 
@@ -1019,7 +1019,7 @@ console.log(2 + 3 + 4 + "5"); // result will be "95"
 console.log("10" - "4" - "3" - 2 + "5"); // Result will be "15";
 ```
 
-## Truthy & Falsy Values
+## 15. Truthy & Falsy Values
 
 Falsy values are values that are not exactly false but will become false when they are converted to a **Boolean**. In JavaScript there are over 5 falsy values:
 
@@ -1036,11 +1036,11 @@ These 5 values are not exactly false initially but will become false when we try
 Everything else are called: Truthy values. Basically any number that is not `0`, or any string that is not empty will be true when we try to convert them to a Boolean.
 
 ```js
-console.log(Boolean(0)); // With a number = false
+console.log(Boolean(0)); // With the number 0 = false
 console.log(Boolean(undefined)); // With undefined  = false
 console.log(Boolean("Eke")); // With a string = true
-console.log(Boolean({})); // With an empty object = true
 console.log(Boolean("")); // With an empty string = false
+console.log(Boolean({})); // With an empty object = true
 ```
 
 In practice, we rarely use the above concept. Conversion to Boolean values is usually done implicitly in other words, it is by type coercion and not conversion.
@@ -1073,14 +1073,14 @@ if (height) {
 }
 ```
 
-In the example above code, height is undefined, because we didn't assign it any value yet and we know from the list we shared earlier, undefined is a falsy value, the height will be converted to a Boolean and the else block will be executed.
+In the example above, height is undefined, because we didn't assign it any value yet and we know from the list we shared earlier, undefined is a falsy value, the height will be converted to a Boolean and the else block will be executed.
 
-If we assign a value to the height, this will execute the if `statement`
+If we assign a value to the height, this will execute the if block.
 
 ```js
 let height = 100;
 ```
 
-But we may run into problems with this. For example, if the `height: 0`, (which is a falsy value) the output will be the `else` block. And this is a bug in our code because we didn't account for the height to be 0 and the result is undefined even though that is not true.
+But we may run into problems with this. For example, if the `height: 0` (which is a falsy value), the output will be the `else` block. And this is a bug in our code because we didn't account for the height to be 0 and the result is undefined even though that is not true.
 
 However we can fix this using something called `logical operators` which we'll check later.
