@@ -1219,7 +1219,7 @@ Note that Boolean logic is not specific to only JavaScript but true to all other
 
 Let's use an example to illustrate:
 
-`<img src="" width="100px" alt="Sarah has a driver's license and Sarah has good vision">`
+<img src="https://user-images.githubusercontent.com/62628408/165135822-c5936d06-77d1-4423-8248-f873f335b885.png" width="300px" alt="Sarah has a driver's license and Sarah has good vision">
 
 In the example above, we have two `Boolean` variables that can either be true or false, because
 
@@ -1235,7 +1235,7 @@ and of course on the other hand,
 
 Now using the `AND` operator like `A and B`, we can combine these two Boolean varaible like "Sarah has a driver's license `And` good vision and the result can be gotten using something called: "Truth Table".
 
-`<img src="" width="100px" alt="And operator">`
+<img src="https://user-images.githubusercontent.com/62628408/165135933-b3a337f2-d7a2-4c88-8c14-f5c64d6c1aa1.png" width="300px" alt="And operator">
 
 Here we have the two possible values for each of the varaibles, `A & B`, which gives us four possible combination or results. From the table, we can see that only if `A and B` are true will the result of the operation be true as well. Afterall, it's called the `And` operator.
 
@@ -1248,7 +1248,7 @@ The `OR` operator works in the opposite way. With the current example, we could 
 The `Or` operator would be true if just one of the varaibles is true,
 and if we look at the truth table, we can confirm that.
 
-`<img src="" width="100px" alt="Or operator">`
+<img src="https://user-images.githubusercontent.com/62628408/165137086-332680f4-7733-47c3-87e9-431e435fa81a.png" width="200px" alt="Or operator">
 
 So unlike the `And` operator, even if one of the the variables is false, the outcome will still be true. And if we have multiple variables, it is enough for one of them to be true to make the whole operation true as well.
 
@@ -1272,7 +1272,7 @@ age = 16;
 
 If `age = 16;` then `A` would be false and `B` true, because 16 is lesser than 20 and 30.
 
-`<img src="" width="100px" alt="Logical operators example">`
+<img src="https://user-images.githubusercontent.com/62628408/165136271-5958059d-3227-4f64-8637-8e272292a978.png" width="500px" alt="Logical operators example">
 
 That's the basic explanation. Now let's combine these variables using the logical operators.
 
