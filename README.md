@@ -1206,3 +1206,5 @@ if (favNumber !== 23) console.log("Why not 23?");
 Now if we input a value that is not 23, the result in the console will be "Why not 23?" because we have specified a condition if the value is not `23`. What if we use the 23, then we won't have any result on the console concerning the different operator block of code.
 
 Sometimes we need the equality operator and sometimes we need the different operator, just choose whatever you need to solve any particular problem. In both cases, make sure you always use the strict version of the operator.
+
+## Boolean Logic
