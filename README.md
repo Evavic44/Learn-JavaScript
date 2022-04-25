@@ -766,7 +766,7 @@ multiple
 lines`);
 ```
 
-## 13. Conditional Staements - if else
+## 13. Conditional Statements - if else
 
 Conditional statements are used to perform different actions based on different conditions.
 
