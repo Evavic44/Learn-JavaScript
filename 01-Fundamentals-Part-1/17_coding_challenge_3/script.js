@@ -25,16 +25,84 @@ Koalas score 109, 95, and 106
 GOOD LUCK 🙂
 */
 
-// Solution
+// =============== MY SOLUTION ========================
+// =============== MY SOLUTION ========================
 
-// Teams
-const dolphinsScoreOne = 96;
-const dolphinsScoreTwo = 108;
-const dolphinsScoreThree = 89;
+// Solution One 😁✅ // Got this right
+const dolphins = (96 + 108 + 89) / 3;
+const koalas = (88 + 91 + 110) / 3;
 
-const koalasScoreOne = 88;
-const koalasScoreTwo = 91;
-const koalasScoreThree = 110;
+console.log(dolphins, koalas);
 
-const dolphinsAvgScore = 96 + 108 + 89 / 3;
-const koalasAvgScore = 88 + 91 + 110 / 3;
+if (dolphins > koalas) {
+  console.log("Dolphins won the competition! 🐬");
+} else if (dolphins < koalas) {
+  console.log("Koalas won the competition! 🐨");
+} else if (dolphins === koalas) {
+  console.log("The match is a draw! 🤝🏽");
+} else {
+  console.log("Nobody Won!");
+}
+
+// Bonus 1 😭❌ // Got this wrong
+const dolphinsOne = (97 + 112 + 101) / 3;
+const koalasOne = (109 + 95 + 123) / 3;
+const hasMinimumScore = 100;
+
+console.log(dolphinsOne, koalasOne);
+
+if (dolphinsOne > koalasOne && hasMinimumScore) {
+  console.log("Dolphins won the competition! 🐬");
+} else if (dolphinsOne < koalasOne && hasMinimumScore) {
+  console.log("Koalas won the competition! 🐨");
+} else if (dolphinsOne === koalasOne) {
+  console.log("The match is a draw! 🤝🏽");
+} else {
+  console.log("Nobody Won!");
+}
+
+// Bonus 2 😭❌ // Got this wrong
+const dolphinsTwo = (97 + 112 + 101) / 3;
+const koalasTwo = (109 + 95 + 106) / 3;
+const score = 100;
+
+if (dolphinsTwo === koalasTwo) {
+  console.log("Game is a draw", dolphinsTwo, koalasTwo);
+} else if (dolphinsTwo >= score) {
+  console.log("Dolphins Won!");
+} else if (koalasTwo >= score) {
+  console.log("Koalas Won!");
+}
+
+// =============== JONAS'S SOLUTION ========================
+// =============== JONAS'S SOLUTION ========================
+
+// const scoreDolphins = (96 + 108 + 89) / 3;
+// const scoreKoalas = (88 + 91 + 110) / 3;
+// console.log(scoreDolphins, scoreKoalas);
+
+// if (scoreDolphins > scoreKoalas) {
+//   console.log("Dolphins win the trophy 🏆");
+// } else if (scoreKoalas > scoreDolphins) {
+//   console.log("Koalas win the trophy 🏆");
+// } else if (scoreDolphins === scoreKoalas) {
+//   console.log("Both win the trophy!");
+// }
+
+const scoreDolphins = (97 + 112 + 101) / 3;
+const scoreKoalas = (109 + 95 + 106) / 3;
+console.log(scoreDolphins, scoreKoalas);
+
+if (scoreDolphins > scoreKoalas && scoreDolphins >= 100) {
+  console.log("Dolphins win the trophy 🏆");
+} else if (scoreKoalas > scoreDolphins && scoreKoalas >= 100) {
+  console.log("Koalas win the trophy 🏆");
+} else if (
+  scoreDolphins === scoreKoalas &&
+  scoreDolphins >= 100 &&
+  scoreKoalas >= 100
+) {
+  console.log("Both win the trophy!");
+} else {
+  console.log("No one wins the trophy 😭");
+}
