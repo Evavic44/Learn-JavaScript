@@ -1,6 +1,6 @@
 /*
 There are two gymnastics teams, Dolphins and Koalas.
-They compete against each other 3 times. The winner with the highest average score wins a trophy!
+They compete against each other 3 times. The team with the highest average score wins the trophy!
 
 1. Calculate the average score for each team, using the test data below.
 
