@@ -22,12 +22,12 @@
 - 📄 [What do we use JavaScript for]()
 - 📄 [JavaScript Releases]()
 
-## 2️. How to link JavaScript file
+## 2. How to link JavaScript file
 
 - 🟡 [Inline Linking]()
 - 🟡 [External Linking]()
 
-## 3️. Values and Variables
+## 3. Values and Variables
 
 - 📄 [Definition of Values]()
 - 📄 [Definition of Variables]()
@@ -35,13 +35,13 @@
 - 🟡 [Rules and Reserved Keywords]()
 - 🟡 [Code File]()
 
-## 4️. Data Types
+## 4. Data Types
 
 - 📄 [Definition of Data Types]()
 - 📄 [The 7 Primitive Data Types]()
 - 🟡 [Code File]()
 
-## 5️. Let, Const, Var
+## 5. Let, Const, Var
 
 - 📄 [Ways to declare a Variable]()
 - 📄 [When to use Var]()
@@ -50,7 +50,7 @@
 - 📄 [Let or Const]()
 - 🟡 [Code File]()
 
-## 6️. Operators
+## 6. Operators
 
 - 📄 [Basic Operators]()
 - 📄 [Arithimetic Operators]()
@@ -58,24 +58,24 @@
 - 📄 [Comparison Operators]()
 - 🟡 [Code File]()
 
-## 7️. Operator Precedence
+## 7. Operator Precedence
 
 - 📄 [Definition of Operator Precedence]()
 - 🔗 [MDN Docs Reference]()
 - 🟡 [Code File]()
 
-## 8️. Coding Challenge One 🎉
+## 8. Coding Challenge One 🎉
 
 - 📄 [Coding Challenge]()
 - 🟡 [Solution]()
 
-## 9️. String & Template Literals
+## 9. String & Template Literals
 
 - 📄 [Strings]()
 - 📄 [Template Literals]()
 - 🟡 [Code File]()
 
-## 1️0. Taking Decisions (If/Else)
+## 10. Taking Decisions (If/Else)
 
 - 📄 [Conditional Statements]()
 - 📄 [If Statement]()
@@ -83,31 +83,31 @@
 - 📄 [Else If Statement]()
 - 🟡 [Code File]()
 
-## 1️1. Coding Challenge Two 🎉
+## 11. Coding Challenge Two 🎉
 
 - 📄 [Coding Challenge]()
 - 🟡 [Solution]()
 
-## 1️2. Type Conversion & Coercion
+## 12. Type Conversion & Coercion
 
 - 📄 [Definition]()
 - 📄 [Type Conversion]()
 - 📄 [Type Coercion]()
 - 🟡 [Code File]()
 
-## 1️3️. Truthy & Falsy Values
+## 13. Truthy & Falsy Values
 
 - 📄 [Definition of Truthy & Falsy Values]()
 - 🟡 [Code File]()
 
-## 1️4️. Equality Operator
+## 14. Equality Operator
 
 - 📄 [Strict Equality Operator ===]()
 - 📄 [Loose Equality Operator ==]()
 - 📄 [Differential Equality Operator !==]()
 - 🟡 [Code File]()
 
-## 1️5️. Boolean Logic
+## 15. Boolean Logic
 
 - 📄 [Defintion of Boolean Logic]()
 - 📄 [AND Operator]()
@@ -116,34 +116,34 @@
 - 📄 [How do Logical Operators Work?]()
 - 🟡 [Code File]()
 
-## 1️6️. Logical Operators
+## 16. Logical Operators
 
 - 📄 [Definition of Logical Operators]()
 - 🟡 [Code File]()
 
-## 1️7️. Coding Challenge Three 🎉
+## 17. Coding Challenge Three 🎉
 
 - 📄 [Coding Challenge]()
 - 🟡 [Solution]()
 
-## 1️8️. Switch Statement
+## 18. Switch Statement
 
 - 📄 [What are Switch Statements?]()
 - 📄 [Break]()
 - 📄 [Default]()
 - 🟡 [Code File]()
 
-## 1️9️. Statements & Expressions
+## 19. Statements & Expressions
 
 - 📄 [Introduction to Statements & Expression]()
 - 🟡 [Code File]()
 
-## 2️0️. Conditional (Ternary) Operator
+## 20. Conditional (Ternary) Operator
 
 - 📄 [Introduction to Ternary Operator]()
 - 🟡 [Code File]()
 
-## 2️1️. Coding Challenge Four 🎉
+## 21. Coding Challenge Four 🎉
 
 - 📄 [Coding Challenge]()
 - 🟡 [Solution]()
