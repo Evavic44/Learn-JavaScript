@@ -9,15 +9,141 @@
 - <a href="https://www.udemy.com/course/the-complete-javascript-course/">The Complete JavaScript Course 2022: From Zero to Expert!</a>
 - <a href="https://github.com/jonasschmedtmann/complete-javascript-course">GitHub Repository</a>
 
-## Books and Articles.
+# Books and Articles.
 
 - <a href="https://eloquentjavascript.net/">Eloquent JavaScript</a> by <a href="https://twitter.com/MarijnJH?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor">Martin Haverbeke</a>
 
-## What is JavaScript?
+# 01. 🔸Fundamentals Part 1🔸
 
-JavaScript is a High level, object oriented, multi-paradigm programming language.
+## 1️⃣ Introduction
 
-- A programming language is a tool that allows one to write code that will instruct a computer to do something.
-- JavaScript is a high level language, which means that we don't have to worry about a lot of stuff like managing a computer's memory while it runs. Which makes JavaScript easier to write and learn.
-- JavaScript is object oriented which means the language is mostly based on objects for storing data.
-- JavaScript is also a multi paradigm language meaning that it is so flexible and versartile that we can use all kinds of different programming styles. And this styles are just ways of structuring our code.
+- 📄 [What is JavaScript]()
+- 🟡 [Hello World in JavaScript]()
+- 📄 [What do we use JavaScript for]()
+- 📄 [JavaScript Releases]()
+
+## 2️⃣ How to link JavaScript file
+
+- 🟡 [Inline]()
+- 🟡 [External Script File]()
+
+## 3️⃣ Values and Variables
+
+- 📄 [Definition of Values]()
+- 📄 [Definition of Variables]()
+- 🟡 [Variable Naming Convention]()
+- 🟡 [Rules and Reserved Keywords]()
+- 🟡 [Code File]()
+
+## 4️⃣ Data Types
+
+- 📄 [Definition of Data Types]()
+- 📄 [The 7 Primitive Data Types]()
+- 🟡 [Code File]()
+
+## 5️⃣ Let, Const, Var
+
+- 📄 [Ways to declare a Variable]()
+- 📄 [When to use Var]()
+- 📄 [Let]()
+- 📄 [Const]()
+- 📄 [Let or Const]()
+- 🟡 [Code File]()
+
+## 6️⃣ Operators
+
+- 📄 [Basic Operators]()
+- 📄 [Arithimetic Operators]()
+- 📄 [Assignment Operators]()
+- 📄 [Comparison Operators]()
+- 🟡 [Code File]()
+
+## 7️⃣ Operator Precedence
+
+- 📄 [Definition of Operator Precedence]()
+- 🔗 [MDN Docs Reference]()
+- 🟡 [Code File]()
+
+## 8️⃣ Coding Challenge 1 🎉
+
+- 📄 [Coding Challenge]()
+- 🟡 [Solution]()
+
+## 9️⃣ String & Template Literals
+
+- 📄 [Strings]()
+- 📄 [Template Literals]()
+- 🟡 [Code File]()
+
+## 1️⃣0️⃣ Taking Decisions (If/Else)
+
+- 📄 [Conditional Statements]()
+- 📄 [If Statement]()
+- 📄 [Else Statement]()
+- 📄 [Else If Statement]()
+- 🟡 [Code File]()
+
+## 1️⃣1️⃣ Coding Challenge 2 🎉
+
+- 📄 [Coding Challenge]()
+- 🟡 [Solution]()
+
+## 1️⃣2️⃣ Type Conversion & Coercion
+
+- 📄 [Definition]()
+- 📄 [Type Conversion]()
+- 📄 [Type Coercion]()
+- 🟡 [Code File]()
+
+## 1️⃣3️⃣ Truthy & Falsy Values
+
+- 📄 [Definition of Truthy & Falsy Values]()
+- 🟡 [Code File]()
+
+## 1️⃣4️⃣ Equality Operator
+
+- 📄 [Strict Equality Operator ===]()
+- 📄 [Loose Equality Operator ==]()
+- 📄 [Differential Equality Operator !==]()
+- 🟡 [Code File]()
+
+## 1️⃣5️⃣ Boolean Logic
+
+- 📄 [Defintion of Boolean Logic]()
+- 📄 [AND Operator]()
+- 📄 [OR Operator]()
+- 📄 [NOT Operator]()
+- 📄 [How do Logical Operators Work?]()
+- 🟡 [Code File]()
+
+## 1️⃣6️⃣ Logical Operators
+
+- 📄 [Definition of Logical Operators]()
+- 🟡 [Code File]()
+
+## 1️⃣7️⃣ Coding Challenge 3 🎉
+
+- 📄 [Coding Challenge]()
+- 🟡 [Solution]()
+
+## 1️⃣8️⃣ Switch Statement
+
+- 📄 [What are Switch Statements?]()
+- 📄 [Break]()
+- 📄 [Default]()
+- 🟡 [Code File]()
+
+## 1️⃣9️⃣ Statements & Expressions
+
+- 📄 [Introduction to Statements & Expression]()
+- 🟡 [Code File]()
+
+## 2️⃣0️⃣ Conditional (Ternary) Operator
+
+- 📄 [Introduction to Ternary Operator]()
+- 🟡 [Code File]()
+
+## 2️⃣1️⃣ Coding Challenge 4 🎉
+
+- 📄 [Coding Challenge]()
+- 🟡 [Solution]()
