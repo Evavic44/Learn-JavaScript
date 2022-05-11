@@ -13,21 +13,21 @@
 
 - <a href="https://eloquentjavascript.net/">Eloquent JavaScript</a> by <a href="https://twitter.com/MarijnJH?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor">Martin Haverbeke</a>
 
-# 01. 🔸Fundamentals Part 1🔸
+# 1️⃣ 🔸Fundamentals Part 1🔸
 
-## 1️⃣ Introduction
+## 1. Introduction
 
 - 📄 [What is JavaScript]()
 - 🟡 [Hello World in JavaScript]()
 - 📄 [What do we use JavaScript for]()
 - 📄 [JavaScript Releases]()
 
-## 2️⃣ How to link JavaScript file
+## 2️. How to link JavaScript file
 
-- 🟡 [Inline]()
-- 🟡 [External Script File]()
+- 🟡 [Inline Linking]()
+- 🟡 [External Linking]()
 
-## 3️⃣ Values and Variables
+## 3️. Values and Variables
 
 - 📄 [Definition of Values]()
 - 📄 [Definition of Variables]()
@@ -35,13 +35,13 @@
 - 🟡 [Rules and Reserved Keywords]()
 - 🟡 [Code File]()
 
-## 4️⃣ Data Types
+## 4️. Data Types
 
 - 📄 [Definition of Data Types]()
 - 📄 [The 7 Primitive Data Types]()
 - 🟡 [Code File]()
 
-## 5️⃣ Let, Const, Var
+## 5️. Let, Const, Var
 
 - 📄 [Ways to declare a Variable]()
 - 📄 [When to use Var]()
@@ -50,7 +50,7 @@
 - 📄 [Let or Const]()
 - 🟡 [Code File]()
 
-## 6️⃣ Operators
+## 6️. Operators
 
 - 📄 [Basic Operators]()
 - 📄 [Arithimetic Operators]()
@@ -58,24 +58,24 @@
 - 📄 [Comparison Operators]()
 - 🟡 [Code File]()
 
-## 7️⃣ Operator Precedence
+## 7️. Operator Precedence
 
 - 📄 [Definition of Operator Precedence]()
 - 🔗 [MDN Docs Reference]()
 - 🟡 [Code File]()
 
-## 8️⃣ Coding Challenge 1 🎉
+## 8️. Coding Challenge One 🎉
 
 - 📄 [Coding Challenge]()
 - 🟡 [Solution]()
 
-## 9️⃣ String & Template Literals
+## 9️. String & Template Literals
 
 - 📄 [Strings]()
 - 📄 [Template Literals]()
 - 🟡 [Code File]()
 
-## 1️⃣0️⃣ Taking Decisions (If/Else)
+## 1️0. Taking Decisions (If/Else)
 
 - 📄 [Conditional Statements]()
 - 📄 [If Statement]()
@@ -83,31 +83,31 @@
 - 📄 [Else If Statement]()
 - 🟡 [Code File]()
 
-## 1️⃣1️⃣ Coding Challenge 2 🎉
+## 1️1. Coding Challenge Two 🎉
 
 - 📄 [Coding Challenge]()
 - 🟡 [Solution]()
 
-## 1️⃣2️⃣ Type Conversion & Coercion
+## 1️2. Type Conversion & Coercion
 
 - 📄 [Definition]()
 - 📄 [Type Conversion]()
 - 📄 [Type Coercion]()
 - 🟡 [Code File]()
 
-## 1️⃣3️⃣ Truthy & Falsy Values
+## 1️3️. Truthy & Falsy Values
 
 - 📄 [Definition of Truthy & Falsy Values]()
 - 🟡 [Code File]()
 
-## 1️⃣4️⃣ Equality Operator
+## 1️4️. Equality Operator
 
 - 📄 [Strict Equality Operator ===]()
 - 📄 [Loose Equality Operator ==]()
 - 📄 [Differential Equality Operator !==]()
 - 🟡 [Code File]()
 
-## 1️⃣5️⃣ Boolean Logic
+## 1️5️. Boolean Logic
 
 - 📄 [Defintion of Boolean Logic]()
 - 📄 [AND Operator]()
@@ -116,34 +116,34 @@
 - 📄 [How do Logical Operators Work?]()
 - 🟡 [Code File]()
 
-## 1️⃣6️⃣ Logical Operators
+## 1️6️. Logical Operators
 
 - 📄 [Definition of Logical Operators]()
 - 🟡 [Code File]()
 
-## 1️⃣7️⃣ Coding Challenge 3 🎉
+## 1️7️. Coding Challenge Three 🎉
 
 - 📄 [Coding Challenge]()
 - 🟡 [Solution]()
 
-## 1️⃣8️⃣ Switch Statement
+## 1️8️. Switch Statement
 
 - 📄 [What are Switch Statements?]()
 - 📄 [Break]()
 - 📄 [Default]()
 - 🟡 [Code File]()
 
-## 1️⃣9️⃣ Statements & Expressions
+## 1️9️. Statements & Expressions
 
 - 📄 [Introduction to Statements & Expression]()
 - 🟡 [Code File]()
 
-## 2️⃣0️⃣ Conditional (Ternary) Operator
+## 2️0️. Conditional (Ternary) Operator
 
 - 📄 [Introduction to Ternary Operator]()
 - 🟡 [Code File]()
 
-## 2️⃣1️⃣ Coding Challenge 4 🎉
+## 2️1️. Coding Challenge Four 🎉
 
 - 📄 [Coding Challenge]()
 - 🟡 [Solution]()
