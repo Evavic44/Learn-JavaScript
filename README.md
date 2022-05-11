@@ -148,3 +148,11 @@
 
 - 📄 [Coding Challenge]()
 - 🟡 [Solution]()
+
+## 22. JavaScript Releases (ES5, ES6+ and ESNext)
+
+- 📄 [A Brief History of JavaScript]()
+- 📄 [ES6/ES2015 (ECMAScript 2015)]()
+- 📄 [Backwards Compatibility]()
+- 📄 [Forwards Compatibility]()
+- 📄 [Babel (Transpiler)]()
