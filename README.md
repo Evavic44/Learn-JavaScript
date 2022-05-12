@@ -18,10 +18,10 @@
 
 ## 1. Introduction
 
-- 📄 [What is JavaScript]()
-- 🟡 [Hello World in JavaScript]()
-- 📄 [What do we use JavaScript for]()
-- 📄 [JavaScript Releases]()
+- 📄 [What is JavaScript](https://github.com/Mount-Blanc/Learn-JavaScript/tree/main/01-Fundamentals-Part-1/00_introduction#what-is-javascript)
+- 🟡 [Hello World in JavaScript](https://github.com/Mount-Blanc/Learn-JavaScript/blob/main/01-Fundamentals-Part-1/01_hello_world/Hello_world.js)
+- 📄 [What do we use JavaScript for](https://github.com/Mount-Blanc/Learn-JavaScript/tree/main/01-Fundamentals-Part-1/01_hello_world#what-do-we-use-javascript-for)
+- 📄 [JavaScript Releases](https://github.com/Mount-Blanc/Learn-JavaScript/tree/main/01-Fundamentals-Part-1/01_hello_world#javascript-releases)
 
 ## 2. How to link JavaScript file
 
