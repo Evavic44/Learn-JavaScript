@@ -41,6 +41,8 @@ ECMAScript will keep releasing new features in JavaScript every year until the e
 
 ### Backwards Compatibility
 
+<img src="" alt="backwards compaibility">
+
 JavaScript is backwards-compatible. This means that once something is accepted as valid JS, there will not be a future change to the language that causes that code to become invalid JS. JS code written in 1995 - however primitive or limited - should still work now.
 
 The idea is that JS developers can write code with confidence that their code wouldn’t stop working unpredictably because a browser update is released.
@@ -49,6 +51,21 @@ The idea is that JS developers can write code with confidence that their code wo
 
 JS is not forwards-compatible. This means that including a new addition to the language in a program would cause that program to break if it were run in an older JS engine. So if you run a program that uses an ES2019 feature in an engine from 2016, the program will very likely break and crash.
 
-### Babel (Transpiler)
+### How to use Modern JavaScript Today?
+
+We need to understand how we can use Modern JavaScript today, and to answer this question, we need to consider two scenarios. Development and production.
+
+- During Development: Simply use the latest Google Chrome
+- During Production: Use Babel to transpile and polyfill your code (converting back to ES5 to ensure browser compatibility for all users.)
+
+We need to understand that the users may not be using the latest browsers so in other to fix that, we need to basically convert this modern JavaScript versions back to ES5 using a process called Transpiling or Polyfilling.
+
+#### Babel (Transpiler)
 
 Typically forwards-compatibility problems related to syntax are solved by using a transpiler to convert from a newer JS syntax to an equivalent older version. The most common transpiler being used is Babel, which is mainly used to convert ECMASCRIPT-2015+ code into backwards compatible version of JavaScript in current and older browsers or environments.
+
+### Compatibility Table
+
+This table helps you keep up-to date on JavaScript releases and what browsers these feature can work on.
+
+<img src="" alt="Compaibility Table">
