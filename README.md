@@ -158,3 +158,7 @@
 - 📄 [Babel (Transpiler)]()
 - 📄 [Compaibility Table]()
 - 📄 [How to use Modern JavaScript Today?]()
+
+### Assignment
+
+- 🟡 [Fundamentals Part 1 Assignment]()
