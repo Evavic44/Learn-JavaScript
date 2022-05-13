@@ -156,3 +156,5 @@
 - 📄 [Backwards Compatibility]()
 - 📄 [Forwards Compatibility]()
 - 📄 [Babel (Transpiler)]()
+- 📄 [Compaibility Table]()
+- 📄 [How to use Modern JavaScript Today?]()
