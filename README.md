@@ -158,3 +158,14 @@
 - 📄 [Babel (Transpiler)]()
 - 📄 [Compaibility Table]()
 - 📄 [How to use Modern JavaScript Today?]()
+
+# 2️⃣ 🔸Fundamentals Part 2🔸
+
+Welcome to JavaScript Fundamentals part two.
+
+## 01. Strict Mode
+
+- [What is Strict Mode](https://github.com/Evavic44/Learn-JavaScript/tree/main/02-Fundamentals-Part-2/00_strict_mode#what-is-strict-mode)
+- [How to Enable Strict Mode](https://github.com/Evavic44/Learn-JavaScript/tree/main/02-Fundamentals-Part-2/00_strict_mode#how-to-enable-strict-mode)
+- [Importance and Examples](https://github.com/Evavic44/Learn-JavaScript/tree/main/02-Fundamentals-Part-2/00_strict_mode#importance-and-examples)
+- 🟡 [Code File](https://github.com/Evavic44/Learn-JavaScript/tree/main/02-Fundamentals-Part-2/00_strict_mode/script.js)
