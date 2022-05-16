@@ -169,3 +169,9 @@ Welcome to JavaScript Fundamentals part two.
 - [How to Enable Strict Mode](https://github.com/Evavic44/Learn-JavaScript/tree/main/02-Fundamentals-Part-2/00_strict_mode#how-to-enable-strict-mode)
 - [Importance and Examples](https://github.com/Evavic44/Learn-JavaScript/tree/main/02-Fundamentals-Part-2/00_strict_mode#importance-and-examples)
 - 🟡 [Code File](https://github.com/Evavic44/Learn-JavaScript/tree/main/02-Fundamentals-Part-2/00_strict_mode/script.js)
+
+## 02. Functions
+
+- [What is a Function](https://github.com/Evavic44/Learn-JavaScript/tree/main/02-Fundamentals-Part-2/01_functions#what-is-a-function)
+
+- 🟡 [Code File](https://github.com/Evavic44/Learn-JavaScript/tree/main/02-Fundamentals-Part-2/01_functions/script.js)
