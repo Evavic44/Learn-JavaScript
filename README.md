@@ -173,5 +173,6 @@ Welcome to JavaScript Fundamentals part two.
 ## 02. Functions
 
 - [What is a Function](https://github.com/Evavic44/Learn-JavaScript/tree/main/02-Fundamentals-Part-2/01_functions#what-is-a-function)
-
+- [Parameters and Arguments](https://github.com/Evavic44/Learn-JavaScript/tree/main/02-Fundamentals-Part-2/01_functions#parameters-and-arguments)
+- [Conclusion](https://github.com/Evavic44/Learn-JavaScript/tree/main/02-Fundamentals-Part-2/01_functions#parameters-and-arguments)
 - 🟡 [Code File](https://github.com/Evavic44/Learn-JavaScript/tree/main/02-Fundamentals-Part-2/01_functions/script.js)

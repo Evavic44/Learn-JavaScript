@@ -47,7 +47,7 @@ const interface = "Audio";
 ```
 
 We can see JavaScript throws an error that `interface` is a reserved identifier, thanks to enabling the Strict mode.
-There are other reserved identifier, some we have alreadt looked at in section 1 when we learned about Naming conventions in JavaScript.
+There are other reserved identifier, some we have already looked at in section 1 when we learned about Naming conventions in JavaScript.
 
 ```js
 const private = "444";
