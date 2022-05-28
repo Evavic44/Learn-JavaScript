@@ -171,3 +171,10 @@ Welcome to JavaScript Fundamentals part two.
 - [Parameters and Arguments](https://github.com/Evavic44/Learn-JavaScript/tree/main/02-Fundamentals-Part-2/01_functions#parameters-and-arguments)
 - [Conclusion](https://github.com/Evavic44/Learn-JavaScript/tree/main/02-Fundamentals-Part-2/01_functions#conclusion)
 - [Code File](https://github.com/Evavic44/Learn-JavaScript/tree/main/02-Fundamentals-Part-2/01_functions/script.js)
+
+### 03. Function Decleration vs Expressions
+
+- [Function Declarations](https://github.com/Evavic44/Learn-JavaScript/tree/main/02-Fundamentals-Part-2/02_functions_declarations_expressions#function-declaration)
+- [Function Expressions](https://github.com/Evavic44/Learn-JavaScript/tree/main/02-Fundamentals-Part-2/02_functions_declarations_expressions#function-expression)
+- [Conclusion](https://github.com/Evavic44/Learn-JavaScript/tree/main/02-Fundamentals-Part-2/02_functions_declarations_expressions#conclusion)
+- [Code File](https://github.com/Evavic44/Learn-JavaScript/tree/main/02-Fundamentals-Part-2/02_functions_declarations_expressions/script.js)
