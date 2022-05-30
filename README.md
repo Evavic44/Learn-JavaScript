@@ -178,3 +178,8 @@ Welcome to JavaScript Fundamentals part two.
 - [Function Expressions](https://github.com/Evavic44/Learn-JavaScript/tree/main/02-Fundamentals-Part-2/02_functions_declarations_expressions#function-expression)
 - [Conclusion](https://github.com/Evavic44/Learn-JavaScript/tree/main/02-Fundamentals-Part-2/02_functions_declarations_expressions#conclusion)
 - [Code File](https://github.com/Evavic44/Learn-JavaScript/tree/main/02-Fundamentals-Part-2/02_functions_declarations_expressions/script.js)
+
+### 04. Arrow Function
+
+- [Arrow Function](https://github.com/Evavic44/Learn-JavaScript/tree/main/02-Fundamentals-Part-2/03_arrow_function#arrow-function)
+- [Code File](https://github.com/Evavic44/Learn-JavaScript/tree/main/02-Fundamentals-Part-2/03_arrow_function/script.js)
