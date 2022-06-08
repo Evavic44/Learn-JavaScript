@@ -34,20 +34,20 @@ const calcAgeTwo = function (birthYear) {
 };
 ```
 
-So all of these is an expression and remember that an expression produces a value and we used stored that value in a varaible, `calcAgeTwo`. Therefore, this variable now becomes the function. Now to call this function is the same way.
+So all of these is an expression and remember that an expression produces a value and we stored that value in a varaible, `calcAgeTwo`. Therefore, this variable now becomes the function. Now to call this function is the same way.
 
 ```js
 const ageTwo = calcAgeTwo(1997);
 console.log(ageTwo);
 ```
 
-The function expression works exactly the same way as the function decleration, we called it the same way, we captured it the same way and the result is actually the same because the function body is the same. It is important to know that we have these two types of functions in JavaScript because in some places, we will need to write functions in different ways.
+The function expression works exactly the same way as the function declaration, we called it the same way, we captured it the same way, and the result is actually the same because the function body is the same. It is important to know that we have these two types of functions in JavaScript because in some places, we will need to write functions in different ways.
 
 It is also good to note that functions in JavaScript are just values, it is not a string or a number but a value and since it's a value, we can store it into a variable.
 
 So finally, what's the big difference between function declarations and function expressions?
 
-So what's the big difference? The main practical difference is that we can actually call function declarations before they are defined in the code.
+The main practical difference is that we can actually call function declarations before they are defined in the code.
 
 For Example:
 

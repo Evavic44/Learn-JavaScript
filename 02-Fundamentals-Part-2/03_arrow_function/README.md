@@ -43,7 +43,7 @@ And then calculate the years before retirement (let's say the retirement age is 
 
 `const retirement = 65 - age;`
 
-Now to return this retirement, we actually need to wrtie the return keyword explicitly. We can only ommit the return when it is a one-liner function.
+Now we actually need to wrtie the return keyword explicitly. We can only ommit the return when it is a one-liner function.
 
 ```js
 const yearsUntilRetirement = (birthYear) => {
