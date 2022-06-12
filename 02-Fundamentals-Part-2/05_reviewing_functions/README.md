@@ -177,7 +177,7 @@ To fix this, we simply have to move the string above the return keyword and it w
 ## Summary 
 Now let's take a look at some of the things we've already learned about functions.
 
-[Functions](https://images.img)
+![Functions](https://user-images.githubusercontent.com/62628408/173243436-404b4fb7-4a1e-4982-ad60-5e75a3cf1bb3.png)
 
 In the diagram above, we can see all three types of functions:
 
