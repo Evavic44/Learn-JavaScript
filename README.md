@@ -183,3 +183,9 @@ Welcome to JavaScript Fundamentals part two.
 
 - [Arrow Function](https://github.com/Evavic44/Learn-JavaScript/tree/main/02-Fundamentals-Part-2/03_arrow_function#arrow-function)
 - [Code File](https://github.com/Evavic44/Learn-JavaScript/tree/main/02-Fundamentals-Part-2/03_arrow_function/script.js)
+
+### 05. Reviewing Functions
+- [Reviewing Functions](https://github.com/Evavic44/Learn-JavaScript/tree/main/02-Fundamentals-Part-2/04_reviewing_functions#reviewing-functions)
+- [Summary](https://github.com/Evavic44/Learn-JavaScript/tree/main/02-Fundamentals-Part-2/04_reviewing_functions#summary)
+- [Anatomy of a Function](https://github.com/Evavic44/Learn-JavaScript/tree/main/02-Fundamentals-Part-2/04_reviewing_functions#anatomy-of-a-function)
+- [Code File](https://github.com/Evavic44/Learn-JavaScript/tree/main/02-Fundamentals-Part-2/04_reviewing_functions/script.js)
