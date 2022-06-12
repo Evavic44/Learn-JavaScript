@@ -189,7 +189,7 @@ Welcome to JavaScript Fundamentals part two.
 - [Code File](https://github.com/Evavic44/Learn-JavaScript/tree/main/02-Fundamentals-Part-2/04_functions_calling_other_functions/script.js)
 
 ### 06. Reviewing Functions
-- [Reviewing Functions](https://github.com/Evavic44/Learn-JavaScript/tree/main/02-Fundamentals-Part-2/04_reviewing_functions#reviewing-functions)
-- [Summary](https://github.com/Evavic44/Learn-JavaScript/tree/main/02-Fundamentals-Part-2/04_reviewing_functions#summary)
-- [Anatomy of a Function](https://github.com/Evavic44/Learn-JavaScript/tree/main/02-Fundamentals-Part-2/04_reviewing_functions#anatomy-of-a-function)
-- [Code File](https://github.com/Evavic44/Learn-JavaScript/tree/main/02-Fundamentals-Part-2/04_reviewing_functions/script.js)
+- [Reviewing Functions](https://github.com/Evavic44/Learn-JavaScript/tree/main/02-Fundamentals-Part-2/05_reviewing_functions#reviewing-functions)
+- [Summary](https://github.com/Evavic44/Learn-JavaScript/tree/main/02-Fundamentals-Part-2/05_reviewing_functions#summary)
+- [Anatomy of a Function](https://github.com/Evavic44/Learn-JavaScript/tree/main/02-Fundamentals-Part-2/05_reviewing_functions#anatomy-of-a-function)
+- [Code File](https://github.com/Evavic44/Learn-JavaScript/tree/main/02-Fundamentals-Part-2/05_reviewing_functions/script.js)
