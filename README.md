@@ -146,13 +146,12 @@
 
 ### 22. JavaScript Releases (ES5, ES6+ and ESNext)
 
-- [A Brief History of JavaScript]()
-- [ES6/ES2015 (ECMAScript 2015)]()
-- [Backwards Compatibility]()
-- [Forwards Compatibility]()
-- [Babel (Transpiler)]()
-- [Compaibility Table]()
-- [How to use Modern JavaScript Today?]()
+- [A Brief History of JavaScript](https://github.com/Evavic44/Learn-JavaScript/tree/main/01-Fundamentals-Part-1/22_javascript_releases_ES5_ES6%2B_ESNext#a-brief-history-of-javascript)
+- [ES6/ES2015 (ECMAScript 2015)](https://github.com/Evavic44/Learn-JavaScript/tree/main/01-Fundamentals-Part-1/22_javascript_releases_ES5_ES6%2B_ESNext#2015)
+- [Backwards Compatibility](https://github.com/Evavic44/Learn-JavaScript/tree/main/01-Fundamentals-Part-1/22_javascript_releases_ES5_ES6%2B_ESNext#backwards-compatibility)
+- [Forwards Compatibility](https://github.com/Evavic44/Learn-JavaScript/tree/main/01-Fundamentals-Part-1/22_javascript_releases_ES5_ES6%2B_ESNext#forwards-compatibility)
+- [Babel (Transpiler)](https://github.com/Evavic44/Learn-JavaScript/tree/main/01-Fundamentals-Part-1/22_javascript_releases_ES5_ES6%2B_ESNext#babel-transpiler)
+- [Compaibility Table](https://kangax.github.io/compat-table/es6/)
 
 ## Fundamentals Part 2🔸
 
@@ -185,11 +184,19 @@ Welcome to JavaScript Fundamentals part two.
 - [Code File](https://github.com/Evavic44/Learn-JavaScript/tree/main/02-Fundamentals-Part-2/03_arrow_function/script.js)
 
 ### 05. Function Calling other Functions
+
 - [Functions calling other Functions](https://github.com/Evavic44/Learn-JavaScript/tree/main/02-Fundamentals-Part-2/04_functions_calling_other_functions#reviewing-functions)
 - [Code File](https://github.com/Evavic44/Learn-JavaScript/tree/main/02-Fundamentals-Part-2/04_functions_calling_other_functions/script.js)
 
 ### 06. Reviewing Functions
+
 - [Reviewing Functions](https://github.com/Evavic44/Learn-JavaScript/tree/main/02-Fundamentals-Part-2/05_reviewing_functions#reviewing-functions)
 - [Summary](https://github.com/Evavic44/Learn-JavaScript/tree/main/02-Fundamentals-Part-2/05_reviewing_functions#summary)
 - [Anatomy of a Function](https://github.com/Evavic44/Learn-JavaScript/tree/main/02-Fundamentals-Part-2/05_reviewing_functions#anatomy-of-a-function)
 - [Code File](https://github.com/Evavic44/Learn-JavaScript/tree/main/02-Fundamentals-Part-2/05_reviewing_functions/script.js)
+
+### 07. Coding Challenge Five 🎉
+
+- [Coding Challenge](https://github.com/Evavic44/Learn-JavaScript/tree/main/02-Fundamentals-Part-2/06_coding_challenge)
+- [Solution](https://github.com/Evavic44/Learn-JavaScript/blob/main/02-Fundamentals-Part-2/06_coding_challenge/script.js)
+  git
