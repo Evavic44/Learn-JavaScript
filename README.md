@@ -199,4 +199,9 @@ Welcome to JavaScript Fundamentals part two.
 
 - [Coding Challenge](https://github.com/Evavic44/Learn-JavaScript/tree/main/02-Fundamentals-Part-2/06_coding_challenge)
 - [Solution](https://github.com/Evavic44/Learn-JavaScript/blob/main/02-Fundamentals-Part-2/06_coding_challenge/script.js)
-  git
+
+### 08. Introduction to Arrays
+
+- [Introduction to Arrays](https://github.com/Evavic44/Learn-JavaScript/tree/main/02-Fundamentals-Part-2/07_introduction_to_arrays)
+- [Exercise](https://github.com/Evavic44/Learn-JavaScript/tree/main/02-Fundamentals-Part-2/07_introduction_to_arrays)
+- [Code File](https://github.com/Evavic44/Learn-JavaScript/blob/main/02-Fundamentals-Part-2/07_introduction_to_arrays/script.js)
