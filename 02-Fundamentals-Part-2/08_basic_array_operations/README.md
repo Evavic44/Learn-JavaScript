@@ -100,7 +100,7 @@ console.log(friends);
 ["Michael", "Steven"];
 ```
 
-## indexOf() method
+## indexOf method
 
 This method tells us where an element is at in an array.
 
@@ -145,4 +145,4 @@ if (friends.includes("Steven")) {
 }
 ```
 
-This of coure will check the array for the string `"Steven", and if it is found, the result will be true, which will return the if statement.`
+This of course will check the array for the string `"Steven"`, and if it is found, the result will be true, which will return the if statement.`

@@ -1,54 +1,38 @@
-// Add Elements
-
-// Push = Add elements to the end of an array.
+// ARRAY METHOD
 const friends = ["Michael", "Steven", "Peter"];
+console.log(friends);
+
+// [Length] Sets or returns the number of elements in an array
+console.log(friends.length);
+
+// [Push] - Add elements to the end of an array
 friends.push("Jay");
 console.log(friends);
 
-// Get total number of values in the array.
-const newLength = friends.push("Jay");
-console.log(newLength);
-
-// Push = Add elements to the beginnig of an array.
+// [Unshift] - Add elements to the beginning of an array
 friends.unshift("John");
 console.log(friends);
 
-// Remove Elements
-
-// Pop = Remove elements at the end of an array.
+// [Pop] - Removes last element of the array
 friends.pop();
-friends.pop();
-console.log(friends);
-
-// Return last removed element
 const popped = friends.pop();
 console.log(popped);
-console.log(friends);
 
-// Return first removed element
+// [Shift] - Removes first element of the array
 friends.shift();
 console.log(friends);
 
-// indexOf() = Tells us which position an element is at in an array.
-console.log(friends.indexOf("Steven"));
+// [IndexOf] - Tells us the position of an element in the array.
+console.log(friends.indexOf("Michael"));
 
 // Returns -1 if we check an element that is not in the array.
 console.log(friends.indexOf("Bob"));
 
-// includes() = Tells us if an element is in an array. Returns a boolean value using the strict equality.
-
-console.log(friends.includes("Steven"));
-console.log(friends.includes("Bob"));
-
-// False = Checking number using string. Doesn't do type coercion.
+// Includes() - Check if an array contains the specified element using strict equality.
 friends.push(23);
 console.log(friends.includes("23"));
 
-// True = Checking the exact number works. Uses strict equality
-friends.push(23);
-console.log(friends.includes(23));
-
-// Conditionals in includes()
+// Conditionals with includes()
 if (friends.includes("Steven")) {
   console.log("You have a friend called Steven");
 }
