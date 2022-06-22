@@ -203,5 +203,16 @@ Welcome to JavaScript Fundamentals part two.
 ### 08. Introduction to Arrays
 
 - [Introduction to Arrays](https://github.com/Evavic44/Learn-JavaScript/tree/main/02-Fundamentals-Part-2/07_introduction_to_arrays)
-- [Exercise](https://github.com/Evavic44/Learn-JavaScript/tree/main/02-Fundamentals-Part-2/07_introduction_to_arrays)
+- [Exercise](https://github.com/Evavic44/Learn-JavaScript/tree/main/02-Fundamentals-Part-2/07_introduction_to_arrays#exercise)
 - [Code File](https://github.com/Evavic44/Learn-JavaScript/blob/main/02-Fundamentals-Part-2/07_introduction_to_arrays/script.js)
+
+### 09. Array Methods
+
+- [Basic Array Operations (Methods)](<https://github.com/Evavic44/Learn-JavaScript/tree/main/02-Fundamentals-Part-2/08_basic_array_operations#basic-array-operations-(methods)>)
+- [push() Method](https://github.com/Evavic44/Learn-JavaScript/tree/main/02-Fundamentals-Part-2/08_basic_array_operations#push-method)
+- [unshift() Method](https://github.com/Evavic44/Learn-JavaScript/tree/main/02-Fundamentals-Part-2/08_basic_array_operations#unshift-method)
+- [pop() Method](https://github.com/Evavic44/Learn-JavaScript/tree/main/02-Fundamentals-Part-2/08_basic_array_operations#pop-method)
+- [shift() Method](https://github.com/Evavic44/Learn-JavaScript/tree/main/02-Fundamentals-Part-2/08_basic_array_operations#shift-method)
+- [indexOf() Method](https://github.com/Evavic44/Learn-JavaScript/tree/main/02-Fundamentals-Part-2/08_basic_array_operations#indexOf-method)
+- [includes() Method](https://github.com/Evavic44/Learn-JavaScript/tree/main/02-Fundamentals-Part-2/08_basic_array_operations#includes-method)
+- [Code File](https://github.com/Evavic44/Learn-JavaScript/blob/main/02-Fundamentals-Part-2/08_basic_array_operations/script.js)

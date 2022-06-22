@@ -1,0 +1,5 @@
+{
+  "markdown.experimental.validate.ignoreLinks": [
+    "../02-Fundamentals-Part-2/assignment.js"
+  ]
+}

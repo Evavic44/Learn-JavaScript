@@ -14,14 +14,14 @@ const friend3 = "Peter";
 
 This might pose an issue if we want to store several names, this is where data structures like arrays come in.
 
-Instead of doing this, let's create a varaible which we can call friends and then we use a square brackets `[]` to create a new array and we can put different values seperated by a comma.
+Instead of doing this, let's create a varaible which we can call friends and then we use a square brackets `[]` to create a new array and we can put different values seperated by a comma. This method is called "The Literal syntax"
 
 ```js
 const friends = ["Michael", "Steven", "Peter"];
 console.log(friends);
 ```
 
-There is another way of writing arrays. Let's say for example we want to create an array of years, instead of the bracket, we can just wirte `new`, the array keyword `Array` followed by a paranthesis of our values.
+There is another way of writing arrays. By using the Array function. We can just wirte `new`, the array function `Array` followed by a paranthesis of our values.
 
 ```js
 let years = new Array(1991, 1984, 2008, 2020);
