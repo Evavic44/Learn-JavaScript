@@ -219,5 +219,5 @@ Welcome to JavaScript Fundamentals part two.
 
 ### 10. Coding Challenge Six 🎉
 
-- [Coding Challenge](https://github.com/Evavic44/Learn-JavaScript/tree/main/02-Fundamentals-Part-2/10_coding_challenge)
-- [Solution](https://github.com/Evavic44/Learn-JavaScript/blob/main/02-Fundamentals-Part-2/10_coding_challenge/script.js)
+- [Coding Challenge](https://github.com/Evavic44/Learn-JavaScript/tree/main/02-Fundamentals-Part-2/09_coding_challenge#coding-challenge)
+- [Solution](https://github.com/Evavic44/Learn-JavaScript/blob/main/02-Fundamentals-Part-2/09_coding_challenge/script.js)
