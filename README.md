@@ -216,3 +216,8 @@ Welcome to JavaScript Fundamentals part two.
 - [indexOf() Method](https://github.com/Evavic44/Learn-JavaScript/tree/main/02-Fundamentals-Part-2/08_basic_array_operations#indexOf-method)
 - [includes() Method](https://github.com/Evavic44/Learn-JavaScript/tree/main/02-Fundamentals-Part-2/08_basic_array_operations#includes-method)
 - [Code File](https://github.com/Evavic44/Learn-JavaScript/blob/main/02-Fundamentals-Part-2/08_basic_array_operations/script.js)
+
+### 10. Coding Challenge Six 🎉
+
+- [Coding Challenge](https://github.com/Evavic44/Learn-JavaScript/tree/main/02-Fundamentals-Part-2/10_coding_challenge)
+- [Solution](https://github.com/Evavic44/Learn-JavaScript/blob/main/02-Fundamentals-Part-2/10_coding_challenge/script.js)
