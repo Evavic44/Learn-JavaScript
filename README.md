@@ -221,3 +221,7 @@ Welcome to JavaScript Fundamentals part two.
 
 - [Coding Challenge](https://github.com/Evavic44/Learn-JavaScript/tree/main/02-Fundamentals-Part-2/09_coding_challenge#coding-challenge)
 - [Solution](https://github.com/Evavic44/Learn-JavaScript/blob/main/02-Fundamentals-Part-2/09_coding_challenge/script.js)
+
+### 11. Introduction to Objects
+
+- [Introduction to Objects](https://github.com/Evavic44/Learn-JavaScript/tree/main/02-Fundamentals-Part-2/10_introduction_to_objects#introduction-to-objects)
