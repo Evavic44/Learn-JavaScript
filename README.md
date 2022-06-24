@@ -225,3 +225,13 @@ Welcome to JavaScript Fundamentals part two.
 ### 11. Introduction to Objects
 
 - [Introduction to Objects](https://github.com/Evavic44/Learn-JavaScript/tree/main/02-Fundamentals-Part-2/10_introduction_to_objects#introduction-to-objects)
+
+### 12. Dots and Brackets Notations
+
+- [How to retrieve elements from an object](https://github.com/Evavic44/Learn-JavaScript/tree/main/02-Fundamentals-Part-2/11_dots_brackets_notations#how-to-retrieve-elements-from-an-object)
+- [Dot Notation](https://github.com/Evavic44/Learn-JavaScript/tree/main/02-Fundamentals-Part-2/11_dots_brackets_notations#how-to-retrieve-elements-from-an-object)
+- [Bracket Notation](https://github.com/Evavic44/Learn-JavaScript/tree/main/02-Fundamentals-Part-2/11_dots_brackets_notations#bracket-notation)
+- [Dot Notation use case](https://github.com/Evavic44/Learn-JavaScript/tree/main/02-Fundamentals-Part-2/11_dots_brackets_notations#situations-to-use-dot-notation)
+- [Bracket Notation use case](https://github.com/Evavic44/Learn-JavaScript/tree/main/02-Fundamentals-Part-2/11_dots_brackets_notations#bracket-notation-use-case)
+- [Adding new properties to an object](https://github.com/Evavic44/Learn-JavaScript/tree/main/02-Fundamentals-Part-2/11_dots_brackets_notations#adding-new-properties-to-an-object)
+- [Code File](https://github.com/Evavic44/Learn-JavaScript/tree/main/02-Fundamentals-Part-2/11_dots_brackets_notations/script.js)

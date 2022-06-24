@@ -1,8 +1,14 @@
 ## Introduction to Object
 
+A JavaScript object is a collection of named values
+
 After arrays, objects are another type of data structure. Usually in arrays, we have different values combined into one entity.
 
 For example, a variable called `ekeArray` can hold basic information about a person called `Eke`.
+
+### Note
+
+> It is a common practice to declare objects with the const keyword.
 
 ```js
 const ekeArray = [
