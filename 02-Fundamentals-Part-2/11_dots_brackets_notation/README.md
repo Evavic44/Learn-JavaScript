@@ -16,14 +16,14 @@ console.log(eke);
 
 The values in an object is arranged alphabetically, but this doesn't matter because we simply get the properties from the object using the property name itself.
 
-There are two ways to do that, first way is by using the `dot notation`
+There are two ways to do that, the `dot notation` and the `bracket notation`
 
 ## Dot Notation
 
 Now let's get the last name from our object array.
 
 ```js
-console.log(eke.lastName); Get last name from the array
+console.log(eke.lastName); // Get last name from the array
 ```
 
 This dot here is an operator that will go to this object and retrieve the property using the name we specified `(lastName)`
@@ -36,7 +36,7 @@ We can do the same thing using the brackets notation. It looks similar to how we
 console.log(eke["lastName"]);
 ```
 
-Now the big difference between these two is that in the bracket notation eke["name"], we can put an expression inside. So we don't have to explicitly write the string here, we can compute it from an operation.
+Now the big difference between these two is that in the bracket notation `eke["name"]`, we can put an expression inside. So we don't have to explicitly write the string here, we can compute it from an operation.
 
 For example, imagine we have a variable in which we store a repeating part `(name)` in firstName and lastName.
 
