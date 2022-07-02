@@ -235,3 +235,9 @@ Welcome to JavaScript Fundamentals part two.
 - [Bracket Notation use case](https://github.com/Evavic44/Learn-JavaScript/tree/main/02-Fundamentals-Part-2/11_dots_brackets_notations#bracket-notation-use-case)
 - [Adding new properties to an object](https://github.com/Evavic44/Learn-JavaScript/tree/main/02-Fundamentals-Part-2/11_dots_brackets_notations#adding-new-properties-to-an-object)
 - [Code File](https://github.com/Evavic44/Learn-JavaScript/tree/main/02-Fundamentals-Part-2/11_dots_brackets_notations/script.js)
+
+### 13. Object Methods
+
+- [Definition of Objects](https://github.com/Evavic44/Learn-JavaScript/tree/main/02-Fundamentals-Part-2/12_objects_methods#definition-of-objects)
+- [Definition of Objects](https://github.com/Evavic44/Learn-JavaScript/tree/main/02-Fundamentals-Part-2/12_objects_methods#challenge)
+- [Definition of Objects](https://github.com/Evavic44/Learn-JavaScript/tree/main/02-Fundamentals-Part-2/12_objects_methods/script.js)
