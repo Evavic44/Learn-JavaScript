@@ -1,10 +1,10 @@
-@import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+@import url(https://fonts.googleapis.com/css?family=Plus+Jakarta+Sans:200,300,regular,500,600,700,800,200italic,300italic,italic,500italic,600italic,700italic,800italic);
 body {
   height: 100vh;
   display: flex;
   align-items: center;
   background: linear-gradient(to top left, #28b487, #7dd56f);
-  font-family: "Poppins", sans-serif;
+  font-family: "Plus Jakarta sans", sans-serif;
   overflow-y: hidden;
 }
 

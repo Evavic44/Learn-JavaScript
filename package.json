@@ -1,0 +1,23 @@
+{
+  "name": "javascript-course",
+  "version": "1.0.0",
+  "description": "<h1 align=\"center\">\r  <img src=\"https://user-images.githubusercontent.com/62628408/167905373-02d9fa6c-e4a0-4023-9e51-6c8bcf98a085.png\" width=\"170px\" alt=\"JavaScript logo\">\r </h1>",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Evavic44/Learn-JavaScript.git"
+  },
+  "keywords": [],
+  "author": "Victor Eke",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Evavic44/Learn-JavaScript/issues"
+  },
+  "homepage": "https://github.com/Evavic44/Learn-JavaScript#readme"
+}

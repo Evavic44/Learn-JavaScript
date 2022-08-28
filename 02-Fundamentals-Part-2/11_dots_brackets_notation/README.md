@@ -60,7 +60,7 @@ To recap what was said earlier, we use the bracket notation when we need to firs
 
 Let's look at another example to make the need for the bracket notation even more clear.
 
-Let's say that we don't know yet which propety we want to show, instead we get this from some user interface, what we can do is:
+Let's say that we don't know yet which property we want to show, instead we get this from some user interface, what we can do is:
 
 ```js
 const interestedIn = prompt(
@@ -69,11 +69,13 @@ const interestedIn = prompt(
 console.log(eke[interestedIn]);
 ```
 
+Here the `eke` object will replace the `interestedIn` variable with the values in the string.
+
 If we use the bracket notation, we get and `Undefined` error. This errors happens anytime we try to access a property on an object that does not exist. In our example, eke does not have a property called `interestedIn`
 
 Instead of using the dot notation, we use the bracket notation. Because then we can put any expression here, which will be interestedIn.
 
-Now if we pass in a propery or value that is not available in the object, we also get an undefined erorr. We can of course write a logic that will print a custom string whenever the user tries to access a property that doesn't exisit.
+Now if we pass in a propery or value that is not available in the object, we also get an undefined errorr. We can of course write a logic that will print a custom string whenever the user tries to access a property that doesn't exisit.
 
 ```js
 if (eke[interestedIn]) {
