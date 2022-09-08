@@ -246,3 +246,19 @@ Welcome to JavaScript Fundamentals part two.
 
 - [Coding Challenge](https://github.com/Evavic44/Learn-JavaScript/tree/main/02-Fundamentals-Part-2/13_coding_challenge#coding-challenge)
 - [Solution](https://github.com/Evavic44/Learn-JavaScript/blob/main/02-Fundamentals-Part-2/13_coding_challenge/script.js)
+
+### 15. Iteraton the For Loop
+
+- [Iteration - The for Loop](https://github.com/Evavic44/Learn-JavaScript/tree/main/02-Fundamentals-Part-2/14_iteration_the_for_loop#Iteration:-the-for-Loop)
+- [What are Loops](https://github.com/Evavic44/Learn-JavaScript/tree/main/02-Fundamentals-Part-2/14_iteration_the_for_loop#what-are-loops)
+- [Example](https://github.com/Evavic44/Learn-JavaScript/tree/main/02-Fundamentals-Part-2/14_iteration_the_for_loop#example)
+- [For Loop](https://github.com/Evavic44/Learn-JavaScript/tree/main/02-Fundamentals-Part-2/14_iteration_the_for_loop#for-loop)
+- [Code File](https://github.com/Evavic44/Learn-JavaScript/tree/main/02-Fundamentals-Part-2/14_iteration_the_for_loop/script.js)
+
+### 16. Looping Arrays, Breaking & Continuing
+
+- [Looping Arrays, Breaking and Continuing](https://github.com/Evavic44/Learn-JavaScript/tree/main/02-Fundamentals-Part-2/15_looping_arrays_breaking_continuing#looping-arrays-breaking-and-continuing)
+- [Looping Arrays Summary](https://github.com/Evavic44/Learn-JavaScript/tree/main/02-Fundamentals-Part-2/15_looping_arrays_breaking_continuing#in-summary)
+- [Continue and Break Statements](https://github.com/Evavic44/Learn-JavaScript/tree/main/02-Fundamentals-Part-2/15_looping_arrays_breaking_continuing#continue-and-break-statements)
+- [Example - Break](https://github.com/Evavic44/Learn-JavaScript/tree/main/02-Fundamentals-Part-2/15_looping_arrays_breaking_continuing#example-break)
+- [Code File](https://github.com/Evavic44/Learn-JavaScript/tree/main/02-Fundamentals-Part-2/15_looping_arrays_breaking_continuing/script.js)
