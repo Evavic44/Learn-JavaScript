@@ -34,6 +34,8 @@ The loop statement has 3 parts, namely:
 1. The initial value of a counter `in our example(1 - 10)`
 2. The logical condition that is evaluated before each iteration of the loop(each time before the loop is executed). For example: if this condition `rep <= 10` is true, then the next loop iteration will run.
 
+What this means is that rep is equal to the number of values in the array. So if we have 10 values, `rep = 9`, so `rep <= 10` is also `9 <= 10`
+
 > **Note** > `rep` here is short for repition so you can name your varaible whatever you want.
 
 But as soon as this condition is false, then the loop stops. (normal code will be executed). In summary,
