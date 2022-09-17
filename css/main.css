@@ -1,18 +1,18 @@
-@import url(https://fonts.googleapis.com/css?family=Plus+Jakarta+Sans:200,300,regular,500,600,700,800,200italic,300italic,italic,500italic,600italic,700italic,800italic);
 body {
   height: 100vh;
   display: flex;
   align-items: center;
   background: linear-gradient(to top left, #28b487, #7dd56f);
-  font-family: "Plus Jakarta sans", sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   overflow-y: hidden;
 }
 
 h1 {
-  font-size: 50px;
+  font-size: 35px;
   width: 100%;
   text-align: center;
   color: white;
+  letter-spacing: -1px;
 }
 
 /*# sourceMappingURL=main.css.map */
