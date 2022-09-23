@@ -85,8 +85,63 @@ An Event is something that happens on the page like: mouse click, mouse scroll, 
 
 The Event Listener uses a method called `addEventListener` to check for events. As usual, we'll use the querySelector method to select the element we want to attach the event to, and then the event listener method. There are other ways to attach an event listener to an element but this is the most common way.
 
+Next we need to pass in the type of event `(click)` and finally what we want the event to do, and that can be done by defining a function. Basically, this function will run whenever we click on the button.
+
+This function is known as an event handler. It is a special kind of function that will be passed into the `addEventListener` as a parameter, and then inside the function, we'll write the code we want to run.
+
 ```js
 document.querySelector(".check").addEventListener("click", function () {
   console.log(document.querySelector(".guess").value);
 });
 ```
+
+Also, note that we did not call this function, the JavaScript engine is responsible for calling this function as the event happens.
+
+By default, the result of the input filed will be a string, but since we're expecting a number, we can convert that using the `Number()` function.
+
+For the logic, we need to check if there is a value in the input field, and we'll do that using an if/else statement.
+
+So we're going to check if there is no value and to do that, we use the Not `(!)` operator to convert the number to true`(!guess)`, we can print a response. If the input is empty or 0, it is treated as a falsy value(0 is a falsy value).
+
+```js
+document.querySelector(".check").addEventListener("click", function () {
+  const guess = Number(document.querySelector(".guess").value);
+  console.log(guess);
+
+  if (!guess) {
+    document.querySelector(".message").textContent = "⛔ No number";
+  }
+});
+```
+
+## Implementing the game logic
+
+This is simply Implementing how the game works and this is broken down into three conditions:
+
+1. What happens when the guess is correct, so equal to the secret number.
+2. What happens when the guess is too low
+3. What happens when the guess is too high.
+
+To start, we need to define the secret number, and we'll do this outside of the button handler because if we do it inside, everytime the button is clicked, it will generate a new number which defeats the whole purpose of the game.
+
+To get the random secret number, we'll use the `Math` object which has methods we can use like `.random()`, and this gives us a number between 0 and 1. To get a number between 0 and 20, we multiply the object with 20.
+
+```js
+Math.random() * 20;
+```
+
+By default, these numbers have decimal points so to remove that, we'll use another Math object method `Math.trunc`.
+
+```js
+Math.trunc(Math.random() * 20);
+```
+
+Also, the random number will never give us 20 but will stop at 19 or 19.99999. To fix that, we'll add 1 to it.
+
+```js
+Math.trunc(Math.random() * 20 + 1);
+```
+
+So this will be our secret number.
+
+Next, we can add that
