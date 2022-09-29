@@ -154,3 +154,47 @@ Implement a game reset functionality, so that the player can make a new guess! H
 2. In the handler function, restore initial value of the score and secretNumber variables.
 3. Restore the initial conditions of the `messgae`, `secretNumber`, `score` and `guess` input field.
 4. Also restore the original background color `(#222)` and number width `(15rem)`
+
+## Refactoring
+
+Having a lot of duplicate code violates the DRY principle as we learned in previous sections. To fix this problem, we have to do something called `refactoring`.
+
+Refactoring is simply restructing the code without changing it's functionality. We do this to improve the code and to eliminate duplicates.
+
+The first step is by indetifying duplicates. For example.
+
+This condition is checking if the guess is too low or too high, but the conditions are somewhat similar because they are basically checking if the guess is different or not equal to the secret number.
+
+```js
+// Long
+if (guess > secretNumber) {
+}
+if (guess < secretNumber) {
+}
+
+// Short
+if(guess !== secretNumber)
+```
+
+Also, since we have similar strings with only the value `"Too low 🔽"` or `"Too high 🔼"`, we can use a ternary operator to change up the code.
+
+```js
+if (guess !== secretNumber) {
+  document.querySelector(".message").textContent =
+    guess > secretNumber ? "Too high 🔼" : "Too low 🔽";
+}
+```
+
+Another way we can refactor code is by adding repeated code blocks into a function. For example: We have a block of code that is repeated several times in our code, with only the value as the difference. Now we can put that code into a function and then pass in the value as a parameter.
+
+```js
+const displayMessage = function (message) {
+  return (document.querySelector(".message").textContent = message);
+};
+
+// Calling the function for no number
+displayMessage("No Number ⛔");
+
+// Calling the function when the number is too high
+displayMessage("Too high 🔼");
+```
