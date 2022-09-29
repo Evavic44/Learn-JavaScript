@@ -145,3 +145,12 @@ Math.trunc(Math.random() * 20 + 1);
 So this will be our secret number.
 
 Next, we can add that
+
+## Coding Challenge
+
+Implement a game reset functionality, so that the player can make a new guess! Here is how:
+
+1. Select the element with the `again` class and attach a click event handler.
+2. In the handler function, restore initial value of the score and secretNumber variables.
+3. Restore the initial conditions of the `messgae`, `secretNumber`, `score` and `guess` input field.
+4. Also restore the original background color `(#222)` and number width `(15rem)`
