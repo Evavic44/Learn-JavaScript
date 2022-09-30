@@ -262,3 +262,49 @@ Welcome to JavaScript Fundamentals part two.
 - [Continue and Break Statements](https://github.com/Evavic44/Learn-JavaScript/tree/main/02-Fundamentals-Part-2/15_looping_arrays_breaking_continuing#continue-and-break-statements)
 - [Example - Break](https://github.com/Evavic44/Learn-JavaScript/tree/main/02-Fundamentals-Part-2/15_looping_arrays_breaking_continuing#example-break)
 - [Code File](https://github.com/Evavic44/Learn-JavaScript/tree/main/02-Fundamentals-Part-2/15_looping_arrays_breaking_continuing/script.js)
+
+### 17. Looping Backwards and Loops in Loops
+
+- [Looping Backwards](https://github.com/Evavic44/Learn-JavaScript/tree/main/02-Fundamentals-Part-2/16_looping_backwards_loops_in_loops/#looping-backwards)
+
+- [Loops in Loops](https://github.com/Evavic44/Learn-JavaScript/tree/main/02-Fundamentals-Part-2/16_looping_backwards_loops_in_loops/#looping-in-loops)
+
+- [Code File](https://github.com/Evavic44/Learn-JavaScript/tree/main/02-Fundamentals-Part-2/16_looping_backwards_loops_in_loops/script.js)
+
+### 18. While Loop
+
+- [Overview](https://github.com/Evavic44/Learn-JavaScript/tree/main/02-Fundamentals-Part-2/17_while_loop/#while-loop)
+
+- [Code File](https://github.com/Evavic44/Learn-JavaScript/tree/main/02-Fundamentals-Part-2/17_while_loop/script.js)
+
+### 14. Coding Challenge Eight 🎉
+
+- [Coding Challenge](https://github.com/Evavic44/Learn-JavaScript/tree/main/02-Fundamentals-Part-2/18_coding_challenge#coding-challenge)
+- [Solution](https://github.com/Evavic44/Learn-JavaScript/blob/main/02-Fundamentals-Part-2/18_coding_challenge/script.js)
+
+## Developer Skills🔸
+
+- [Coding Challenge](https://github.com/Evavic44/Learn-JavaScript/tree/main/03-Developer-skills/challenge.js)
+- [How to effectively solve problems](https://github.com/Evavic44/Learn-JavaScript/tree/main/03-Developer-skills/#how_to_effectively_solve_problems)
+
+- [What is a Software Bug](https://github.com/Evavic44/Learn-JavaScript/tree/main/03-Developer-skills/#what-is-a-software-bug?)
+
+- [Debugging with console and Breakpoints](https://github.com/Evavic44/Learn-JavaScript/tree/main/03-Developer-skills/#debugging-with-console-and-breakpoints)
+
+- [Code File](https://github.com/Evavic44/Learn-JavaScript/tree/main/03-Developer-skills/script.js)
+
+## Guess My Number Game🔸
+
+- [What is DOM and DOM Manipulation](https://github.com/Evavic44/Learn-JavaScript/tree/main/05-guess-my-number/#what-is-dom-and-dom-manipulation)
+
+- [DOM !== JavaScript](https://github.com/Evavic44/Learn-JavaScript/tree/main/05-guess-my-number/#dom-!==-javascript)
+
+- [Selecting and Manipulating Elements](https://github.com/Evavic44/Learn-JavaScript/tree/main/05-guess-my-number/#dom-!==-javascript)
+
+- [Handling Click Events (Event Listener)](https://github.com/Evavic44/Learn-JavaScript/tree/main/05-guess-my-number/#handling-click-events-event-listener)
+
+- [Implementing the Game Logic](https://github.com/Evavic44/Learn-JavaScript/tree/main/05-guess-my-number/#implementing-the-game-logic)
+
+- [Coding Challenge](https://github.com/Evavic44/Learn-JavaScript/tree/main/05-guess-my-number/#coding-challenge)
+
+- [Refactoring](https://github.com/Evavic44/Learn-JavaScript/tree/main/05-guess-my-number/#refactoring)
