@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/Evavic44/Learn-JavaScript/issues"
   },
-  "homepage": "https://github.com/Evavic44/Learn-JavaScript#readme"
+  "homepage": "https://github.com/Evavic44/Learn-JavaScript#readme",
+  "dependencies": {
+    "live-server": "^1.2.2"
+  }
 }
