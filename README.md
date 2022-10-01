@@ -266,15 +266,12 @@ Welcome to JavaScript Fundamentals part two.
 ### 17. Looping Backwards and Loops in Loops
 
 - [Looping Backwards](https://github.com/Evavic44/Learn-JavaScript/tree/main/02-Fundamentals-Part-2/16_looping_backwards_loops_in_loops/#looping-backwards)
-
 - [Loops in Loops](https://github.com/Evavic44/Learn-JavaScript/tree/main/02-Fundamentals-Part-2/16_looping_backwards_loops_in_loops/#looping-in-loops)
-
 - [Code File](https://github.com/Evavic44/Learn-JavaScript/tree/main/02-Fundamentals-Part-2/16_looping_backwards_loops_in_loops/script.js)
 
 ### 18. While Loop
 
 - [Overview](https://github.com/Evavic44/Learn-JavaScript/tree/main/02-Fundamentals-Part-2/17_while_loop/#while-loop)
-
 - [Code File](https://github.com/Evavic44/Learn-JavaScript/tree/main/02-Fundamentals-Part-2/17_while_loop/script.js)
 
 ### 14. Coding Challenge Eight 🎉
@@ -286,9 +283,7 @@ Welcome to JavaScript Fundamentals part two.
 
 - [Coding Challenge](https://github.com/Evavic44/Learn-JavaScript/tree/main/03-Developer-skills/challenge.js)
 - [How to effectively solve problems](https://github.com/Evavic44/Learn-JavaScript/tree/main/03-Developer-skills/#how_to_effectively_solve_problems)
-
 - [What is a Software Bug](https://github.com/Evavic44/Learn-JavaScript/tree/main/03-Developer-skills/#what-is-a-software-bug?)
-
 - [Debugging with console and Breakpoints](https://github.com/Evavic44/Learn-JavaScript/tree/main/03-Developer-skills/#debugging-with-console-and-breakpoints)
 
 - [Code File](https://github.com/Evavic44/Learn-JavaScript/tree/main/03-Developer-skills/script.js)
@@ -296,15 +291,19 @@ Welcome to JavaScript Fundamentals part two.
 ## Guess My Number Game🔸
 
 - [What is DOM and DOM Manipulation](https://github.com/Evavic44/Learn-JavaScript/tree/main/05-guess-my-number/#what-is-dom-and-dom-manipulation)
-
 - [DOM !== JavaScript](https://github.com/Evavic44/Learn-JavaScript/tree/main/05-guess-my-number/#dom-!==-javascript)
-
 - [Selecting and Manipulating Elements](https://github.com/Evavic44/Learn-JavaScript/tree/main/05-guess-my-number/#dom-!==-javascript)
-
 - [Handling Click Events (Event Listener)](https://github.com/Evavic44/Learn-JavaScript/tree/main/05-guess-my-number/#handling-click-events-event-listener)
-
 - [Implementing the Game Logic](https://github.com/Evavic44/Learn-JavaScript/tree/main/05-guess-my-number/#implementing-the-game-logic)
-
 - [Coding Challenge](https://github.com/Evavic44/Learn-JavaScript/tree/main/05-guess-my-number/#coding-challenge)
-
 - [Refactoring](https://github.com/Evavic44/Learn-JavaScript/tree/main/05-guess-my-number/#refactoring)
+
+## Modal
+
+- [How to create a modal with JavScript](https://github.com/Evavic44/Learn-JavaScript/tree/main/06-modal-window/#how-to-create-a-simple-modal-with-javascript)
+- [Modal Functionality](https://github.com/Evavic44/Learn-JavaScript/tree/main/06-modal-window/#modal-functionality)
+- [Manipulating classes with JavScript](https://github.com/Evavic44/Learn-JavaScript/tree/main/06-modal-window/#manipulating-classes-with-JavScript)
+- [Close Modal](https://github.com/Evavic44/Learn-JavaScript/tree/main/06-modal-window/#close-modal-when-overlay-is-clicked)
+- [Refactoring](https://github.com/Evavic44/Learn-JavaScript/tree/main/06-modal-window/#refactoring)
+- [Handle Events on keypress](https://github.com/Evavic44/Learn-JavaScript/tree/main/06-modal-window/#handle-events-on-keypress)
+- [Code File](https://github.com/Evavic44/Learn-JavaScript/tree/main/06-modal-window/script.js)
