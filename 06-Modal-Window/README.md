@@ -93,7 +93,7 @@ closeModalBtn.addEventListener("click", modalClose);
 We can do the same for the open modal.
 
 ```js
-// Close Modal function
+// Open Modal function
 const modalOpen = function () {
   modal.classList.remove("hidden");
   overlay.classList.remove("hidden");
