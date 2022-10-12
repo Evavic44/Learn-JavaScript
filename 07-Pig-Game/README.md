@@ -26,7 +26,7 @@ const btnRoll = document.querySelector(".btn--roll");
 const btnHold = document.querySelector(".btn--hold");
 ```
 
-But unlike the `querySelector`, we're only passing in the name of the ID without the class selector(`#`)
+But unlike the `querySelector`, we're only passing in the name of the ID without the class selector(`#`).
 
 For the first conditions, we need to set the scores to 0 by default and hide the dice.
 
@@ -35,3 +35,28 @@ score0El.textContent = 0;
 score1El.textContent = 0;
 diceEl.classList.add("hidden");
 ```
+
+Just like before, we added a hidden class to the element which hides the image from the DOM. Now let's break down the next steps into smaller task. From the functionality flow chart, here are the following things we need to do next:
+
+### Generate a random dice roll
+
+Before we implement our dice roll functionality, we need to select the button and add an `eventListener` so when we click, it will execute that function and then for the random dice roll, we'll use the `Math.random()` function.
+
+And remeber this will generate a number from 0 to almost one so 0 - 0.9999999e, we'll multiply it by 6 and then add 1 to it. Since we want a number without a decimal point, we'll use the `Math.trunc()` function.
+
+### Display the dice
+
+Since we hid the dice earlier by adding the hidden class using the `classList()` method, we'll show the dice by removing the class this time. To show a random dice image, we'll use the `.src()` property to define what image we want to show based on the random generated number.
+
+```js
+btnRoll.addEventListener("click", function () {
+  // 1. Generate a random dice roll
+  const dice = Math.trun(Math.random() * 6) + 1;
+
+  // 2. Display the dice
+  dice.classList.remove("hidden");
+  diceEl.src = `dice-${dice}.png`;
+});
+```
+
+Here `dice` represents the random dice number from 1 - 6;
