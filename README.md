@@ -307,3 +307,14 @@ Welcome to JavaScript Fundamentals part two.
 - [Refactoring](https://github.com/Evavic44/Learn-JavaScript/tree/main/06-modal-window/#refactoring)
 - [Handle Events on keypress](https://github.com/Evavic44/Learn-JavaScript/tree/main/06-modal-window/#handle-events-on-keypress)
 - [Code File](https://github.com/Evavic44/Learn-JavaScript/tree/main/06-modal-window/script.js)
+
+## Building a Pig Game 🐷
+
+- [Build a pig game using JavaScript](https://github.com/Evavic44/Learn-JavaScript/tree/main/07-pig-game/#how-to-create-a-simple-modal-with-javascript)
+- [What are flowcharts?](https://github.com/Evavic44/Learn-JavaScript/tree/main/07-pig-game/#building-a-pig-game)
+- [Selecting the Elements](https://github.com/Evavic44/Learn-JavaScript/tree/main/07-pig-game/#selecting-the-elements)
+- [Generate a random dice roll](https://github.com/Evavic44/Learn-JavaScript/tree/main/07-pig-game/#generate-a-random-dice-roll)
+- [Refactoring](https://github.com/Evavic44/Learn-JavaScript/tree/main/07-pig-game/#refactoring)
+- [Display the dice](https://github.com/Evavic44/Learn-JavaScript/tree/main/07-pig-game/#display-the-dice)
+- [Switcing the players](https://github.com/Evavic44/Learn-JavaScript/tree/main/07-pig-game/#switch-the-players)
+- [Code File](https://github.com/Evavic44/Learn-JavaScript/tree/main/07-pig-game/script.js)
