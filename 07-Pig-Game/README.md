@@ -13,7 +13,7 @@ A flowchart is simply a graphical representation of the functionality of an appl
 - The blue box shows conditions like (true of false) conditions.
 - Finally the red box shows the result of a condition.
 
-## Building the game
+## Selecting the Elements
 
 As usual we'll store our classes and IDs in variables. In the previous lecture, we learned how to select elements using `document.querySelector()`, but there is a special way of specifically selecing IDs in a webpage and that is:
 
@@ -24,6 +24,8 @@ const diceEl = document.querySelector(".dice");
 const btnNew = document.querySelector(".btn--new");
 const btnRoll = document.querySelector(".btn--roll");
 const btnHold = document.querySelector(".btn--hold");
+const current0El = document.getElementById("current--0");
+const current1El = document.getElementById("current--1");
 ```
 
 But unlike the `querySelector`, we're only passing in the name of the ID without the class selector(`#`).
@@ -46,9 +48,11 @@ And remeber this will generate a number from 0 to almost one so 0 - 0.9999999e, 
 
 ### Display the dice
 
-Since we hid the dice earlier by adding the hidden class using the `classList()` method, we'll show the dice by removing the class this time. To show a random dice image, we'll use the `.src()` property to define what image we want to show based on the random generated number.
+Since we hid the dice earlier by adding the hidden class using the `classList()` property, we'll show the dice by removing the class this time. To show a random dice image, we'll use the `.src()` property to define what image we want to show based on the random generated number.
 
 ```js
+const currentScore = 0;
+
 btnRoll.addEventListener("click", function () {
   // 1. Generate a random dice roll
   const dice = Math.trun(Math.random() * 6) + 1;
@@ -59,4 +63,49 @@ btnRoll.addEventListener("click", function () {
 });
 ```
 
-Here `dice` represents the random dice number from 1 - 6;
+Here `dice` represents the random dice number from 1 - 6. The next step is to write our condition to check if the dice rolled is a 1, if it is, then the score of the current player will be 0 and it will switch to the next player or else, the point gets added to the current score. But we need to capture that current score and not just have it changed on the DOM.
+
+We'll use the let keyword since the current score will be constantly updated and also declare this variable outside of our handler function because we want to persist that value and not have it set to 0 every time the btnRoll function is executed.
+
+```js
+// 3. Check for rolled 1: If true
+let currentScore = 0;
+
+if (dice !== 1) {
+  // Add dice to current score
+  // currentScore = currentScore + dice0El; // Can also be written as
+  currentScore += dice;
+  // display score on current element (on the first player for now).
+  current0El.textContent = currentScore;
+} else {
+  // switch to next player
+}
+```
+
+### Switcing the players
+
+Next step is switching between the players if the score is 1. In other to do that, we need to capture the player that is currently playing, essentially the active player. To do that, we'll store the value of the active player in a variable and set it to 0 because player 1 is 0 and player 2 is 1.
+
+The reason we're doing this is because we'll store the score of each player in an array and since arrays are zero based, the first score will be at position 0 and second score at positon 1.
+
+With this activePlayer variable, we can now dynamically set the score of the current player and not just for the first player alone.
+
+For the else block, we want to
+
+```js
+// 3. Check for rolled 1: If true
+let currentScore = 0;
+const scores = [0, 0];
+let activePlayer = 0;
+
+if (dice !== 1) {
+  // Add dice to current score
+  // currentScore = currentScore + dice0El; // Can also be written as
+  currentScore += dice;
+  // display score on current element (on the first player for now).
+  document.getElementById(`current--${activePlayer}`).textContent =
+    currentScore;
+} else {
+  // switch to next player
+}
+```
