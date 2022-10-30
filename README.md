@@ -285,7 +285,6 @@ Welcome to JavaScript Fundamentals part two.
 - [How to effectively solve problems](https://github.com/Evavic44/Learn-JavaScript/tree/main/03-Developer-skills/#how_to_effectively_solve_problems)
 - [What is a Software Bug](https://github.com/Evavic44/Learn-JavaScript/tree/main/03-Developer-skills/#what-is-a-software-bug?)
 - [Debugging with console and Breakpoints](https://github.com/Evavic44/Learn-JavaScript/tree/main/03-Developer-skills/#debugging-with-console-and-breakpoints)
-
 - [Code File](https://github.com/Evavic44/Learn-JavaScript/tree/main/03-Developer-skills/script.js)
 
 ## Guess My Number Game🔸
@@ -318,3 +317,8 @@ Welcome to JavaScript Fundamentals part two.
 - [Display the dice](https://github.com/Evavic44/Learn-JavaScript/tree/main/07-pig-game/#display-the-dice)
 - [Switcing the players](https://github.com/Evavic44/Learn-JavaScript/tree/main/07-pig-game/#switch-the-players)
 - [Code File](https://github.com/Evavic44/Learn-JavaScript/tree/main/07-pig-game/script.js)
+
+## How JavaScript works behind the scenes
+
+- [An Hight level overview of JavaScript]()
+- [What is JavaScript (Revisited)]()
