@@ -322,3 +322,11 @@ Welcome to JavaScript Fundamentals part two.
 
 - [An Hight level overview of JavaScript]()
 - [What is JavaScript (Revisited)]()
+- [High Level Language]()
+- [Garbage Collection]()
+- [Intepreted or Just in Time Compiled]()
+- [Mutli Paradigm]()
+- [Prototype-based Object Oriented]()
+- [First Class Functions]()
+- [Dynamically-typed Language]()
+- [Single Thread & Non-blocking Event Loop]()
