@@ -22,3 +22,13 @@ const eke = {
   },
 };
 eke.calcAge();
+
+const matilda = {
+  year: 2017,
+};
+
+matilda.calcAge = eke.calcAge;
+matilda.calcAge();
+
+const f = eke.calcAge;
+// f();

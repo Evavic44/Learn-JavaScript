@@ -239,3 +239,35 @@ eke.calcAge();
 ```
 
 This will give us `25` because we used the `this` keyword to get the year property in the object. So `eke.year === this.year`.
+
+Another important concept to understand is that the `this` keyword points to the method in which it is called and not to the object in which the method was written.
+
+In the example above, the `calcAge` method was written inside the `eke` object but that is not the reason why the `this` keyword points to the `eke` object. Rather it is because we called the `calcAge` method with the `eke` object.
+
+What this means is that any object that calls the method, will be the object the `this` keyword is attached to. Even if the method was not written inside it.
+
+### Example
+
+```js
+const matilda = {
+  year: 2017,
+};
+
+matilda.calcAge = eke.calcAge;
+```
+
+Here we created a new object called `matilda` and then assigned the value of `eke.calcAge` to `matilda.calcAge`. Since functions are simply values, the calcAge function will be assigned to `matilda` as well.
+
+And now if we call `calcAge` with `matilda`, the result will be `5`.
+This means in this method call, the `this` keyword now points to `matilda`.
+
+This example explains why the `this` keyword is dynamic, it's not static and it depends on how the function is called.
+
+Another example is when we call the `calcAge` function without any object. For example:
+
+```js
+const f = eke.calcAge;
+f(); // undefined
+```
+
+We get undefined because `f` is not attached to any object. It is just an ordinary function and since the `this` keyword is undefined in an regular function, the result of `f` will too be undefined.
