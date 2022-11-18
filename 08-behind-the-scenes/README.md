@@ -99,3 +99,143 @@ The Just in time compilation
 # The JavaScript Runtime
 
 ![javascript-runtime-in-browser](https://user-images.githubusercontent.com/62628408/199721867-7434152f-3520-45fa-95c9-3f6585b9d863.png)
+
+# The This Keyword
+
+The this `keyword/variable` is a special variable that is created for every execution context(every function). Takes the value of (points to) the owner of the function in which the `this` keyword is used.
+
+The this keyword is one of the three component of any execution context, along with the `variable environment` and `scope chain`.
+
+Therefore, the value of the `this` is not static, it depends on how the function is called.
+
+- The value of the this keyword is only assigned when the function is actually called. To illustrate this, let's look at the ways in which functions are actually called.
+
+## Four ways functions can be called
+
+### 1. Through Methods
+
+Methods are functions attached to objects so when we call a method, the this keyword points to the object calling the method.
+
+```js
+method 👉🏽 this = <Object calling the method>
+```
+
+### E.g
+
+```js
+const eke = {
+  name: 'Victor',
+  year: '1997',
+  calcAge: function() {
+    rerturn 2022 - this.year;
+  }
+}
+
+calcAge(); // 26
+```
+
+In the example above, `calcAge()` is the method and `this` inside the method is `eke` the object. So `this.year` is the same as `eke.year` but doing it this way is a much better solution than `eke.year`
+
+### 2. Simple function calls
+
+Another way we call functions is by calling them as normal functions so not as methods(not atttached to any object).
+
+In this case, the `this` keyword will be undefined but only on `strict mode` otherwise, the `this` keyword will point to the global object(window object in the browser).
+
+```js
+Simple function call 👉🏽 this = undefined
+```
+
+### 3. Arrow Functions
+
+Arrow functions are not exactly a way of calling functions but it is an essential function to consider. Remember arrow functions do not contain the `this` keyword.
+
+If you use the `this` keyword in an arrow function, it will simply be the this keyword of the surrounding(parent) function.
+
+In technical terms, this is called the `lexical keyword` because it gets picked up from the outer lexical scope of the arrow function.
+
+```js
+Arrow Functions 👉🏽 this = <this of surrounding function (lexical this)>
+```
+
+### Always Remeber
+
+> Arrow functions do not get their own this keyword.
+
+### 4. Event Listener
+
+When the function is called as an `Event Listener`, the this keyword will be the `DOM element` the handler function is attached to.
+
+```js
+Event Listener 👉🏽 this = <DOM element that the handler is attached to>
+```
+
+### Note
+
+The `this` keyword in arrow functions does not point to the function itself, and also does not point to it's variable environment.
+
+Finally, it's good to note that there are other ways of calling a function like using the `new, call, apply, bind` methods.
+
+# The This Keyword in Practice
+
+- If you run the this keyword alone outside of a function, the result will be the global(window) object.
+
+E.g
+
+```js
+console.log(this);
+```
+
+- If the `this` keyword is executed in a regular function, the result will be undefined.
+
+E.g
+
+```js
+const calcAge = function (birthYear) {
+  console.log(2022 - birthYear);
+  console.log(this);
+};
+
+calcAge(); // Result = undefined
+```
+
+Note that a regular function is referred to a function that isn't attached to any object.
+
+- Next up if you run the `this` keyword in an arrow function, the result will be the window object, same as when we run it outside of a function, and this happens because the `this` keyword in an arrow function points to the lexical scope, which in this case is the parent scope. And since the parent scope is the window object, this keyword in an arrow function will be the same.
+
+```js
+const calcAge = (birthYear) => {
+  console.log(birthYear - 2022);
+  consol.log(this);
+};
+
+calcAge(1997); // result = window object
+```
+
+- In using the `this` keyword in an object, the result will be the object calling the function. For example:
+
+```js
+const eke = {
+  year: 1997,
+  calcAge: function () {
+    console.log(this);
+  },
+};
+eke.calcAge();
+```
+
+This here will be the object `eke` itself.
+
+With this we can do some opertion using the this keyword.
+
+```js
+const eke = {
+  year: 1997,
+  calcAge: function () {
+    console.log(2022 - this.year);
+  },
+};
+eke.calcAge();
+```
+
+This will give us `25` because we used the `this` keyword to get the year property in the object. So `eke.year === this.year`.
