@@ -271,3 +271,63 @@ f(); // undefined
 ```
 
 We get undefined because `f` is not attached to any object. It is just an ordinary function and since the `this` keyword is undefined in an regular function, the result of `f` will too be undefined.
+
+# Regular Functions vs Arrow Functions
+
+There are a few pitfalls related to using the `this` keyword in regular functions and arrow functions that require mentioning.
+
+```js
+const eke = {
+  firstName: "Victor",
+  year: 1997,
+  calcAge: function () {
+    console.log(2022 - this.year);
+    console.log(this);
+  },
+
+  greet: () => console.log(`Hey, ${this.firstName}`),
+};
+
+eke.greet();
+```
+
+In the code example above, the result of calling the greet method —which is an arrow function is undefined. Because remember an arrow functions does not get it's own `this` keyword, it will then use the `this` keyword from the global scope. In this scenario, `firstName` is not in the global scope therefore, the result will be `undefined`.
+
+This can be quite dangerous in a situation `var` is used to create variables because variables declared with `var` creates properties on the global object.
+
+```js
+var firstName = "Matilda"; // Result of eke.greet will now be Hey, matilda
+```
+
+The reason this happens is because `this` keyword points to the window object in the `greet` method, and since `firstName` was declared as Matilda using the `var` keyword, `this.firstName` will now produce Hey, Matilda.
+
+This is another good reason to not use the `var` keyword to declare a variable. From this example, the big takeaway is to not use an arrow function as a method but normal functions. Just following this rule will prevent the bug we illustrated in the example above.
+
+Another final example of one of the pitfalls of using the `this` keyword is when we have a function inside a method.
+
+# Primitive vs Objects (Primitive vs Reference Types)
+
+Primitive values inclues:
+
+- Number
+- String
+- Boolean
+- Undefined
+- Null
+- Symbol
+- BigInt
+
+Objects
+Everyting else are basically objects
+
+- Object literal
+- Arrays
+- Functions
+  and many more..
+
+For the sake of memory management, we refer to primitive as primitive types and objects as refrence types.
+Primitive types are stored in the `Call stack` while refrence types are stored in the `Heap`.
+
+It's a misconceptionn that all variables declared with the `const` keyword are immutable. However this is only true for primitive values but not for refrence values.
+
+# Primitive vs Objects in Practice
