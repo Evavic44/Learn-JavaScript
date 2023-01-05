@@ -94,6 +94,10 @@ const restaurant = {
   orderPasta: function (ing1, ing2, ing3) {
     console.log(`Here is yout declicious pasta with ${ing1}, ${ing2}, ${ing3}`);
   },
+
+  orderPizza: function (mainIngredient, ...otherIngredients) {
+    console.log(mainIngredient, otherIngredients);
+  },
 };
 
 // Calling orderDelivery method with new object parameters
@@ -161,7 +165,7 @@ const newMenu = [...restaurant.mainMenu, "Gnocci"];
 console.log(newMenu);
 
 /* 
-? Difference btw spread operator and destructuring is that  spread operators does not create new variables. It can only be used in places where values are seperated by commas.
+? Difference btw spread operator and destructuring is that spread operators does not create new variables. It can only be used in places where values are seperated by commas.
 */
 
 // Copy arrays
@@ -177,7 +181,7 @@ const str = "Eke";
 const letters = [...str, "", "S"];
 console.log(letters);
 
-// Spread operators can only be used when building an array or when values are passed into a funciton.
+//? Spread operators can only be used when building an array or when values are passed into a funciton.
 // console.log(${...str} 'Victor'); Will not work
 
 // Real-world example
@@ -199,3 +203,40 @@ console.log(newRestaurant);
 const restaurantCopy = { ...restaurant };
 restaurantCopy.name = "Ristorante Roma";
 console.log(restaurantCopy.name, restaurant.name);
+
+// 🔸Rest Pattern and Parameters🔸
+const data = [1, 2, ...[3, 4]];
+
+// Rest: Destructuring
+const [j, k, ...others] = [1, 2, 3, 4, 5];
+console.log(j, k, others);
+
+const [pizza, , risotto, ...otherFood] = [
+  ...restaurant.mainMenu,
+  ...restaurant.starterMenu,
+];
+
+console.log(pizza, risotto, otherFood);
+
+const { sat, ...weekdays } = { ...restaurant.openingHours };
+console.log(sat, weekdays);
+
+// Rest: Functions
+const add = function (...numbers) {
+  console.log(numbers);
+  let sum = 0;
+  for (let i = 0; i < numbers.length; i++) {
+    sum += numbers[i];
+  }
+  console.log(sum);
+};
+
+add(2, 3);
+add(5, 3, 7, 2);
+add(8, 2, 5, 3, 2, 1, 4);
+
+const x = [23, 5, 7];
+add(...x);
+
+restaurant.orderPizza("Mushrooms", "Onions", "Olives", "Spinach");
+restaurant.orderPizza("Mushrooms");
