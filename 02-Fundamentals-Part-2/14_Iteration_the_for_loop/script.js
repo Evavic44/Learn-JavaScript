@@ -1,22 +1,16 @@
-// console.log("lifting weights repetition 1 🏋🏽");
-// console.log("lifting weights repetition 2 🏋🏽");
-// console.log("lifting weights repetition 3 🏋🏽");
-// console.log("lifting weights repetition 4 🏋🏽");
-// console.log("lifting weights repetition 5 🏋🏽");
-// console.log("lifting weights repetition 6 🏋🏽");
-// console.log("lifting weights repetition 7 🏋🏽");
-// console.log("lifting weights repetition 8 🏋🏽");
-// console.log("lifting weights repetition 9 🏋🏽");
-// console.log("lifting weights repetition 10 🏋🏽");
+// console.log("Lifting Weights repition 1 🏋🏽");
+// console.log("Lifting Weights repition 2 🏋🏽");
+// console.log("Lifting Weights repition 3 🏋🏽");
+// console.log("Lifting Weights repition 4 🏋🏽");
+// console.log("Lifting Weights repition 5 🏋🏽");
+// console.log("Lifting Weights repition 6 🏋🏽");
+// console.log("Lifting Weights repition 7 🏋🏽");
+// console.log("Lifting Weights repition 8 🏋🏽");
+// console.log("Lifting Weights repition 9 🏋🏽");
+// console.log("Lifting Weights repition 10 🏋🏽");
 
-// for loop keeps running while condition is TRUE
-// for (let rep = 1; rep <= 10; rep++) {
-//   // code that we want repeated
-//   console.log("Lifting weights repetition 1 🏋🏽");
-// }
+// for ([initialExpression]; [conditionExpression]; [incrementExpression]) statement
 
-// We can use a template literal to dynamically increase the number in the string.
-
-for (let rep = 1; rep <= 10; rep++) {
-  console.log(`Lifting weights repetition ${rep} 🏋🏽`);
+for (let rep = 1; rep <= 30; rep++) {
+  console.log(`Lifting Weights repition ${rep} 🏋🏽`);
 }

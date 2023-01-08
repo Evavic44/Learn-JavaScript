@@ -1,6 +1,6 @@
 ### Iteration: The for Loop
 
-We talked about `if/else` statements in previous lectures about how they are control structures, but there are other control structures. Another control structure we have are `loops`
+We talked about `if/else` statements in previous lectures about how they are control structures. Another control structure we have are `loops`
 
 ### What are loops
 
@@ -31,10 +31,8 @@ So we'll use the `for` loop, which has a counter for this. Just like a function,
 
 The loop statement has 3 parts, namely:
 
-1. The initial value of a counter `in our example(1 - 10)`
+1. The initial value of a counter `in our example(1)`
 2. The logical condition that is evaluated before each iteration of the loop(each time before the loop is executed). For example: if this condition `rep <= 10` is true, then the next loop iteration will run.
-
-What this means is that rep is equal to the number of values in the array. So if we have 10 values, `rep = 9`, so `rep <= 10` is also `9 <= 10`
 
 > **Note** > `rep` here is short for repition so you can name your varaible whatever you want.
 
@@ -42,7 +40,7 @@ But as soon as this condition is false, then the loop stops. (normal code will b
 
 > The loop will keep running while the condition is true.
 
-3. And the final part is used to increase the counter for each iteration. To do this, we increase rep with 1 for each iteration. Example: `rep + 1`. But there's an operator we can use to write this in a shorter way, `rep++`
+3. And the final part is used to increase the counter for each iteration. To do this, we increase rep with 1 for each iteration. Example: `rep = rep + 1`, `rep++` for shorts
 
 ```js
 for (let rep = 1; rep <= 10; rep++);
@@ -54,4 +52,10 @@ And the final part we need to do is write the code that needs to be repeated.
 for (let rep = 1; rep <= 10; rep++) {
   console.log("Lifting weights repetition 1 🏋🏽");
 }
+```
+
+Finally, we can use template literals to append the number so we know the loop is working.
+
+```js
+console.log(`Lifting weights repition ${rep} 🏋🏽`);
 ```
