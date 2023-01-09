@@ -21,7 +21,7 @@ console.log(...data);
 
 Another use case of the spread operator is for passing in multiple values into a function.
 
-# Rest Patter and Parameters
+# Rest Pattern and Parameters
 
 The rest pattern is the opposite of the spread operator. It uses the exact same syntax, however, it it used to collect multiple elements and condense them into an array, whereas, the spread operator is used for unpacking an array into multiple elements or array.
 
@@ -94,3 +94,75 @@ The subtle distinction that tells you when and where to use spread and rest.
 
 - Use Spread when you want to write values seperated by commas.
 - Use Rest when you want to write variable names seperated by commas.
+
+# Short Circuting (&& and ||)
+
+In the past, we've looked at the `&&` and `||` operators but we only crossed the surface. In this section, we'll look at how to use these operators for something called circuting.
+
+### Properties of logical operators
+
+1. They can use any data type
+2. They can return any data type
+3. They can perform short circuting (short circuit evaluation)
+
+### Short Circuting Or ||
+
+For example:
+
+```js
+console.log(3 || "Eke");
+```
+
+In the case of the OR operator, short circuting means that if the first operand is a truthy value, it will return that value and not even evaluate the other value.
+
+```js
+console.log("🔸Short Circuting🔸");
+console.log(3 || "Eke"); // Truthy
+console.log("" || "Eke"); // Falsy
+console.log(true || 0); // Truthy
+console.log(undefined || null); // Falsy
+console.log(undefined || 0 || "" || "Hello" || 23 || null);
+```
+
+From the example above, we can see that the result of the OR operator doesn't have to be a boolean. It will simply short circut the entire operation and return the first truthy value.
+
+```js
+restaurant.numGuests = 23;
+const guest = restaurant.numGuests ? restaurant.numGuests : 10;
+console.log(guest);
+
+// In the example above before numGuest was assigned the number 23, restaurant.numGuest was undefined, which makes it a falsy value. And as such the operand will skip to the next value which is 10.
+
+// Instead of using a tenary operator, we can use short0-circuting in the OR operator.
+
+const guest2 = restaurant.numGuests || 10;
+console.log(guest2);
+```
+
+### Short Circuting And &&
+
+Short circuting the And operator works exactly the opposite of the OR operator. This means that if the first operand is a falsy value, it will return that value and not evaluate the other operand.
+
+For Example
+
+```js
+// Short Circuting (AND &&)
+console.log(0 && "Eke");
+console.log(7 && "Eke");
+
+console.log("Hello" && 23 && null && "Eke");
+
+if (restaurant.orderPizza) {
+  restaurant.orderPizza("Mushrooms", "Spinach");
+}
+
+restaurant.orderPizza && restaurant.orderPizza("Mushrooms", "Spinach");
+```
+
+In summary:
+
+- The OR operator will return the first truthy value of all the operands or simply return the last value if all the operands are falsy.
+
+- The AND operator will return the first falsy value or the last value if all the operands are truthy.
+
+In practical real world examples, the OR operator can be used for setting default values and the AND operator for setting executing code in the second operand if the first operand is true.

@@ -240,3 +240,30 @@ add(...x);
 
 restaurant.orderPizza("Mushrooms", "Onions", "Olives", "Spinach");
 restaurant.orderPizza("Mushrooms");
+
+// Short Circuting (OR ||)
+console.log("🔸Short Circuting🔸");
+console.log(3 || "Eke");
+console.log("" || "Eke");
+console.log(true || 0);
+console.log(undefined || null);
+console.log(undefined || 0 || "" || "Hello" || 23 || null);
+
+restaurant.numGuests = 23;
+const guest = restaurant.numGuests ? restaurant.numGuests : 10;
+console.log(guest);
+
+const guest2 = restaurant.numGuests || 10;
+console.log(guest2);
+
+// Short Circuting (AND &&)
+console.log(0 && "Eke");
+console.log(7 && "Eke");
+
+console.log("Hello" && 23 && null && "Eke");
+
+if (restaurant.orderPizza) {
+  restaurant.orderPizza("Mushrooms", "Spinach");
+}
+
+restaurant.orderPizza && restaurant.orderPizza("Mushrooms", "Spinach");
