@@ -103,7 +103,7 @@ In the past, we've looked at the `&&` and `||` operators but we only crossed the
 
 1. They can use any data type
 2. They can return any data type
-3. They can perform short circuting (short circuit evaluation)
+3. They can perform short circuting (aka short circuit evaluation)
 
 ### Short Circuting Or ||
 
@@ -117,10 +117,10 @@ In the case of the OR operator, short circuting means that if the first operand 
 
 ```js
 console.log("🔸Short Circuting🔸");
-console.log(3 || "Eke"); // Truthy
-console.log("" || "Eke"); // Falsy
-console.log(true || 0); // Truthy
-console.log(undefined || null); // Falsy
+console.log(3 || "Eke");
+console.log("" || "Eke");
+console.log(true || 0);
+console.log(undefined || null);
 console.log(undefined || 0 || "" || "Hello" || 23 || null);
 ```
 
@@ -133,7 +133,7 @@ console.log(guest);
 
 // In the example above before numGuest was assigned the number 23, restaurant.numGuest was undefined, which makes it a falsy value. And as such the operand will skip to the next value which is 10.
 
-// Instead of using a tenary operator, we can use short0-circuting in the OR operator.
+// Instead of using a tenary operator, we can use short-circuting in the OR operator.
 
 const guest2 = restaurant.numGuests || 10;
 console.log(guest2);
@@ -166,3 +166,24 @@ In summary:
 - The AND operator will return the first falsy value or the last value if all the operands are truthy.
 
 In practical real world examples, the OR operator can be used for setting default values and the AND operator for setting executing code in the second operand if the first operand is true.
+
+# The Nullish Coalescing Operator ()
+
+In the example below, the result for the OR operation will be 10 because the first value `restaurant.numGuests` is a truthy value, but if `restaurant.numGuets` becomes 0(a falsy value), the result will 20, the second option in the OR operation.
+
+```js
+restaurant.numGuests = 10;
+const guests = restaurant.numGuests || 20;
+console.log(guests);
+```
+
+In other to fix this issue, JavaScript introduced a new property called "The Nullish Coalescing Operator" that is similar to the OR operator.
+
+```js
+const guestCorrect = restaurant.numGuests ?? 20;
+console.log(guestCOrrect);
+```
+
+This works because the Nullish operator works with the concept of Nullish values instead of falsy values. So it works with `Undefined` and `Null` as falsy values and considers empty string and 0 as truthy values.
+
+In other words, the condition will work only if the first value is null or undefined. Since 0 is not a falsy value in the Nullish Coalescing operator, the condition will move to the next option.
