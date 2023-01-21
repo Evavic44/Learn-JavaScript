@@ -86,9 +86,12 @@ const players1Final = [...player1, "Thiago", "Coutinho", "Perisic"];
 console.log(players1Final);
 
 // 5.
-const {
-  odds: { team1, x: draw, team2 },
-} = game;
+// const {
+//   odds: { team1, x: draw, team2 },
+// } = game;
+
+// or
+const { team1, x: draw, team2 } = game.odds;
 console.log(team1, draw, team2);
 
 // 6.
@@ -100,7 +103,6 @@ printGoals(...game.scored);
 
 // 7.
 console.log(
-  game.odds.team1 < game.odds.team2 && "Team 1 is more likely to win",
-  "\n",
-  game.odds.team1 > game.odds.team2 && "Team 2 is more likely to win"
+  team1 < team2 && "Team 1 is more likely to win",
+  team1 > team2 && "Team 2 is more likely to win"
 );
