@@ -187,3 +187,37 @@ console.log(guestCOrrect);
 This works because the Nullish operator works with the concept of Nullish values instead of falsy values. So it works with `Undefined` and `Null` as falsy values and considers empty string and 0 as truthy values.
 
 In other words, the condition will work only if the first value is null or undefined. Since 0 is not a falsy value in the Nullish Coalescing operator, the condition will move to the next option.
+
+# Looping Arrays - The For Of Loop
+
+The for...of statement executes a loop that operates on a sequence of values sourced from an iterable object.
+
+Let's say we want to loop the array below, a typical `For` loop will look like this:
+
+```js
+const newMenu2 = [...restaurant.starterMenu, ...restaurant.mainMenu];
+
+for (let i = 0; i < newMenu2.lenght; i++) {
+  console.log(newMenu2[i]);
+}
+```
+
+But there is an easier way to loop between this array without having to specify all these conditions. This method is called the `For Of loop` and it was introduced in ES6.
+
+```js
+for (const foo of newMenu2) console.log(foo);
+```
+
+You can also use the `continue` and `break` keywords in the `for of` loop.
+
+Now what if we need the current index of each value? It's more of a pain to get the current index in a for of loop, and that is because, the for of loop was built to give us the current element. However you can get both the element and it's index.
+
+Example
+
+```js
+for (const bar of newMenu2.entries()) {
+  console.log(bar);
+}
+
+console.log([...newMenu2.entries()]);
+```

@@ -241,8 +241,8 @@ add(...x);
 restaurant.orderPizza("Mushrooms", "Onions", "Olives", "Spinach");
 restaurant.orderPizza("Mushrooms");
 
-// Short Circuting (OR ||)
-console.log("🔸Short Circuting🔸");
+// 🔸Short Circuting (OR ||)🔸
+console.log("Short Circuting");
 console.log(3 || "Eke");
 console.log("" || "Eke");
 console.log(true || 0);
@@ -268,7 +268,20 @@ if (restaurant.orderPizza) {
 
 restaurant.orderPizza && restaurant.orderPizza("Mushrooms", "Spinach");
 
-// Nullish Coalescing Operator
+// 🔸Nullish Coalescing Operator🔸
 restaurant.numGuests = 0;
 const guest3 = restaurant.numGuests || 10;
 console.log(guest3);
+
+// 🔸Looping Arrays (For-Of Loop)🔸
+const newMenu2 = [...restaurant.starterMenu, ...restaurant.mainMenu];
+
+// for (let i = 0; i < newMenu2.length; i++) {
+//   console.log(`FOR: ${newMenu2[i]} is a Cheese Recipe`);
+// }
+
+for (const foo of newMenu2) console.log(foo);
+for (const [i, el] of newMenu2.entries()) {
+  // console.log(item);
+  console.log(`${i + 1}: ${el}`);
+}
