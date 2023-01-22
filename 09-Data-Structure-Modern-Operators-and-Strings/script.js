@@ -285,3 +285,31 @@ for (const [i, el] of newMenu2.entries()) {
   // console.log(item);
   console.log(`${i + 1}: ${el}`);
 }
+
+// Enhanced object literals
+const testing = {
+  thu: {
+    open: 12,
+    close: 22,
+  },
+  fri: {
+    open: 11,
+    close: 23,
+  },
+};
+
+const other = {
+  // ES5
+  testing: testing,
+  // ES6
+  testing,
+
+  // ES5
+  orderPizza: function (mainIngredient, ...otherIngredients) {
+    console.log(mainIngredient, otherIngredients);
+  },
+  // ES6
+  orderPizza(mainIngredient, ...otherIngredients) {
+    console.log(mainIngredient, otherIngredients);
+  },
+};

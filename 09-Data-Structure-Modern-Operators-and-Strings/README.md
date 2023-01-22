@@ -221,3 +221,47 @@ for (const bar of newMenu2.entries()) {
 
 console.log([...newMenu2.entries()]);
 ```
+
+# Enhanced Object Literals
+
+Object literals are objects written literally, using the curly braces syntax. With ES6, enhanced object literals introduced three ways that allows you write object literals in an easy way.
+
+It provides a shorthand syntax for initializing properties from variables.
+It provides a shorthand syntax for defining function methods.
+It enables the ability to have computed property names in an object literal definition
+
+For Example.
+Consider the object below which has two methods and nested objects. With enhanced object literal, we don't need to assign a key: and it's value pair, we simply just write the object name.
+
+```js
+const testing = {
+  thu: {
+    open: 12,
+    close: 22,
+  },
+  fri: {
+    open: 11,
+    close: 23,
+  },
+};
+
+const other = {
+  // ES5
+  testing: testing,
+  // ES6
+  testing,
+
+  // ES5
+  orderPizza: function (mainIngredient, ...otherIngredients) {
+    console.log(mainIngredient, otherIngredients);
+  },
+  // ES6
+  orderPizza(mainIngredient, ...otherIngredients) {
+    console.log(mainIngredient, otherIngredients);
+  },
+};
+```
+
+Here we removed the colon `:` and the property `name` and simply passed in the object as a variable, and wrote the function like a regular function without the function keyword and colon.
+
+These all balls down to personal preference. You can choose which one you want to use.
