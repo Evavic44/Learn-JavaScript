@@ -313,3 +313,28 @@ const other = {
     console.log(mainIngredient, otherIngredients);
   },
 };
+
+// 🔸Optional Chaining🔸
+// Using conditional statements
+if (restaurant.openingHours.mon) console.log(restaurant.openingHours.mon.open);
+
+// Using optional chaining
+console.log(restaurant.openingHours.mon?.open);
+
+// Real-world Example
+const days = ["mon", "tue", "wed", "thu", "fri", "sat", "sun"];
+for (const day of days) {
+  console.log(day);
+  const open = restaurant.openingHours[day]?.open ?? "closed";
+  console.log(`On ${day}, we open at ${open}`);
+}
+
+// Optional chanining on Methods
+console.log(restaurant.order?.(0, 1) ?? "Method does not exisit");
+console.log(restaurant.orderRisotto?.(0, 1) ?? "Method does not exisit");
+
+// Optional chanining on Arrays
+const users = [{ name: "Eke", email: "hello@eke.com" }];
+console.log(users[0]?.name ?? "User array empty");
+
+// 🔸Looping Objects, Keys, Values, and Entries🔸

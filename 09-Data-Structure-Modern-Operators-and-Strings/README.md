@@ -265,3 +265,33 @@ const other = {
 Here we removed the colon `:` and the property `name` and simply passed in the object as a variable, and wrote the function like a regular function without the function keyword and colon.
 
 These all balls down to personal preference. You can choose which one you want to use.
+
+# Optional Chaining (?.)
+
+The optional chaining (?.) operator accesses an object's property or calls a function. If the object accessed or function called is undefined or null, it returns undefined instead of throwing an error.
+
+For example
+
+```js
+console.log(restaurant.openingHours.mon); // Result will be undefined
+```
+
+The code above will output undefined because `restaurant.mon` does not exist in the restaurant object. When working on real world projects, usually you get your data from a web service (API) so you need a way to check if a property exist.
+
+We could use conditional statments
+
+```js
+if (restaurant.openingHours) console.log(restaurant.openingHours.mon.open);
+```
+
+and even logical operators. But when we have several conditions we need to check for, it can get very messy using these methods. This is where the ES2020 optional chaining comes in.
+
+```js
+console.log(restaurant.openingHours.mon?.open);
+```
+
+The syntax uses a question mark after the element we want to check conditionally. In the example above the code is checking if `restaurant.openingHours.mon` exists, and if not, the code after the question mark will not even be evaluated.
+
+So the result in this operation will be `undefined` and the error we saw earlier will be avoided.
+
+# Looping Objects, Object Keys, Values, and Entries
