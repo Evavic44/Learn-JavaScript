@@ -338,3 +338,24 @@ const users = [{ name: "Eke", email: "hello@eke.com" }];
 console.log(users[0]?.name ?? "User array empty");
 
 // 🔸Looping Objects, Keys, Values, and Entries🔸
+const properties = Object.keys(openingHours);
+console.log(properties);
+
+let openStr = `We are open on ${properties.length} days: `;
+
+for (const day of properties) {
+  openStr += `${day}, `;
+}
+console.log(openStr);
+
+const values = Object.values(openingHours);
+console.log(values);
+
+// Entries Object
+const entries = Object.entries(openingHours);
+console.log(entries);
+
+// [key, value]
+for (const [q, { open, close }] of entries) {
+  console.log(`On ${q} we open at ${open} and close at ${close}`);
+}
