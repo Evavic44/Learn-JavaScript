@@ -401,3 +401,54 @@ console.log(staffUnique);
 // Convert values to arrays
 const staffUniqueAr = [...new Set(staff)];
 console.log(staffUniqueAr);
+
+// 🔸Maps🔸
+const rest = new Map();
+// Add elements
+rest.set("name", "Classico Italiano");
+rest.set(1, "Firenze, Italy");
+rest.set(2, "Lisbon, Portugal");
+console.log(rest);
+
+rest
+  .set(categories, [])
+  .set("open", 11)
+  .set("close", 23)
+  .set(true, "We are open :D")
+  .set(false, "We are closed :(");
+
+console.log(rest);
+console.log(rest.get(true));
+
+// Get elements
+const time = 21;
+console.log(rest.get(time > rest.get("open") && time < rest.get("close")));
+
+// Check for elements
+console.log(rest.has(categories));
+
+// Remove elements
+rest.delete(2);
+console.log(rest);
+
+// Size of elements
+console.log(rest.size);
+
+// Clear elements
+// rest.clear();
+// console.log(rest);
+
+// We can also use object inside of maps
+rest.set([1, 2], "Test");
+console.log(rest);
+
+// This will not work because it is not present in the same memory.
+console.log(rest.get([1, 2])); // Undefined
+
+const s = [1, 2];
+rest.set(s, "Test");
+console.log(rest.get(s));
+
+// DOM elements
+rest.set(document.querySelector("h1"), "Heading");
+console.log(rest);

@@ -413,3 +413,71 @@ console.log(uniqueStaff);
 ```
 
 Sets are not intended to replace arrays at all but only for working with unique values.
+
+# Maps
+
+Map objects are a collection of key-value pairs. Similar to objects, their keys only occur once and it is unique in a collection.
+
+The main difference is that `objects` only support string and `symbol` keys where as Maps supports any key type.
+
+Maps are created by defining a new map and to add items to the map, we use the `set()` method, which takes in any key `name` and a value.
+
+```js
+const rest = new Map();
+rest.set("name", "Classico Italiano"); // String as key
+rest.set(1, "Firenze, Italy"); // Number as key
+```
+
+We can also chain the set method with other items.
+
+```js
+rest
+  .set(categories, [])
+  .set("open", 11)
+  .set("close", 23)
+  .set(true, "We are open :D")
+  .set(false, "We are closed :(");
+
+console.log(rest);
+```
+
+To get items inside a `Map`, we use the `get()` method, with the key name we want to get. The key name data type also matters.
+
+```js
+console.log(rest.get(true));
+
+const time = 21;
+console.log(rest.get(time > rest.get("open") && time < rest.get("close")));
+```
+
+The rest also contains the `has()` method for checking for elements.
+
+```js
+rest.has(categories); // True
+```
+
+To remove elements from the Map, we use the delete method.
+
+```js
+rest.delete(1);
+```
+
+We can also use objects as Map keys
+
+```js
+rest.set([1, 2], "Test");
+```
+
+However, if we try to use the `get()` method on `[1, 2]`, it will not work because they are not in the same memory. In other to get the value `Test`, we store the element key in a variable and use that variable to get the element.
+
+```js
+const arr = [1, 2];
+rest.set(arr, "Test");
+rest.get(rest.get(arr));
+```
+
+We an also use the `rest` on `DOM` elements, which allows us to do advanced functionalities.
+
+```js
+rest.get(document.querySelector("h1"));
+```
