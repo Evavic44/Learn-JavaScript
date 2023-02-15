@@ -356,6 +356,48 @@ const entries = Object.entries(openingHours);
 console.log(entries);
 
 // [key, value]
-for (const [q, { open, close }] of entries) {
-  console.log(`On ${q} we open at ${open} and close at ${close}`);
+for (const [day, { open, close }] of entries) {
+  console.log(`On ${day} we open at ${open} and close at ${close}`);
 }
+
+// 🔸Sets🔸
+const ordersSet = new Set([
+  "Pasta",
+  "Pizza",
+  "Pizza",
+  "Risoto",
+  "Pasta",
+  "Pizza",
+]);
+console.log(ordersSet);
+
+console.log(ordersSet.size);
+
+// Has
+console.log(ordersSet.has("Bread"));
+console.log(ordersSet.has("Pizza"));
+
+// Add & Delete
+ordersSet.add("Garlic Bread");
+ordersSet.add("Garlic Bread");
+console.log(ordersSet);
+
+ordersSet.delete("Risoto");
+console.log(ordersSet);
+
+// Clear
+// ordersSet.clear();
+
+for (const order of ordersSet) {
+  console.log(order);
+}
+
+// Use Case
+const staff = ["Waiter", "Chef", "Waiter", "Manager", "Chef", "Waiter"];
+
+const staffUnique = new Set(staff);
+console.log(staffUnique);
+
+// Convert values to arrays
+const staffUniqueAr = [...new Set(staff)];
+console.log(staffUniqueAr);

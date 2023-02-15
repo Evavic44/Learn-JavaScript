@@ -295,3 +295,121 @@ The syntax uses a question mark after the element we want to check conditionally
 So the result in this operation will be `undefined` and the error we saw earlier will be avoided.
 
 # Looping Objects, Object Keys, Values, and Entries
+
+We can also loop Objects which are not iterables using the `For of` loop, though in an indirect way.
+
+With objects, we can loop through property names(keys) or values.
+
+### Property names(keys)
+
+```js
+for (const day of Object.keys(openingHours)) {
+  console.log(day);
+}
+```
+
+This will fetch all the key names (thu, fri, sat) of the openingHours object.
+
+We can also get property values using a similar fashion.
+
+### Property values
+
+```js
+for (const val of Object.values(openingHours)) {
+  console.log(val);
+}
+```
+
+But in other to get the full content of the array, we need a property called `entries`. Which is basically a method that returns both `keys` and `values` together.
+
+In objects it works a bit differently, as we don't call it as a method.
+
+### Entire Object
+
+```js
+const entries = Object.entries(openingHours)
+for(const [key, {open close}] of entries) {
+  console.log(`On ${key}, we open at ${open} and close at ${close}`)
+}
+```
+
+# Sets
+
+In the past, we only had two data structures: Arrays and Objects, but in ES6, two other data structures were added to the list: Sets and Maps.
+
+A set is a collection of unique values. Which means that a set can never have any duplicates.
+
+```js
+const ordersSet = new Set([
+  "Pasta",
+  "Pizza",
+  "Pizza",
+  "Risoto",
+  "Pasta",
+  "Pizza",
+]);
+console.log(ordersSet);
+```
+
+The result of this will be `'Pasta', 'Pizza', and 'Risoto'`. It will eliminate all duplicates. You can also pass in a string.
+
+## How to work with sets
+
+- Size
+  You can get the number of unique values in a set using the `size`
+  property. This is similar to the `.length` method in arrays
+
+```js
+console.log(ordersSize.size);
+```
+
+- If an element is in a set
+  With the `has` property, you can check if a value exists in a set. This property is similar to the `includes()` method in Arrays
+
+```js
+console.log(ordersSize.has("Bread"));
+```
+
+- Add and delete elements in a set
+
+```js
+ordersSet.add("Garlic Bread");
+ordersSet.delete("Garlic Bread");
+```
+
+You can't get values from a set. If you need to get a list of values, we still use Arrays.
+
+- Clear
+  Use this property to clear all the elements inside a set.
+
+```js
+ordersSet.clear();
+```
+
+Since sets are iterables, we can also loop over them.
+
+```js
+for (const order of ordersSet) {
+  console.log(order);
+}
+```
+
+## Use case for Sets
+
+The main use case for sets is to remove duplicate values in arrays. For example, let's say we need to get the unique values in an array and avoid all duplicates, here's how we can do that using a set.
+
+```js
+const staff = ["Waiter", "Chef", "Waiter", "Manager", "Chef", "Waiter"];
+
+const staffUnique = new Set(staff);
+console.log(staffUnique);
+```
+
+The result will still a set. To convert it into an array, we use the spread operator
+
+```js
+const uniqueStaff = [...new Set(staff)];
+console.log(uniqueStaff);
+```
+
+Sets are not intended to replace arrays at all but only for working with unique values.
