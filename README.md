@@ -328,3 +328,18 @@ Welcome to JavaScript Fundamentals part two.
 - [The this keyword]()
 - [Regular functions vs Arrow Functions]()
 - [Primitive vs Objects]()
+
+## Data Structure, Modern Operators and Strings
+
+- [Destructuring Arrays]()
+- [Destructuring Objects]()
+- [Spread Operators]()
+- [Rest Patterns and Parameters]()
+- [Short Circuting (OR ||)]()
+- [Nullish Coalescing Operator]()
+- [Looping Arrays (For of Loop)]()
+- [Optional Chaining]()
+- [Looping Objects, Keys, Values and Entries]()
+- [Sets]()
+- [Maps]()
+- [Maps Iteration]()
