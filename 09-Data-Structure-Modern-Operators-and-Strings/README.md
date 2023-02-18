@@ -481,3 +481,64 @@ We an also use the `rest` on `DOM` elements, which allows us to do advanced func
 ```js
 rest.get(document.querySelector("h1"));
 ```
+
+### Maps Iteration
+
+Elements are added to a `Map` using the `set()` method. But this can be cumbersome if you're trying to add multiple elements at the same time. To fix that, we can create a new `map` using an array inside the `map`.
+
+For example:
+
+```js
+const question = new Map([
+  ["Question", "What is the best programming language in the world?"],
+  [1, "C"],
+  [2, "Java"],
+  [3, "JavaScript"],
+  ["Correct", 3],
+  [true, "Correct 🎉"],
+  [false, "Try Again 💔"],
+]);
+```
+
+This method makes it easier but in any case where we need to keep adding elements to the `Map` programtically, the `set()` method is best.
+
+### Convert Objects to Map
+
+```js
+const hoursMap = new Map(Object.entries(openingHours));
+console.log(hoursMap);
+```
+
+```js
+// Quiz App
+console.log(question.get("Question"));
+
+for (const [key, value] of question) {
+  if (typeof key === "number") {
+    console.log(`Answer ${key}: ${value}`);
+  }
+}
+
+const answer = Number(prompt("What is your answer?"));
+console.log(
+  answer === question.get("correct")
+    ? `${answer} ${question.get(true)}`
+    : `${answer} ${question.get(false)}`
+);
+```
+
+Finally, it can be important to know how to convert a `Map` back to an array. To do that, simply use destructure the `Map`.
+
+```js
+console.log(...question);
+```
+
+Finally, `Maps` also contains the keywords for getting elements:
+
+```js
+console.log(...question.entries());
+console.log(...question.keys());
+console.log(...question.values());
+```
+
+# Summary: Which Data Structure to Use

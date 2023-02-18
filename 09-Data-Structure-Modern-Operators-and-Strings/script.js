@@ -373,11 +373,11 @@ console.log(ordersSet);
 
 console.log(ordersSet.size);
 
-// Has
+// Has in Set
 console.log(ordersSet.has("Bread"));
 console.log(ordersSet.has("Pizza"));
 
-// Add & Delete
+// Add & Delete Set
 ordersSet.add("Garlic Bread");
 ordersSet.add("Garlic Bread");
 console.log(ordersSet);
@@ -385,7 +385,7 @@ console.log(ordersSet);
 ordersSet.delete("Risoto");
 console.log(ordersSet);
 
-// Clear
+// Clear a set
 // ordersSet.clear();
 
 for (const order of ordersSet) {
@@ -452,3 +452,46 @@ console.log(rest.get(s));
 // DOM elements
 rest.set(document.querySelector("h1"), "Heading");
 console.log(rest);
+
+const dat = new Map();
+
+// Map Iterations
+const question = new Map([
+  ["Question", "What is the best programming language in the world?"],
+  [1, "C"],
+  [2, "Java"],
+  [3, "JavaScript"],
+  ["Correct", 3],
+  [true, "correct 🎉"],
+  [false, "Try Again 💔"],
+]);
+
+console.log(question);
+
+// Convert objects to Map
+const hoursMap = new Map(Object.entries(openingHours));
+console.log(hoursMap);
+
+// Quiz App
+console.log(question.get("Question"));
+
+for (const [key, value] of question) {
+  if (typeof key === "number") {
+    console.log(`Answer ${key}: ${value}`);
+  }
+}
+
+const answer = Number(prompt("What is your answer?"));
+console.log(
+  answer === question.get("correct")
+    ? `${answer} ${question.get(true)}`
+    : `${answer} ${question.get(false)}`
+);
+
+// Convert Map to Array
+console.log(...question);
+
+// Also contains the keywords in Objects
+console.log(...question.entries());
+console.log(...question.keys());
+console.log(...question.values());
