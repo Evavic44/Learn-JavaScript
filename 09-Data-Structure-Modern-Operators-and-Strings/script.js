@@ -453,8 +453,6 @@ console.log(rest.get(s));
 rest.set(document.querySelector("h1"), "Heading");
 console.log(rest);
 
-const dat = new Map();
-
 // 🔸Map Iterations🔸
 const question = new Map([
   ["Question", "What is the best programming language in the world?"],
@@ -481,7 +479,8 @@ for (const [key, value] of question) {
   }
 }
 
-const answer = Number(prompt("What is your answer?"));
+// const answer = Number(prompt("What is your answer?"));
+const answer = 3;
 console.log(
   answer === question.get("correct")
     ? `${answer} ${question.get(true)}`

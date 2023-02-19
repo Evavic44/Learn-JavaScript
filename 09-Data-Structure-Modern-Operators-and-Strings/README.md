@@ -542,3 +542,92 @@ console.log(...question.values());
 ```
 
 # Summary: Which Data Structure to Use
+
+Initially we had two main data structures, Arrays and Objects but we have looked at other data structures introduced to JavaScript from ES6.
+
+It's important to know the pros and cons of all the data structures and which one to use at any given point.
+
+## Sources of Data
+
+There are three main sources of Data,
+
+- The Program: Data written directly in source code (E.g: Status Message)
+- From the UI: Data input from the user or Data written in DOM (E.g tasks in a todo app).
+- From External Sources: Data fetched for example from Web API (E.g recipe, objects)
+
+## Data Structures to Use
+
+- Simple List: Arrays or Sets
+- Key/Value Pairs: Objects or Maps
+
+The most common source of Data is the Web API which commonly comes in a `JSON` format and for storing such data, arrays is usually the way to go.
+
+Now there are other data structures not built into JavaScript like:
+
+### Other Built-In
+
+- WeakMap
+- WeakSet
+
+### Non-Built In
+
+- Stacks
+- Queues
+- Linked Lists
+- Trees
+- Hash Tables
+
+## Arrays vs Sets & Objects vs Maps
+
+## Arrays
+
+```js
+const tasks = ["Code", "Eat", "Code"];
+// ["Code", "Eat", "Code"]
+```
+
+1. Use arrays when you need **ordered** list of values(with duplicates).
+2. Use arrays when you need to **manipulate** data
+
+## Sets
+
+```js
+const task = new Set(["Code", "Eat", "Code"]);
+// ["Code", "Eat"]
+```
+
+1. Use Sets when you need to work with **unique** values.
+2. Use Sets when **high performance** is really important.
+3. Use Sets to **remove duplicates** from arrays.
+
+## Objects
+
+```js
+const task = {
+  task: "code",
+  date: "today",
+  repeat: true,
+};
+```
+
+1. More traditional key/value store
+2. Eaiser to write and access values with `.` and `[]` notations
+3. Use when you need to include `functions` (methods)
+4. Use when working with `JSON` (can covert to `Map`)
+
+## Maps
+
+```js
+const task = new Map([
+  ["task", "code"],
+  ["date", "today"],
+  [false, "start coding!"],
+]);
+```
+
+1. Better performance
+2. Keys can have any data type
+3. Easy to iterate
+4. Easy to compute size
+5. Use when you simply need to map key to values
+6. Use when you need keys that are not strings.
