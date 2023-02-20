@@ -482,7 +482,7 @@ We an also use the `rest` on `DOM` elements, which allows us to do advanced func
 rest.get(document.querySelector("h1"));
 ```
 
-### Maps Iteration
+# Maps Iteration
 
 Elements are added to a `Map` using the `set()` method. But this can be cumbersome if you're trying to add multiple elements at the same time. To fix that, we can create a new `map` using an array inside the `map`.
 
@@ -579,7 +579,7 @@ Now there are other data structures not built into JavaScript like:
 
 ## Arrays vs Sets & Objects vs Maps
 
-## Arrays
+### Arrays
 
 ```js
 const tasks = ["Code", "Eat", "Code"];
@@ -589,7 +589,7 @@ const tasks = ["Code", "Eat", "Code"];
 1. Use arrays when you need **ordered** list of values(with duplicates).
 2. Use arrays when you need to **manipulate** data
 
-## Sets
+### Sets
 
 ```js
 const task = new Set(["Code", "Eat", "Code"]);
@@ -600,7 +600,7 @@ const task = new Set(["Code", "Eat", "Code"]);
 2. Use Sets when **high performance** is really important.
 3. Use Sets to **remove duplicates** from arrays.
 
-## Objects
+### Objects
 
 ```js
 const task = {
@@ -615,7 +615,7 @@ const task = {
 3. Use when you need to include `functions` (methods)
 4. Use when working with `JSON` (can covert to `Map`)
 
-## Maps
+### Maps
 
 ```js
 const task = new Map([
@@ -631,3 +631,245 @@ const task = new Map([
 4. Easy to compute size
 5. Use when you simply need to map key to values
 6. Use when you need keys that are not strings.
+
+# Working with Strings - Part 1
+
+In JavaScript we work a lot with strings and there are some important `string methods` worth knowing. This methods are very similar with the `array methods`
+
+We can get elements in a string using the dot notation and the postion number. (Like arrays, strings are also zero-based)
+
+```js
+const airline = "Dana Air Nigeria";
+const plane = "Boeing 700";
+
+console.log(plane[0]); // output B
+console.log(plane[1]); // output o
+console.log(plane[2]); // output e
+console.log("B737"[0]); // output B
+```
+
+We can also get the lenght of a string and the position of an element in a string.
+
+```js
+console.log(airline.length); // output 16
+console.log("B737".length); // output 4
+
+console.log(airline.indexOf("a")); // output 1
+console.log(airline.lastIndexOf("a")); // output 15
+console.log(airline.indexOf("Codo")); // output -1 (since result is not found)
+```
+
+### Slice Method
+
+The `slice()` method returns a shallow copy of a portion of an arrayl or string into a new array object selected from `start` to `end`
+
+Syntax
+
+```js
+slice();
+slice(start);
+slice(start, end);
+```
+
+The importance of using these indexes is using the `slice()` method to get `indexOf` of a string element or array.
+
+**Start**
+
+```js
+console.log(airplane.slice(5));
+```
+
+This will slice the string `Dana Air Nigeria` by five positions and output the remaining result, which will be `Air Nigeria`
+
+The result of a sliced string is referred to as a **sub string** because it does not change the original string. Of course this is because strings are immutable.
+
+If you need to change the string, you would have to store it in a variable or data structure.
+
+**End**
+
+```js
+console.log(airplane.slice(4, 7));
+```
+
+The result will be `Ai` because 4 will slice `Dana ` and 7 will slice `r Nigeria`
+
+> **Note**
+> The lenght of the extracted string(sub string) will always be `start - end`. In the example above `7 - 4 = 2` hence the result(Ai)
+
+In real world example, we may not know the string we wish to extract. So how do you extract a string if we didn't know what it is? We use the `indexOf()` method.
+
+```js
+console.log(airline.slice(0, airline.indexOf(" ")));
+```
+
+Here we're starting from 0 and slicing the first occurence of the space`(' ')`, which will give us `Dana`
+
+And if we want to start from the last item:
+
+```js
+console.log(airline.slice(0, airline.lastIndexOf(" ")));
+```
+
+We can also use negative values:
+
+```js
+console.log(airline.slice(-2)); // ia
+console.log(airline.slice(-6)); // igeria
+console.log(airline.slice(-11)); // Air Nigeria
+console.log(airline.slice(1, -11)); // ana
+```
+
+Let's practice what we just learned by writing a function that recieves an airplane sit and logs to the console if it is a middle sit or not.
+
+Note that there are 6 sits in a row from `A - F`
+
+```js
+const checkMiddleSeat = function (seat) {
+  // B & E are middle seats
+  const x = seat.slice(-1);
+  if (x === "B" || x === "E") {
+    console.log(`${x} is a middle seat`);
+  } else {
+    console.log(`${x} is not a middle seat`);
+  }
+};
+
+checkMiddleSeat("11B");
+checkMiddleSeat("23C");
+checkMiddleSeat("3E");
+```
+
+The result will be:
+
+- B is a middle seat
+- C is not a middle seat
+- E is a middle seat
+
+# Working with Strings - Part 2
+
+### Capitalization `(toLowerCase() & toUpperCase())`
+
+```js
+const passenger = "vICtOR";
+const passengerLower = passenger.toLowerCase();
+const passengerCorrect =
+  passengerLower[0].toUpperCase() + passengerLower.slice(1);
+console.log(passengerCorrect);
+
+// Function
+const correctName = function (name) {
+  const low = name.toLowerCase();
+  const correct = low[0].toUpperCase() + low.slice(1);
+  return correct;
+};
+
+console.log(correctName("jOHn"));
+```
+
+### Comparing strings
+
+```js
+const email = "hello@eke.io";
+const loginEmail = "  Hello@eKE.Io \n";
+
+const lowerEmail = loginEmail.toLowerCase();
+const trimmedEmail = lowerEmail.trim();
+console.log(trimmedEmail);
+```
+
+Similar to the `Map` `set()` method, we can join string methods together.
+
+```js
+const normalEmail = loginEmail.toLowerCase().trim();
+console.log(normalEmail); // output hello@eke.io
+console.log(email === normalEmail); // output true
+```
+
+### Replacing
+
+Let's try replacing a currency type and the trailing period with a comma
+
+```js
+const priceNG = "₦288.97";
+console.log(priceNG);
+const priceGB = priceNG.replace("₦", "£").replace(".", ",");
+console.log(priceGB);
+```
+
+Replace words.
+
+```js
+console.log(announcement.replace("door", "gate")); // Replace first occurence of the word 'door'
+console.log(announcement.replaceAll("door", "gate")); // Replace all occurence
+```
+
+Another way we can do this is by using a regular expression.
+
+```js
+console.log(announcement.replace(/door/g, "gate"));
+```
+
+Just like all of the previous methods, the replace method is also case sensitive.
+
+### Booleans
+
+There are three methods that returns a boolean (`includes()`, `startsWith()`, `endsWith()`)
+
+```js
+const planes = "Airbus A320neo";
+console.log(planes.includes("A320")); // true
+console.log(planes.includes("Boeing")); // false
+console.log(planes.startsWith("Air")); // false
+
+if (planes.startsWith("Airbus") && planes.endsWith("neo")) {
+  console.log("Part of the New Airbus family");
+}
+```
+
+#### Practice Exercise
+
+```js
+const checkBaggage = function (items) {
+  const baggage = items.toLowerCase();
+  if (baggage.includes("knife") || baggage.includes("gun")) {
+    console.log("You are NOT allowed on board");
+  } else {
+    console.log("Welcome aboard");
+  }
+};
+
+checkBaggage("I have a laptop, some Food and a pocket Knife");
+checkBaggage("Socks and camera");
+checkBaggage("Get some snacks and a gun for protection");
+```
+
+### Capitalize Name
+
+```js
+const capitalizeName = function (name) {
+  const names = name.split(" ");
+  const namesUpper = [];
+
+  for (const n of names) {
+    // namesUpper.push(n[0].toUpperCase() + n.slice(1));
+    // Using replace
+    namesUpper.push(n.replace(n[0], n[0].toUpperCase()));
+  }
+  console.log(namesUpper.join(" "));
+};
+```
+
+## Summary
+
+- `toLowerCase()`: Converts all the alphabetic characters in a string to lowercase.
+- `toUpperCase()`: Converts all the alphabetic characters in a string to uppercase.
+- `trim()`: Removes the leading and trailing white space and line terminator characters from a string
+- `replace()`: Replaces text in a string, using a regular expression or search string.
+- `replaceAll()`: Replaces all occurence of text in a string, using a regular expression or search string.
+- `indexOf()`: Returns the position of the first occurrence of a substring.
+- `lastIndexOf()`: Returns the last occurrence of a substring in the string.
+- `slice()`: Returns a section or the index to the beginning of the specified portion of stringObj
+- `starsWith()`: Returns true if the sequence of elements of searchString converted to a String is the same as the corresponding elements of this object (converted to a String) starting at position. Otherwise returns false.
+- `endsWith()`: Returns true if the sequence of elements of searchString converted to a String is the same as the corresponding elements of this object (converted to a String) starting at endPosition – length(this). Otherwise returns false.
+- `padStart`: Pads the current string with a given string (possibly repeated) so that the resulting string reaches a given length. The padding is applied from the start (left) of the current string.
+- `padEnd`: Pads the current string with a given string (possibly repeated) so that the resulting string reaches a given length. The padding is applied from the end (right) of the current string.

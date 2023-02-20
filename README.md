@@ -348,3 +348,6 @@ Welcome to JavaScript Fundamentals part two.
 - [Maps Iteration]()
 - [Summary: Which Data Structure to Use]()
 - [Coding Challenge 3]()
+- [Working with Strings - Part 1]()
+- [Working with Strings - Part 2]()
+- [Working with Strings - Part 3]()
