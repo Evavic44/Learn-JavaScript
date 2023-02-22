@@ -265,3 +265,33 @@ for (const [minutes, event] of gameEvents) {
       : `[SECOND HALF] ${minutes}: ${event}`
   );
 }
+
+("use strict");
+
+/*
+---- Challenge ----
+Given a string of parenthesis, return the number of parenthesis you need to add to the string in order for it to be balanced
+
+stringBalanced('()') => 0
+stringBalanced('(()') => 1
+stringBalanced('))()))))()') => 6
+stringBalanced(')))))') => 5
+*/
+
+const stringBalanced = function (par) {
+  let leftPar = par.split(")").length;
+  let rightPar = par.split("(").length;
+
+  if (leftPar === rightPar) {
+    return leftPar - rightPar;
+  } else if (leftPar > rightPar) {
+    return leftPar - rightPar;
+  } else {
+    return rightPar - leftPar;
+  }
+};
+
+console.log(stringBalanced("()"));
+console.log(stringBalanced("(()"));
+console.log(stringBalanced("))()))))()"));
+console.log(stringBalanced(")))))"));

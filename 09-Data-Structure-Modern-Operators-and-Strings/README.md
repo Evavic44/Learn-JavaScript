@@ -661,7 +661,7 @@ console.log(airline.indexOf("Codo")); // output -1 (since result is not found)
 
 ### Slice Method
 
-The `slice()` method returns a shallow copy of a portion of an arrayl or string into a new array object selected from `start` to `end`
+The `slice()` method returns a shallow copy of a portion of an array or string into a new array object selected from `start` to `end`
 
 Syntax
 
@@ -676,6 +676,7 @@ The importance of using these indexes is using the `slice()` method to get `inde
 **Start**
 
 ```js
+const airplane = "Dana Air Nigeria";
 console.log(airplane.slice(5));
 ```
 
@@ -859,7 +860,54 @@ const capitalizeName = function (name) {
 };
 ```
 
-## Summary
+### Padding
+
+This allows us to add a number of elements to a string until a string is at a desired length.
+
+```js
+const message = "Go to gate 23!";
+console.log(message.padStart(25, "+")); // +++++++++++Go to gate 23!
+```
+
+This will add 11 plus symbols to the beginning of the string because using the `padStart()` method, we specified the string to be 25 characters long including the symbol and since the string `"Go to gate 23"` is 14 characters, the `padStart` method will fill it up with 11 + symbols.
+
+If the string we want to pad is the same number of chracters on `padStart()` method, no value will be added to the string.
+
+For example:
+
+```js
+const message = "Hey";
+console.log(message.padStart(3, "+")); // Hey
+```
+
+We also have the `padEnd()` method, which is the opposite of `padStart()`
+
+Let's add 1 plus symbol at the end and beginning of a string.
+
+```js
+console.log("Victor".padStart(10, "+").padEnd(14, "+")); // ++++Victor++++
+```
+
+### Repeat
+
+This method allows you to repeat a string multiple times.
+
+```js
+const message2 = "Hello ";
+console.log(message2.repeat(3)); // Hello Hello Hello
+```
+
+```js
+function planesInline(n) {
+  console.log(`There are ${n} planes in line ${"✈️".repeat(n)}`);
+}
+
+planesInline(10); // There are 10 planes in line ✈️✈️✈️✈️✈️✈️✈️✈️✈️✈️
+planesInline(3); // There are 3 planes in line ✈️✈️✈️
+planesInline(5); // There are 5 planes in line ✈️✈️✈️✈️✈️
+```
+
+## Summary of the String Methods
 
 - `toLowerCase()`: Converts all the alphabetic characters in a string to lowercase.
 - `toUpperCase()`: Converts all the alphabetic characters in a string to uppercase.
@@ -873,3 +921,4 @@ const capitalizeName = function (name) {
 - `endsWith()`: Returns true if the sequence of elements of searchString converted to a String is the same as the corresponding elements of this object (converted to a String) starting at endPosition – length(this). Otherwise returns false.
 - `padStart`: Pads the current string with a given string (possibly repeated) so that the resulting string reaches a given length. The padding is applied from the start (left) of the current string.
 - `padEnd`: Pads the current string with a given string (possibly repeated) so that the resulting string reaches a given length. The padding is applied from the end (right) of the current string.
+- `repeat()`: The repeat() method constructs and returns a new string which contains the specified number of copies of the string on which it was called, concatenated together.

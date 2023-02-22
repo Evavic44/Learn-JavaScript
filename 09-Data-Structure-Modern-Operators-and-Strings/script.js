@@ -638,7 +638,7 @@ capitalizeName("victor eke");
 // Padding
 const message = "Go to gate 23";
 console.log(message.padStart(25, "+"));
-console.log("Victor".padStart(10, "+").padEnd(15, "+"));
+console.log("Victor".padStart(10, "+").padEnd(14, "+"));
 
 const maskCreditCard = function (number) {
   const str = String(number);
@@ -647,3 +647,15 @@ const maskCreditCard = function (number) {
 
 maskCreditCard(5493403400303010);
 maskCreditCard("4446482749251379");
+
+// Repeat
+const message2 = "Hello";
+console.log(message2.repeat(3));
+
+function planesInline(n) {
+  console.log(`There are ${n} planes in line ${"✈️".repeat(n)}`);
+}
+
+planesInline(10);
+planesInline(3);
+planesInline(5);
