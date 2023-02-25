@@ -917,6 +917,7 @@ planesInline(5); // There are 5 planes in line ✈️✈️✈️✈️✈️
 - `indexOf()`: Returns the position of the first occurrence of a substring.
 - `lastIndexOf()`: Returns the last occurrence of a substring in the string.
 - `slice()`: Returns a section or the index to the beginning of the specified portion of stringObj
+- `split()`:
 - `starsWith()`: Returns true if the sequence of elements of searchString converted to a String is the same as the corresponding elements of this object (converted to a String) starting at position. Otherwise returns false.
 - `endsWith()`: Returns true if the sequence of elements of searchString converted to a String is the same as the corresponding elements of this object (converted to a String) starting at endPosition – length(this). Otherwise returns false.
 - `padStart`: Pads the current string with a given string (possibly repeated) so that the resulting string reaches a given length. The padding is applied from the start (left) of the current string.

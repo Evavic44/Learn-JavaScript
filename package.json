@@ -7,7 +7,8 @@
     "doc": "docs"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass --watch sass:css"
   },
   "repository": {
     "type": "git",
@@ -21,6 +22,7 @@
   },
   "homepage": "https://github.com/Evavic44/Learn-JavaScript#readme",
   "dependencies": {
-    "live-server": "^1.2.2"
+    "live-server": "^1.1.0",
+    "npm": "^9.5.0"
   }
 }
