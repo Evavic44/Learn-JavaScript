@@ -53,3 +53,71 @@ const newPassport = function (person) {
 
 newPassport(eke);
 checkIn(flight, eke);
+
+// 🔸 First Class Function vs Higher Order Functions 🔸
+const add = (a, b) => a + b;
+
+const counter = {
+  value: 23,
+  inc: function () {
+    this.value++;
+  },
+};
+
+// const greet = () => console.log("Hey Eke");
+// btnClose.addEventListener("click", greet);
+
+// Higher order function
+function count() {
+  let counter = 0;
+  // Callback function
+  return function () {
+    counter++;
+  };
+}
+
+// 🔸 Functions Accepting Callback Functions 🔸
+const oneWord = function (str) {
+  return str.replaceAll(" ", "").toLowerCase();
+};
+
+const upperFirstWord = function (str) {
+  const [first, ...others] = str.split(" ");
+  return [first.toUpperCase(), ...others].join(" ");
+};
+
+// Higher-order function
+const transformer = function (str, fn) {
+  console.log(`Original string: ${str}`);
+  console.log(`Transformed string: ${fn(str)}`);
+
+  console.log(`Transformed by: ${fn.name}`);
+};
+
+transformer("JavaScript is the best!", upperFirstWord);
+transformer("JavaScript is the best!", oneWord);
+
+// JavaScript uses callbacks all the time.
+const high5 = function () {
+  console.log("👋🏽");
+};
+
+["Victor", "Martha", "Adam"].forEach(high5);
+document.body.addEventListener("click", high5);
+
+// 🔸 Functions Returning Functions 🔸
+const greet = function (greetMsg) {
+  return function (name) {
+    console.log(`${greetMsg} ${name}`);
+  };
+};
+// Arrow function
+const greetAr = (greetMsg) => (name) => console.log(`${greetMsg} ${name}`);
+
+const gretterHey = greet("Hey");
+gretterHey("Victor");
+gretterHey("Ben");
+
+greet("Hello")("Caleb");
+
+// 🔸 The Call and Apply Method 🔸
