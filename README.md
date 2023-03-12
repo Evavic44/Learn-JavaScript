@@ -351,3 +351,18 @@ Welcome to JavaScript Fundamentals part two.
 - [Working with Strings - Part 1]()
 - [Working with Strings - Part 2]()
 - [Working with Strings - Part 3]()
+
+## A Closer Look at Functions
+
+- [Default Parameters]()
+- [How Passing Arguments Work (Value vs Reference)]()
+- [First Class and Higher Order Functions]()
+- [Function Accepting Callback Functions]()
+- [Functions Returning Functions]()
+- [The Call and Apply Method]()
+- [The Bind Method]()
+- [Coding Challenge 1 🎉]()
+- [Immediately Invoked Function Expression (IIFE)]()
+- [Closures]()
+- [Closures Example]()
+- [Coding Challenge 2 🎉]()
