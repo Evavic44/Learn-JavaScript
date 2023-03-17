@@ -366,3 +366,5 @@ Welcome to JavaScript Fundamentals part two.
 - [Closures]()
 - [Closures Example]()
 - [Coding Challenge 2 🎉]()
+
+## Working with Arrays
