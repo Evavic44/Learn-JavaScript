@@ -217,3 +217,33 @@ const addTaxRate = function (rate) {
 const addVat2 = addTaxRate(0.23);
 console.log(addVat2(100));
 console.log(addVat2(23));
+
+// Immediately Invoked Function Expressions (IIFE)
+const runOnce = function () {
+  console.log("This will never run again");
+};
+runOnce();
+
+(function () {
+  console.log("Hello World");
+})();
+
+// Also works with arrow functions
+(() => console.log("Hello World 2"))();
+
+// 🔸 Closures 🔸
+const secureBooking = function () {
+  let passengerCount = 0;
+
+  return function () {
+    passengerCount++;
+    console.log(`${passengerCount} passengerCount`);
+  };
+};
+
+const booker = secureBooking();
+booker();
+booker();
+booker();
+
+// WILL COME BACK TO THIS LESSON

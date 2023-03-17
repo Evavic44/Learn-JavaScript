@@ -400,3 +400,71 @@ const addTask = (rate = 0.23, value) => value + value * rate;
 ```
 
 But the difference is that the bind method allows us to create a completely different function we can work with.
+
+# Immediately Invoked Function Expressions (IIFE)
+
+An IIFE (Immediately Invoked Function Expression) is a JavaScript function that runs as soon as it is called or invoked. This function will only run once
+
+```js
+const runOnce = function () {
+  console.log(`This will never run again`);
+};
+runOnce(); // Can run again
+```
+
+The function above can be called again using the `runOnce` variable. What if we want to call this funtion only within itself, we use the `IIFE`
+
+To use the `IIFE`, write a function without a variable name and wrap it inside parethesis(which converts it into an expression), and then we can call it using the parenthesis `()`.
+
+```js
+(function () {
+  console.log("Hello World");
+})();
+```
+
+It also works with arrow fucntions
+
+```js
+(() => console.log("Hello World 2"))();
+```
+
+Since we didn't assign a variable on both functions, we can only run it once and there is no way to call it aside within itself.
+
+### Importance of IIFE
+
+- This **IIFE** is important when we want to handle Async, await operations.
+- Variables defined inside an `IIFE` scope will not be avaialble in the global scope. For example.
+
+```js
+(function () {
+  console.log("Hello World");
+  const num = 23;
+})();
+
+console.log(num);
+```
+
+This will throw an error because `num` is not accessible in the global scope. Another word for this is called encapsulation.
+
+Data encapsulation and Data privacy are extremely important concepts in programming. It allows us to protect variables from being overwritten by external scripts or libraries, and this is primarily the reason why the `IIFE` were introduced in programming.
+
+Although it is not a method specific to the JavaScript language but a pattern developers came up with to enable them protect variables.
+
+This is also similar to declaring variables using the `const` and `let` keywords within a code block.
+
+```js
+{
+  const isPrivate = 23;
+  var notPrivate = 22;
+}
+```
+
+The `var` keyword points to the global scope and so it will be accessible outside of the code block. While variables declared with `const` and `let` will create their own scope and will not be accessible outside of the code block.
+
+In summary thanks to `ES6`, we do not need to use immediatelt invoked functions if all we want is to hide variables, we can simply declare them using `const` and `let`.
+
+But if we want to run a function only once, `IIFE` is still the way to go, even now with modern JavaScript.
+
+# Closures
+
+WILL COME BACK TO THIS LESSON
