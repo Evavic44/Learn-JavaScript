@@ -81,6 +81,18 @@ const displayMovements = function (movements) {
 };
 displayMovements(account1.movements);
 
+const createUsernames = function (acc) {
+  acc.forEach(function (acc) {
+    acc.username = acc.owner
+      .toLowerCase()
+      .split(' ')
+      .map(letter => letter[0])
+      .join('');
+  });
+};
+createUsernames(accounts);
+console.log(accounts);
+
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
 // LECTURES
@@ -91,7 +103,29 @@ const currencies = new Map([
   ['GBP', 'Pound sterling'],
 ]);
 
-// const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+
+const euroToUsd = 1.1;
+// const movementsUSD = movements.map(function (mov) {
+//   return mov * euroToUsd;
+// });
+
+// Arrow function
+const movementsUSD = movements.map(mov => mov * euroToUsd);
+console.log(movements);
+console.log(movementsUSD);
+
+// for of loop
+const movementsUSDFor = [];
+for (const mov of movements) {
+  movementsUSDFor.push(mov * euroToUsd);
+}
+
+const movementsDescriptions = movements.map(
+  (mov, i) =>
+    `Movements ${i}: You ${mov > 0 ? 'deposited' : 'withdrew'} ${Math.abs(mov)}`
+);
+console.log(movementsDescriptions);
 
 /////////////////////////////////////////////////
 

@@ -193,6 +193,30 @@ This method is similar to the `forEach` method but the difference is that the `M
 
 ![map](https://user-images.githubusercontent.com/62628408/226436590-6e16b20e-89b4-4e7f-883e-cef00552d67a.png)
 
+```js
+const euroToUSD = 1.1;
+const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+cost movementsUSD = movements.map(function (mov) {
+  return mov * euroToUSD;
+});
+```
+
+We can also use the arrow function in the callback function to make it look even neater.
+
+```js
+const movementsUSD = movements.map(mov => mov * euroToUSD);
+```
+
+The `map()` method also has access to the same parameters, we can also get the `index`, and the whole `array` as well.
+
+```js
+const movementsDescriptions = movements.map(
+  (mov, i) =>
+    `Movements ${i}: You ${mov > 0 ? 'deposited' : 'withdrew'} ${Math.abs(mov)}`
+);
+console.log(movementsDescriptions);
+```
+
 ## Filter Method (Array.prototype.filter())
 
 The `filter()` method creates a shallow copy of a portion of a given array, filtered down to just the elements from the given array that pass the test implemented by the provided function (a certain condition).
