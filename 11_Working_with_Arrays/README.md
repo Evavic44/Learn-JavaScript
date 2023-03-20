@@ -175,6 +175,32 @@ The names does not matter but the order has to be `element, index, array`
 `for of (index, element)`
 `forEach (element, index, array)`
 
-## forEach or for of Loop?
+### forEach or for of Loop?
 
 - The forEach method does not have the `continue` and `break` keywords, so use the for of loop if you absolutely want to break or continue a looping operation.
+
+# Data Transformations (Maps, Filter & Reduce)
+
+The Map, Filter, and Reduce array methods are the three biggest array methods in JavaScript for data transformations. They allow us manipulate and change arrays and store them into newer arrays.
+
+In recent years, these tools have become really popular because of their importance.
+
+## Map Method (Array.prototype.map())
+
+The `map()` method creates a new array populated with the results of calling a provided function on every element in the calling array.
+
+This method is similar to the `forEach` method but the difference is that the `Map` methods creates a brand new array based on the original array.
+
+![map](https://user-images.githubusercontent.com/62628408/226436590-6e16b20e-89b4-4e7f-883e-cef00552d67a.png)
+
+## Filter Method (Array.prototype.filter())
+
+The `filter()` method creates a shallow copy of a portion of a given array, filtered down to just the elements from the given array that pass the test implemented by the provided function (a certain condition).
+
+![filter](https://user-images.githubusercontent.com/62628408/226436576-7fa26cd8-0f97-42e0-9f01-4acd6eafe9e3.png)
+
+## Reduce Method (Array.prototype.reduce())
+
+The `reduce()` method executes a 'reducer' callback function on each element of an array and returns the sum of all the elements in the array to a single value.
+
+![reduce](https://user-images.githubusercontent.com/62628408/226436582-8618c570-cb79-40b4-b1dd-096320b5b385.png)

@@ -8,21 +8,20 @@
   margin: 0;
   padding: 0;
   box-sizing: inherit;
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: 'Inter', sans-serif;
 }
 
 html {
-  font-size: 63%;
   box-sizing: border-box;
 }
 
 body {
   color: #444;
-  background-color: #f3f3f3;
+  background-color: #fafafa;
   font-family: inherit;
   height: 100vh;
   padding: 2rem;
-  letter-spacing: -1.5px;
+  letter-spacing: -1px;
 }
 
 nav {
@@ -36,7 +35,6 @@ nav {
 }
 
 .welcome {
-  font-size: 2.2rem;
   font-weight: 600;
 }
 
@@ -56,19 +54,14 @@ nav {
 .login label {
   display: flex;
   flex-direction: column;
-  row-gap: 0.2rem;
-  font-size: 1.2rem;
+  row-gap: 0.3rem;
   font-weight: 500;
-  letter-spacing: -0.6px;
 }
 
 .login__input {
   border: 1px solid #ddd;
   padding: 1rem;
-  font-size: 1.5rem;
-  font-family: inherit;
   border-radius: 5px;
-  margin-right: 1rem;
   color: inherit;
   transition: all 0.3s;
 }
@@ -84,7 +77,6 @@ nav {
   border: none;
   border-radius: 5px;
   padding: 0.8rem 0;
-  font-size: 1.5rem;
   font-weight: 600;
   color: inherit;
   cursor: pointer;
@@ -102,39 +94,40 @@ nav {
 /* MAIN */
 .app {
   position: relative;
-  max-width: 100rem;
+  max-width: 1200px;
   margin: 4rem auto;
   display: grid;
   grid-template-columns: 4fr 3fr;
   grid-template-rows: auto repeat(3, 15rem) auto;
   gap: 2rem;
-
-  /* NOTE This creates the fade in/out anumation */
-  opacity: 0;
+  /* opacity: 0; */
   transition: all 1s;
 }
 
 .balance {
   grid-column: 1 / span 2;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   justify-content: space-between;
   margin-bottom: 2rem;
 }
 
 .balance__label {
-  font-size: 2.2rem;
-  font-weight: 500;
-  margin-bottom: -0.2rem;
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: -0.1rem;
 }
 
 .balance__date {
-  font-size: 1.4rem;
   color: #888;
 }
 
 .balance__value {
-  font-size: 4.5rem;
+  background: white;
+  padding: 0.3rem 1rem;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  font-size: 1.5rem;
   font-weight: 400;
 }
 
@@ -142,7 +135,8 @@ nav {
 .movements {
   grid-row: 2 / span 3;
   background-color: #fff;
-  border-radius: 1rem;
+  border: 1px solid #eee;
+  border-radius: 10px;
   overflow: scroll;
 }
 
@@ -154,32 +148,29 @@ nav {
 }
 
 .movements__type {
-  font-size: 1.1rem;
-  text-transform: uppercase;
   font-weight: 500;
   color: #fff;
   padding: 0.1rem 1rem;
-  border-radius: 10rem;
+  border-radius: 6px;
   margin-right: 2rem;
 }
 
 .movements__date {
-  font-size: 1.1rem;
-  text-transform: uppercase;
   font-weight: 500;
   color: #666;
 }
 
 .movements__type--deposit {
-  background-image: linear-gradient(to top left, #39b385, #9be15d);
+  background-color: #39b386;
 }
 
 .movements__type--withdrawal {
-  background-image: linear-gradient(to top left, #e52a5a, #ff585f);
+  background-color: #ff585f;
 }
 
 .movements__value {
-  font-size: 1.7rem;
+  font-weight: 500;
+  color: #666;
   margin-left: auto;
 }
 
@@ -193,14 +184,12 @@ nav {
 }
 
 .summary__label {
-  font-size: 1.2rem;
   font-weight: 500;
   text-transform: uppercase;
   margin-right: 0.8rem;
 }
 
 .summary__value {
-  font-size: 2.2rem;
   margin-right: 2.5rem;
 }
 
@@ -217,33 +206,31 @@ nav {
   margin-left: auto;
   border: none;
   background: none;
-  font-size: 1.3rem;
   font-weight: 500;
   cursor: pointer;
 }
 
 /* OPERATIONS */
 .operation {
-  border-radius: 1rem;
+  border-radius: 10px;
   padding: 3rem 4rem;
   color: #333;
 }
 
 .operation--transfer {
-  background-image: linear-gradient(to top left, #ffb003, #ffcb03);
+  background-color: #ffb003;
 }
 
 .operation--loan {
-  background-image: linear-gradient(to top left, #39b385, #9be15d);
+  background-color: #39b386;
 }
 
 .operation--close {
-  background-image: linear-gradient(to top left, #e52a5a, #ff585f);
+  background-color: #ff585f;
 }
 
 h2 {
   margin-bottom: 1.5rem;
-  font-size: 1.7rem;
   font-weight: 600;
   color: #333;
 }
@@ -268,8 +255,6 @@ h2 {
   width: 100%;
   border: none;
   background-color: rgba(255, 255, 255, 0.4);
-  font-family: inherit;
-  font-size: 1.5rem;
   text-align: center;
   color: #333;
   padding: 0.3rem 1rem;
@@ -283,14 +268,12 @@ h2 {
 }
 
 .form__label {
-  font-size: 1.3rem;
   text-align: center;
 }
 
 .form__btn {
   border: none;
   border-radius: 0.7rem;
-  font-size: 1.8rem;
   background-color: #fff;
   cursor: pointer;
   transition: all 0.3s;
@@ -305,7 +288,6 @@ h2 {
   padding: 0 0.3rem;
   margin-top: 1.9rem;
   text-align: right;
-  font-size: 1.25rem;
 }
 
 .timer {

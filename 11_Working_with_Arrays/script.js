@@ -61,6 +61,26 @@ const inputLoanAmount = document.querySelector('.form__input--loan-amount');
 const inputCloseUsername = document.querySelector('.form__input--user');
 const inputClosePin = document.querySelector('.form__input--pin');
 
+const displayMovements = function (movements) {
+  containerMovements.innerHTML = 0;
+
+  movements.forEach(function (mov, i) {
+    const type = mov > 0 ? 'deposit' : 'withdrawal';
+
+    const html = `
+    <div class="movements__row">
+      <div class="movements__type movements__type--${type}">${
+      i + 1
+    } ${type}</div>
+      <div class="movements__value">${mov}</div>
+    </div>
+    `;
+
+    containerMovements.insertAdjacentHTML('afterbegin', html);
+  });
+};
+displayMovements(account1.movements);
+
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
 // LECTURES
@@ -75,81 +95,81 @@ const currencies = new Map([
 
 /////////////////////////////////////////////////
 
-// SLICE
-console.log('🔸 SLICE 🔸');
-let arr = ['a', 'b', 'c', 'd', 'e'];
-console.log(arr.slice(2)); // ['c', 'd', 'e']
-console.log(arr.slice(2, 4)); // ['c', 'd']
-console.log(arr.slice(-2)); // Last two elements ['d', 'e']
-console.log(arr.slice(-1)); // Last element of the array ['e']
-console.log(arr.slice(1, -2)); // ['b', 'c']
-console.log(arr.slice()); // ['a', 'b', 'c', 'd', 'e']
-console.log([...arr]); // ['a', 'b', 'c', 'd', 'e']
+// // SLICE
+// console.log('🔸 SLICE 🔸');
+// let arr = ['a', 'b', 'c', 'd', 'e'];
+// console.log(arr.slice(2)); // ['c', 'd', 'e']
+// console.log(arr.slice(2, 4)); // ['c', 'd']
+// console.log(arr.slice(-2)); // Last two elements ['d', 'e']
+// console.log(arr.slice(-1)); // Last element of the array ['e']
+// console.log(arr.slice(1, -2)); // ['b', 'c']
+// console.log(arr.slice()); // ['a', 'b', 'c', 'd', 'e']
+// console.log([...arr]); // ['a', 'b', 'c', 'd', 'e']
 
-console.log('🔸 SPLICE 🔸');
-// SPLICE
-// console.log(arr.splice(2)); // ['c', 'd', 'e']
-// console.log(arr); // leftover elements after splice ['a', 'b']
-// console.log(arr.splice(1, 2)); // ['b', 'c']
-// console.log(arr.splice(-1)); // returns last ['a', 'b' 'c', 'd']
-// console.log(arr); // returns mutated array without last element ['a', 'b', 'c' 'd']
+// console.log('🔸 SPLICE 🔸');
+// // SPLICE
+// // console.log(arr.splice(2)); // ['c', 'd', 'e']
+// // console.log(arr); // leftover elements after splice ['a', 'b']
+// // console.log(arr.splice(1, 2)); // ['b', 'c']
+// // console.log(arr.splice(-1)); // returns last ['a', 'b' 'c', 'd']
+// // console.log(arr); // returns mutated array without last element ['a', 'b', 'c' 'd']
 
-arr.splice(1, 2);
-console.log(arr); // ['b', 'c'] extract 2 elements starting from position [1].
+// arr.splice(1, 2);
+// console.log(arr); // ['b', 'c'] extract 2 elements starting from position [1].
 
-// REVERSE
-arr = ['a', 'b', 'c', 'd', 'e'];
-const arr2 = ['j', 'i', 'h', 'g', 'f'];
-console.log(arr2.reverse()); // ['f', 'g', 'h', 'i', 'j']
-console.log(arr2); // ['f', 'g', 'h', 'i', 'j']
+// // REVERSE
+// arr = ['a', 'b', 'c', 'd', 'e'];
+// const arr2 = ['j', 'i', 'h', 'g', 'f'];
+// console.log(arr2.reverse()); // ['f', 'g', 'h', 'i', 'j']
+// console.log(arr2); // ['f', 'g', 'h', 'i', 'j']
 
-// CONCAT
-const joinedArr = arr.concat(arr2);
-console.log(joinedArr); // ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j'];
-console.log([...arr, ...arr2]); // ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j'];
+// // CONCAT
+// const joinedArr = arr.concat(arr2);
+// console.log(joinedArr); // ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j'];
+// console.log([...arr, ...arr2]); // ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j'];
 
-// JOIN
-console.log(joinedArr.join(' - '));
+// // JOIN
+// console.log(joinedArr.join(' - '));
 
-// 🔸 Looping Arrays forEach 🔸
-const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+// // 🔸 Looping Arrays forEach 🔸
+// const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
-// Looping using for of loop
-for (const transactions of movements) {
-  transactions < 1
-    ? console.log(`You withdrew ${Math.abs(transactions)}`)
-    : console.log(`You deposited ${transactions}`);
-}
+// // Looping using for of loop
+// for (const transactions of movements) {
+//   transactions < 1
+//     ? console.log(`You withdrew ${Math.abs(transactions)}`)
+//     : console.log(`You deposited ${transactions}`);
+// }
 
-// Used the `Math.abs` method to provide only the absolute value and remove any commas.
+// // Used the `Math.abs` method to provide only the absolute value and remove any commas.
 
-// Looping using forEach
-console.log('🔸 forEach 🔸');
-movements.forEach(function (transactions) {
-  transactions < 1
-    ? console.log(`You withdrew ${Math.abs(transactions)}`)
-    : console.log(`You deposited ${transactions}`);
-});
-// 0: function(200)
-// 1: function(450)
-// 2: function(400)
-// ...
+// // Looping using forEach
+// console.log('🔸 forEach 🔸');
+// movements.forEach(function (transactions) {
+//   transactions < 1
+//     ? console.log(`You withdrew ${Math.abs(transactions)}`)
+//     : console.log(`You deposited ${transactions}`);
+// });
+// // 0: function(200)
+// // 1: function(450)
+// // 2: function(400)
+// // ...
 
-// Accessing Index in for of loop
-console.log('🔸 Accessing index in for of loop 🔸');
-for (const [i, transact] of movements.entries()) {
-  transact < 1
-    ? console.log(`Transaction ${i}: You withdrew ${Math.abs(transact)}`)
-    : console.log(`Transaction ${i}: You deposited ${transact}`);
-}
+// // Accessing Index in for of loop
+// console.log('🔸 Accessing index in for of loop 🔸');
+// for (const [i, transact] of movements.entries()) {
+//   transact < 1
+//     ? console.log(`Transaction ${i}: You withdrew ${Math.abs(transact)}`)
+//     : console.log(`Transaction ${i}: You deposited ${transact}`);
+// }
 
-// Accessing Index in forEach method
-console.log('🔸 Accessing index in forEach 🔸');
-movements.forEach(function (transaction, i, array) {
-  transaction < 1
-    ? console.log(
-        `Transaction ${i}: You withdrew ${Math.abs(transaction)}`,
-        array
-      )
-    : console.log(`Transaction ${i}: You deposited ${transaction}`, array);
-});
+// // Accessing Index in forEach method
+// console.log('🔸 Accessing index in forEach 🔸');
+// movements.forEach(function (transaction, i, array) {
+//   transaction < 1
+//     ? console.log(
+//         `Transaction ${i}: You withdrew ${Math.abs(transaction)}`,
+//         array
+//       )
+//     : console.log(`Transaction ${i}: You deposited ${transaction}`, array);
+// });
