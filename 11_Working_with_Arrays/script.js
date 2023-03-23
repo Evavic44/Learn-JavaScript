@@ -33,6 +33,7 @@ const account4 = {
   pin: 4444,
 };
 
+const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 const accounts = [account1, account2, account3, account4];
 
 // Elements
@@ -81,9 +82,16 @@ const displayMovements = function (movements) {
 };
 displayMovements(account1.movements);
 
+const calcDisplayBalance = function (movements) {
+  const balance = movements.reduce((acc, mov) => acc + mov, 0);
+  labelBalance.textContent = `${balance}£`;
+};
+
+calcDisplayBalance(account1.movements);
+
 const createUsernames = function (acc) {
-  acc.forEach(function (acc) {
-    acc.username = acc.owner
+  acc.forEach(function (name) {
+    name.username = name.owner
       .toLowerCase()
       .split(' ')
       .map(letter => letter[0])
@@ -102,8 +110,6 @@ const currencies = new Map([
   ['EUR', 'Euro'],
   ['GBP', 'Pound sterling'],
 ]);
-
-const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
 const euroToUsd = 1.1;
 // const movementsUSD = movements.map(function (mov) {
@@ -126,6 +132,56 @@ const movementsDescriptions = movements.map(
     `Movements ${i}: You ${mov > 0 ? 'deposited' : 'withdrew'} ${Math.abs(mov)}`
 );
 console.log(movementsDescriptions);
+
+console.log('🔸Filter Method🔸');
+const deposits = movements.filter(function (mov, i, arr) {
+  return mov > 0;
+});
+
+console.log(deposits);
+
+console.log('🔸For of loop🔸');
+const depositsFor = [];
+for (const mov of movements) {
+  if (mov > 0) {
+    depositsFor.push(mov);
+  }
+}
+
+console.log(depositsFor);
+
+const withdrawals = movements.filter(mov => mov < 0);
+console.log(withdrawals);
+
+console.log(movements);
+
+// accumulator => Snowball that keeps adding up.
+console.log('🔸Reduce Method🔸');
+// const balance = movements.reduce(function (accumulator, currentEl, index, arr) {
+//   console.log(`Iteration ${index}: ${accumulator}`);
+//   return accumulator + currentEl;
+// }, 0);
+const balance = movements.reduce(
+  (accumulator, currentEl, index, arr) => accumulator + currentEl,
+  0
+);
+console.log(balance);
+
+console.log('🔸For of loop🔸');
+let balance2 = 0;
+for (const mov of movements) balance2 += mov;
+console.log(balance2);
+
+// Maximum value
+const max = movements.reduce((acc, mov) => {
+  if (acc > mov) {
+    return acc;
+  } else {
+    return mov;
+  }
+}, movements[0]);
+
+console.log(max);
 
 /////////////////////////////////////////////////
 
