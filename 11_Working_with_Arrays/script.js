@@ -263,3 +263,115 @@ console.log(max);
 //       )
 //     : console.log(`Transaction ${i}: You deposited ${transaction}`, array);
 // });
+
+const num = movements.find(mov => mov > 3000);
+console.log(movements);
+console.log(num);
+
+console.log(accounts);
+const account = accounts.find(acc => acc.owner === 'Steven Thomas Williams');
+console.log(account.owner);
+
+for (const val of accounts) {
+  if (val.owner === 'Jessica Davis') {
+    console.log(val);
+  }
+}
+
+btnClose.addEventListener('click', function (e) {
+  e.preventDefault();
+  console.log('Delete');
+});
+
+// Strings
+const names = ['John', 'Zach', 'Adam', 'Martha'];
+console.log(names.sort());
+
+console.log(movements);
+
+// return < 0, A, B
+// return > 0, B, A
+movements.sort((a, b) => a - b);
+movements.sort((a, b) => b - a);
+console.log(movements);
+
+const arr = [1, 2, 3, 4, 5, 6, 7];
+const x = new Array(7);
+console.log(x);
+// console.log(x.map(() => 5));
+x.fill(1, 3);
+x.fill(1);
+arr.fill(23, 0, 6);
+console.log(arr);
+console.log(x);
+
+// Array.from
+const y = Array.from({ length: 7 }, () => 1);
+console.log(y);
+
+const z = Array.from({ length: 7 }, (_curr, i) => i + 1);
+console.log(z);
+
+const randomDiceRoll = Array.from({ length: 100 }, (curr, i) => {
+  return Math.floor(Math.random(i) * 100 + 1);
+});
+console.log(randomDiceRoll);
+
+// Array method practice
+// Exercise 1.
+const bankDepositSum = accounts
+  .flatMap(acc => acc.movements)
+  .filter(acc => acc > 0)
+  .reduce((sum, cur) => sum + cur, 0);
+console.log(bankDepositSum);
+
+// 2. Get values at least 1000
+// const numDeposits1000 = accounts
+//   .flatMap(acc => acc.movements)
+//   .filter(mov => mov >= 1000).length;
+// console.log(numDeposits1000);
+
+// 2. Get values at least 1000
+const numDeposits1000 = accounts
+  .flatMap(acc => acc.movements)
+  // .reduce((acc, i) => (i >= 1000 ? acc + 1 : acc), 0);
+  .reduce((acc, currEl) => (currEl >= 1000 ? acc + 1 : acc), 0);
+console.log(numDeposits1000);
+
+// Prefixed ++ operator
+let a = 10;
+console.log(++a);
+console.log(a++);
+
+// 3.
+const { depo, withd } = accounts
+  .flatMap(acc => acc.movements)
+  .reduce(
+    (acc, currEl) => {
+      // currEl > 0 ? (acc.deposits += currEl) : (acc.withdrawals += currEl);
+      acc[currEl > 0 ? 'deposits' : 'withdrawals'] += currEl;
+      return acc;
+    },
+    { deposits: 0, withdrawals: 0 }
+  );
+console.log(depo, withd);
+
+// 4.
+// this is a nice title > This Is a Nice Title.
+const convertTitleCase = function (title) {
+  const capitalize = str => str[0].toUpperCase() + str.slice(1);
+  const exceptions = ['a', 'an', 'and', 'the', 'but', 'or', 'on', 'in', 'with'];
+
+  const titleCase = title
+    .toLowerCase()
+    .split(' ')
+    .map(word =>
+      exceptions.includes(word) ? word : word[0].toUpperCase() + word.slice(1)
+    )
+    .join(' ');
+  return capitalize(titleCase);
+};
+
+console.log(convertTitleCase('this is a nice title'));
+console.log(convertTitleCase('this is a LONG title but not too long'));
+console.log(convertTitleCase('and here is another title with an EXAMPLE'));
