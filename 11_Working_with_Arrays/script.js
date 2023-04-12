@@ -6,10 +6,23 @@
 
 // Data
 const account1 = {
-  owner: 'Jonas Schmedtmann',
-  movements: [200, 450, -400, 3000, -650, -130, 70, 1300],
+  owner: 'Victor Eke',
+  movements: [200, 455.23, -306.5, 25000, -642.21, -133.9, 79.97, 1300],
   interestRate: 1.2, // %
   pin: 1111,
+
+  movementsDates: [
+    '2019-11-18T21:31:17.178Z',
+    '2019-12-23T07:42:02.383Z',
+    '2020-01-28T09:15:04.904Z',
+    '2020-04-01T10:17:24.185Z',
+    '2020-05-08T14:11:59.604Z',
+    '2020-05-27T17:01:17.194Z',
+    '2020-07-11T23:36:17.929Z',
+    '2020-07-12T10:51:36.790Z',
+  ],
+  currency: 'EUR',
+  locale: 'pt-PT', // de-DE
 };
 
 const account2 = {
@@ -17,6 +30,19 @@ const account2 = {
   movements: [5000, 3400, -150, -790, -3210, -1000, 8500, -30],
   interestRate: 1.5,
   pin: 2222,
+
+  movementsDates: [
+    '2019-11-01T13:15:33.035Z',
+    '2019-11-30T09:48:16.867Z',
+    '2019-12-25T06:04:23.907Z',
+    '2020-01-25T14:18:46.235Z',
+    '2020-02-05T16:33:06.386Z',
+    '2020-04-10T14:43:26.374Z',
+    '2020-06-25T18:49:59.371Z',
+    '2020-07-26T12:01:20.894Z',
+  ],
+  currency: 'USD',
+  locale: 'en-US',
 };
 
 const account3 = {
@@ -53,6 +79,7 @@ const btnTransfer = document.querySelector('.form__btn--transfer');
 const btnLoan = document.querySelector('.form__btn--loan');
 const btnClose = document.querySelector('.form__btn--close');
 const btnSort = document.querySelector('.btn--sort');
+const loginForm = document.querySelector('.login');
 
 const inputLoginUsername = document.querySelector('.login__input--user');
 const inputLoginPin = document.querySelector('.login__input--pin');
@@ -62,126 +89,177 @@ const inputLoanAmount = document.querySelector('.form__input--loan-amount');
 const inputCloseUsername = document.querySelector('.form__input--user');
 const inputClosePin = document.querySelector('.form__input--pin');
 
-const displayMovements = function (movements) {
-  containerMovements.innerHTML = 0;
+/////////////////////////////////////////////////
+// Functions
 
-  movements.forEach(function (mov, i) {
+const displayMovements = function (movements, sort = false) {
+  containerMovements.innerHTML = '';
+
+  const movs = sort ? movements.slice().sort((a, b) => a - b) : movements;
+
+  movs.forEach(function (mov, i) {
     const type = mov > 0 ? 'deposit' : 'withdrawal';
 
     const html = `
-    <div class="movements__row">
-      <div class="movements__type movements__type--${type}">${
+      <div class="movements__row">
+        <div class="movements__type movements__type--${type}">${
       i + 1
     } ${type}</div>
-      <div class="movements__value">${mov}</div>
-    </div>
+        <div class="movements__value">${mov.toFixed(2)}€</div>
+      </div>
     `;
 
     containerMovements.insertAdjacentHTML('afterbegin', html);
   });
 };
-displayMovements(account1.movements);
 
-const calcDisplayBalance = function (movements) {
-  const balance = movements.reduce((acc, mov) => acc + mov, 0);
-  labelBalance.textContent = `${balance}£`;
+const calcDisplayBalance = function (acc) {
+  acc.balance = acc.movements.reduce((acc, mov) => acc + mov, 0);
+  labelBalance.textContent = `${acc.balance.toFixed(2)}€`;
 };
 
-calcDisplayBalance(account1.movements);
+const calcDisplaySummary = function (acc) {
+  const incomes = acc.movements
+    .filter(mov => mov > 0)
+    .reduce((acc, mov) => acc + mov, 0);
+  labelSumIn.textContent = `${incomes.toFixed(2)}€`;
 
-const createUsernames = function (acc) {
-  acc.forEach(function (name) {
-    name.username = name.owner
+  const out = acc.movements
+    .filter(mov => mov < 0)
+    .reduce((acc, mov) => acc + mov, 0);
+  labelSumOut.textContent = `${Math.abs(out).toFixed(2)}€`;
+
+  const interest = acc.movements
+    .filter(mov => mov > 0)
+    .map(deposit => (deposit * acc.interestRate) / 100)
+    .filter((int, i, arr) => {
+      // console.log(arr);
+      return int >= 1;
+    })
+    .reduce((acc, int) => acc + int, 0);
+  labelSumInterest.textContent = `${interest.toFixed(2)}€`;
+};
+
+const createUsernames = function (accs) {
+  accs.forEach(function (acc) {
+    acc.username = acc.owner
       .toLowerCase()
       .split(' ')
-      .map(letter => letter[0])
+      .map(name => name[0])
       .join('');
   });
 };
 createUsernames(accounts);
-console.log(accounts);
 
-/////////////////////////////////////////////////
-/////////////////////////////////////////////////
-// LECTURES
+const updateUI = function (acc) {
+  // Display movements
+  displayMovements(acc.movements);
 
-const currencies = new Map([
-  ['USD', 'United States dollar'],
-  ['EUR', 'Euro'],
-  ['GBP', 'Pound sterling'],
-]);
+  // Display balance
+  calcDisplayBalance(acc);
 
-const euroToUsd = 1.1;
-// const movementsUSD = movements.map(function (mov) {
-//   return mov * euroToUsd;
-// });
+  // Display summary
+  calcDisplaySummary(acc);
+};
 
-// Arrow function
-const movementsUSD = movements.map(mov => mov * euroToUsd);
-console.log(movements);
-console.log(movementsUSD);
+///////////////////////////////////////
+// Event handlers
+let currentAccount;
 
-// for of loop
-const movementsUSDFor = [];
-for (const mov of movements) {
-  movementsUSDFor.push(mov * euroToUsd);
-}
+btnLogin.addEventListener('click', function (e) {
+  // Prevent form from submitting
+  e.preventDefault();
 
-const movementsDescriptions = movements.map(
-  (mov, i) =>
-    `Movements ${i}: You ${mov > 0 ? 'deposited' : 'withdrew'} ${Math.abs(mov)}`
-);
-console.log(movementsDescriptions);
+  currentAccount = accounts.find(
+    acc => acc.username === inputLoginUsername.value
+  );
+  console.log(currentAccount);
 
-console.log('🔸Filter Method🔸');
-const deposits = movements.filter(function (mov, i, arr) {
-  return mov > 0;
+  if (currentAccount?.pin === Number(inputLoginPin.value)) {
+    // Display UI and message
+    labelWelcome.textContent = `Welcome back, ${
+      currentAccount.owner.split(' ')[0]
+    }`;
+    containerApp.style.opacity = 100;
+    loginForm.style.display = 'none';
+
+    // Clear input fields
+    inputLoginUsername.value = inputLoginPin.value = '';
+    inputLoginPin.blur();
+
+    // Update UI
+    updateUI(currentAccount);
+  }
 });
 
-console.log(deposits);
+btnTransfer.addEventListener('click', function (e) {
+  e.preventDefault();
+  const amount = Number(inputTransferAmount.value);
+  const receiverAcc = accounts.find(
+    acc => acc.username === inputTransferTo.value
+  );
+  inputTransferAmount.value = inputTransferTo.value = '';
 
-console.log('🔸For of loop🔸');
-const depositsFor = [];
-for (const mov of movements) {
-  if (mov > 0) {
-    depositsFor.push(mov);
+  if (
+    amount > 0 &&
+    receiverAcc &&
+    currentAccount.balance >= amount &&
+    receiverAcc?.username !== currentAccount.username
+  ) {
+    // Doing the transfer
+    currentAccount.movements.push(-amount);
+    receiverAcc.movements.push(amount);
+
+    // Update UI
+    updateUI(currentAccount);
   }
-}
+});
 
-console.log(depositsFor);
+btnLoan.addEventListener('click', function (e) {
+  e.preventDefault();
 
-const withdrawals = movements.filter(mov => mov < 0);
-console.log(withdrawals);
+  const amount = Math.floor(inputLoanAmount.value);
 
-console.log(movements);
+  if (amount > 0 && currentAccount.movements.some(mov => mov >= amount * 0.1)) {
+    // Add movement
+    currentAccount.movements.push(amount);
 
-// accumulator => Snowball that keeps adding up.
-console.log('🔸Reduce Method🔸');
-// const balance = movements.reduce(function (accumulator, currentEl, index, arr) {
-//   console.log(`Iteration ${index}: ${accumulator}`);
-//   return accumulator + currentEl;
-// }, 0);
-const balance = movements.reduce(
-  (accumulator, currentEl, index, arr) => accumulator + currentEl,
-  0
-);
-console.log(balance);
-
-console.log('🔸For of loop🔸');
-let balance2 = 0;
-for (const mov of movements) balance2 += mov;
-console.log(balance2);
-
-// Maximum value
-const max = movements.reduce((acc, mov) => {
-  if (acc > mov) {
-    return acc;
-  } else {
-    return mov;
+    // Update UI
+    updateUI(currentAccount);
   }
-}, movements[0]);
+  inputLoanAmount.value = '';
+});
 
-console.log(max);
+btnClose.addEventListener('click', function (e) {
+  e.preventDefault();
+
+  if (
+    inputCloseUsername.value === currentAccount.username &&
+    Number(inputClosePin.value) === currentAccount.pin
+  ) {
+    const index = accounts.findIndex(
+      acc => acc.username === currentAccount.username
+    );
+    console.log(index);
+    // .indexOf(23)
+
+    // Delete account
+    accounts.splice(index, 1);
+
+    // Hide UI
+    containerApp.style.opacity = 0;
+    loginForm.style.opacity = 1;
+  }
+
+  inputCloseUsername.value = inputClosePin.value = '';
+});
+
+let sorted = false;
+btnSort.addEventListener('click', function (e) {
+  e.preventDefault();
+  displayMovements(currentAccount.movements, !sorted);
+  sorted = !sorted;
+});
 
 /////////////////////////////////////////////////
 
@@ -357,10 +435,23 @@ const { depo, withd } = accounts
 console.log(depo, withd);
 
 // 4.
-// this is a nice title > This Is a Nice Title.
+// this is a nice title > This is a Nice Title.
 const convertTitleCase = function (title) {
   const capitalize = str => str[0].toUpperCase() + str.slice(1);
-  const exceptions = ['a', 'an', 'and', 'the', 'but', 'or', 'on', 'in', 'with'];
+  const exceptions = [
+    'a',
+    'an',
+    'and',
+    'the',
+    'but',
+    'or',
+    'on',
+    'in',
+    'with',
+    'is',
+    'of',
+    'at',
+  ];
 
   const titleCase = title
     .toLowerCase()
@@ -375,3 +466,73 @@ const convertTitleCase = function (title) {
 console.log(convertTitleCase('this is a nice title'));
 console.log(convertTitleCase('this is a LONG title but not too long'));
 console.log(convertTitleCase('and here is another title with an EXAMPLE'));
+console.log(convertTitleCase('nothing TO sEE hErE ON sundaY wiTH ME'));
+
+// 🔸Converting and Checking Numbers🔸
+console.log(23 === 23.0);
+
+// Base 10 = 0 to 9. (1/10 = 0.1), (3/10 = 0.333333∞)
+// Base 2 = 0, 1
+
+// Convert strings to numbers
+console.log(0.1 + 0.2 === 0.3);
+console.log(+'22');
+console.log('22' - 0);
+
+// Parsing Integer => Numbers without decimals
+console.log(Number.parseInt('50px', 10));
+console.log(Number.parseInt('ae34', 10)); // won't work, first value must be a number
+
+// Parsing Float => Numbers with decimals
+console.log(Number.parseInt('2.5rem')); // Will only return first number
+console.log(Number.parseFloat('2.5rem'));
+
+// Are also global functions: Though not recommended
+console.log(parseFloat('22rem'));
+
+// isNan: Check if value is NaN
+console.log(Number.isNaN(20));
+console.log(Number.isNaN('20'));
+console.log(Number.isNaN(+'20x'));
+console.log(Number.isNaN(23 / 0)); // infinity so won't work
+
+// Checking if value is a number
+console.log(Number.isFinite(23));
+console.log(Number.isFinite(+'23px'));
+console.log(Number.isFinite(23 / 0));
+
+console.log(Number.isInteger(23));
+console.log(Number.isInteger(23.0));
+console.log(Number.isInteger(23 / 0));
+
+// 🔸Math and rounding🔸
+console.log(Math.sqrt(25)); // square root
+console.log(25 ** (1 / 2));
+console.log(8 ** (1 / 3)); // cubic root
+
+// min and max numbers
+console.log(Math.max(5, 20, 93, 2, 18)); // Get maximum value
+console.log(Math.max(5, 20, '93', 2, 18)); // Also does type coercion
+console.log(Math.max(5, 20, '93ss', 2, 18)); // Does not do parsing
+
+console.log(Math.min(5, 20, '93', 2, 18));
+
+console.log(Math.PI * Number.parseFloat('10px') ** 2);
+
+// random numbers
+console.log(Math.trunc(Math.random() * 6 + 1));
+// random numbers from a range of two integers
+const randomInt = (min, max) => Math.trunc(Math.random() * (max - min) + min);
+// console.log(randomInt(10, 20));
+
+// rounding integers
+console.log(Math.trunc(16.5)); // return number without decimals
+console.log(Math.round(23.9)); // Round a number
+
+console.log(Math.ceil(23.9)); // Round a number
+console.log(Math.floor(-23.9)); // Truncate integers including decimals
+
+// rounding decimals(floating point numbers)
+console.log((2.7).toFixed(0));
+console.log((2.7).toFixed(3));
+console.log(+(2.345).toFixed(2));
