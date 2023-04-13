@@ -481,7 +481,7 @@ console.log('22' - 0);
 
 // Parsing Integer => Numbers without decimals
 console.log(Number.parseInt('50px', 10));
-console.log(Number.parseInt('ae34', 10)); // won't work, first value must be a number
+console.log(Number.parseInt('ae34', 10)); // won't work, value must start with a number
 
 // Parsing Float => Numbers with decimals
 console.log(Number.parseInt('2.5rem')); // Will only return first number
@@ -536,3 +536,57 @@ console.log(Math.floor(-23.9)); // Truncate integers including decimals
 console.log((2.7).toFixed(0));
 console.log((2.7).toFixed(3));
 console.log(+(2.345).toFixed(2));
+
+// 🔸Remainder Operator🔸
+console.log(5 % 2);
+console.log(5 / 2);
+
+console.log(6 % 2);
+console.log(6 % 3);
+
+// checking if a number is even or odd
+const checkEvenOdd = num =>
+  num % 2 === 0 ? console.log(`${num} is even`) : console.log(`${num} is odd`);
+checkEvenOdd(22);
+checkEvenOdd(16);
+checkEvenOdd(3);
+
+labelBalance.addEventListener('click', function () {
+  [...document.querySelectorAll('.movements__row')].forEach(function (
+    row,
+    index
+  ) {
+    // 0, 2, 4, 6, ...
+    if (index % 2 === 0) row.style.backgroundColor = 'orangered';
+    // 0, 3, 6, 9, ...
+    if (index % 3 === 0) row.style.backgroundColor = 'blue';
+  });
+});
+
+// 🔸Working with BigInt🔸
+console.log(2 ** 53 - 1);
+console.log(Number.MAX_SAFE_INTEGER);
+console.log(2 ** 53 + 2);
+
+console.log(235972592735792702175273597235n); // the n keyword converts numbers >= 2^53 - 1 into BigInt
+console.log(BigInt(235972592)); // this conversion only works with smaller BigInt numbers
+console.log(BigInt(235972592));
+
+// operations with bigint
+console.log(10000 + 10000);
+console.log(1000000000000000000000n * 45252332523n);
+
+const huge = 57935737592739325723523n;
+const number = 23;
+// console.log(huge * number); // can't convert bigint to number
+console.log(huge * BigInt(number));
+
+// exceptions
+console.log(20n > 15);
+console.log(20n === 20);
+console.log(typeof 20n);
+console.log(20n === '20');
+
+console.log(huge + ' is Really big!');
+console.log(11n / 3n);
+console.log(12n / 3n);
