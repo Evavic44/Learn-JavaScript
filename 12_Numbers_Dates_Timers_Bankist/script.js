@@ -81,19 +81,28 @@ const inputClosePin = document.querySelector('.form__input--pin');
 /////////////////////////////////////////////////
 // Functions
 
-const displayMovements = function (movements, sort = false) {
+const displayMovements = function (acc, sort = false) {
   containerMovements.innerHTML = '';
 
-  const movs = sort ? movements.slice().sort((a, b) => a - b) : movements;
+  const movs = sort
+    ? acc.movements.slice().sort((a, b) => a - b)
+    : acc.movements;
 
   movs.forEach(function (mov, i) {
     const type = mov > 0 ? 'deposit' : 'withdrawal';
+
+    const date = new Date(acc.movementsDates[i]);
+    const day = `${date.getDate()}`.padStart(2, 0);
+    const month = `${date.getMonth() + 1}`.padStart(2, 0);
+    const year = date.getFullYear();
+    const displayDate = `${day}/${month}/${year}`;
 
     const html = `
       <div class="movements__row">
         <div class="movements__type movements__type--${type}">${
       i + 1
     } ${type}</div>
+        <div class="movements__date">${displayDate}</div>
         <div class="movements__value">${mov}€</div>
       </div>
     `;
@@ -142,7 +151,7 @@ createUsernames(accounts);
 
 const updateUI = function (acc) {
   // Display movements
-  displayMovements(acc.movements);
+  displayMovements(acc);
 
   // Display balance
   calcDisplayBalance(acc);
@@ -153,7 +162,31 @@ const updateUI = function (acc) {
 
 ///////////////////////////////////////
 // Event handlers
-let currentAccount;
+let currentAccount = account1;
+// FAKED LOGIN
+updateUI(currentAccount);
+containerApp.style.opacity = 100;
+
+const today = new Date();
+const options = {
+  hour: 'numeric',
+  minute: 'numeric',
+  day: 'numeric',
+  month: 'long',
+  year: '2-digit',
+  weekday: 'long',
+};
+
+const locale = navigator.language;
+console.log(locale);
+
+const day = `${today.getDate()}`.padStart(2, 0);
+const month = `${today.getMonth() + 1}`.padStart(2, 0);
+const year = today.getFullYear();
+const hours = `${today.getHours()}`.padStart(2, 0);
+const minutes = `${today.getMinutes()}`.padStart(2, 0);
+// labelDate.textContent = `${day}/${month}/${year}, ${hours}:${minutes}`;
+labelDate.textContent = new Intl.DateTimeFormat(locale, options).format(today);
 
 btnLogin.addEventListener('click', function (e) {
   // Prevent form from submitting
@@ -335,17 +368,17 @@ checkEvenOdd(22);
 checkEvenOdd(16);
 checkEvenOdd(3);
 
-labelBalance.addEventListener('click', function () {
-  [...document.querySelectorAll('.movements__row')].forEach(function (
-    row,
-    index
-  ) {
-    // 0, 2, 4, 6, ...
-    if (index % 2 === 0) row.style.backgroundColor = 'orangered';
-    // 0, 3, 6, 9, ...
-    if (index % 3 === 0) row.style.backgroundColor = 'blue';
-  });
-});
+// labelBalance.addEventListener('click', function () {
+//   [...document.querySelectorAll('.movements__row')].forEach(function (
+//     row,
+//     index
+//   ) {
+//     // 0, 2, 4, 6, ...
+//     if (index % 2 === 0) row.style.backgroundColor = 'orangered';
+//     // 0, 3, 6, 9, ...
+//     if (index % 3 === 0) row.style.backgroundColor = 'blue';
+//   });
+// });
 
 // 🔸Working with BigInt🔸
 console.log(2 ** 53 - 1);
@@ -407,5 +440,46 @@ console.log(new Date(872173385000)); // get date based off timestamps
 console.log(Date.now());
 
 // date set() methods
-future.setFullYear(2099);
+// future.setFullYear(2099);
 console.log(future);
+console.log(Number(future)); // convert date to timestamp(How many miliseconds that have passed since the invention of Unix time)
+console.log(+future);
+
+const calcDaysPassed = (date1, date2) =>
+  Math.abs((date2 - date1) / (24 * 60 * 60 * 1000));
+const days1 = calcDaysPassed(new Date(2022, 3, 14), new Date(2022, 3, 24));
+console.log(days1);
+
+const option = {
+  style: 'currency',
+  unit: 'mile-per-hour',
+  currency: 'EUR',
+  // useGrouping: false,
+};
+
+const numbs = 2323253;
+console.log('US:', new Intl.NumberFormat('en-US', option).format(numbs));
+console.log('Germany:', new Intl.NumberFormat('de-DE', option).format(numbs));
+console.log('Syria:', new Intl.NumberFormat('ar-SY', option).format(numbs));
+console.log(
+  navigator.language,
+  new Intl.NumberFormat(navigator.language).format(numbs)
+);
+
+// 🔸Timers setTimeout and setInterval🔸
+// setTimeout
+const ingredients = ['olives', 'spinach'];
+const pizzaTimer = setTimeout(
+  (ing1, ing2) => console.log(`Here is your pizza 🍕 with ${ing1} & ${ing2}`),
+  3000,
+  ...ingredients
+);
+console.log('Waiting...');
+
+if (ingredients.includes('spinach')) clearTimeout(pizzaTimer);
+
+// setInterval
+setInterval(function () {
+  const now = new Date();
+  console.log(now);
+}, 1000);

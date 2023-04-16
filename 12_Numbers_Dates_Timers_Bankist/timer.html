@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Inter:400,500,600,700,800&display=swap"
+      rel="stylesheet"
+    />
+    <title>Timer</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        position: relative;
+        font-family: 'Inter', sans-serif;
+        letter-spacing: -1px;
+        background-color: rgb(5, 27, 27);
+        color: cyan;
+        padding: 1rem;
+        height: 100vh;
+      }
+
+      main {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      #time {
+        font-size: calc(12vw);
+      }
+
+      #secs {
+        color: greenyellow;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1 id="time" role="clock" aria-label="clock">
+        <span id="hours" aria-label="hours">-:</span
+        ><span id="mins" aria-label="minutes">-:</span
+        ><span id="secs" aria-label="seconds">-:</span>
+      </h1>
+    </main>
+
+    <script>
+      const hrs = document.getElementById('hours');
+      const mins = document.getElementById('mins');
+      const secs = document.getElementById('secs');
+      const sound = new Audio('./buzz.mp3');
+
+      setInterval(() => {
+        const today = new Date();
+        const hours = today.getHours().toString().padStart(2, 0);
+        const minutes = today.getMinutes().toString().padStart(2, 0);
+        const seconds = today.getSeconds().toString().padStart(2, 0);
+
+        if (seconds >= 50) {
+          hrs.style.color = '#ffffff';
+          mins.style.color = '#999999';
+          secs.style.color = '#ff0000';
+          document.body.style.backgroundColor = '#000000';
+          sound.play();
+        } else {
+          hrs.style.color = null;
+          mins.style.color = null;
+          secs.style.color = null;
+          document.body.style.backgroundColor = null;
+        }
+
+        hrs.textContent = `${hours}:`;
+        mins.textContent = `${minutes}:`;
+        secs.textContent = seconds;
+      }, 1000);
+    </script>
+  </body>
+</html>
