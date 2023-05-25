@@ -479,7 +479,7 @@ console.log('Waiting...');
 if (ingredients.includes('spinach')) clearTimeout(pizzaTimer);
 
 // setInterval
-setInterval(function () {
-  const now = new Date();
-  console.log(now);
-}, 1000);
+// setInterval(function () {
+//   const now = new Date();
+//   console.log(now);
+// }, 1000);
